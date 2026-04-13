@@ -21,6 +21,9 @@ async def payment_screenshot_handler(message: Message, session):
     if not user:
         raise SkipHandler()
 
+    if not user.selected_plan_type:
+        raise SkipHandler()
+
     lang = user.language if user.language else "ru"
     photo = message.photo[-1]
     screenshot_file_id = photo.file_id
