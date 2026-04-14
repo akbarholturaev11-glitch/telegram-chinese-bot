@@ -2,7 +2,7 @@ from aiogram import Router, F
 from aiogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.types import FSInputFile
 from app.repositories.user_repo import UserRepository as UserRepo
-from app.bot.keyboards.subscription import subscription_plan_keyboard
+from app.bot.keyboards.subscription import subscription_main_keyboard
 
 from app.config import settings
 from app.repositories.user_repo import UserRepository
@@ -238,7 +238,7 @@ async def payment_alipay_handler(callback: CallbackQuery, session):
 
     await callback.message.edit_text(
         t("subscription_main_title", lang),
-        reply_markup=subscription_plan_keyboard(lang)
+        reply_markup=subscription_main_keyboard(lang)
     )
 
 
