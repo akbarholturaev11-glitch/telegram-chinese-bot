@@ -45,13 +45,15 @@ class PaymentService:
                 base_amount = 29
             elif plan_type == "1_month":
                 base_amount = 66
+
             currency = "¥"
         else:
             if plan_type == "10_days":
                 base_amount = 29
             elif plan_type == "1_month":
                 base_amount = 89
-        currency = "somoni"
+
+            currency = "somoni"
 
         final_amount = (
             self.calculate_discounted_price(base_amount)
@@ -63,9 +65,12 @@ class PaymentService:
             "plan_type": plan_type,
             "base_amount": base_amount,
             "final_amount": final_amount,
-            "discount_applied": discount_applied,
-            "discount_percent": DISCOUNT_PERCENT if discount_applied else 0,
             "currency": currency,
+            "text": (
+                f"📦 Tarif: {plan_type}\n"
+                f"💰 Narx: {final_amount} {currency}\n\n"
+                f"📤 To‘lovdan keyin chek yuboring"
+            )
         }, ""
 
     async def create_pending_payment(
