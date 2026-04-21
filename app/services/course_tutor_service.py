@@ -25,8 +25,8 @@ class CourseTutorService:
 
     def _build_fallback_intro(self, lesson, vocab, dialogue, grammar) -> str:
         title = self._safe_text(getattr(lesson, "title", ""))
-        vocab_words = [item.get("zh", "") for item in vocab[:3] if isinstance(item, dict) and item.get("zh")]
-        grammar_titles = [item.get("title_zh", "") for item in grammar[:2] if isinstance(item, dict) and item.get("title_zh")]
+        vocab_words = [item.get("ru", "") for item in vocab[:3] if isinstance(item, dict) and item.get("ru")]
+        grammar_titles = [item.get("title_ru", "") for item in grammar[:2] if isinstance(item, dict) and item.get("title_ru")]
 
         first_scene = ""
         if dialogue and isinstance(dialogue[0], dict):
@@ -48,8 +48,8 @@ class CourseTutorService:
 
     def _build_fallback_exercise(self, lesson, vocab, dialogue, grammar):
         title = self._safe_text(getattr(lesson, "title", ""))
-        vocab_words = [item.get("zh", "") for item in vocab[:5] if isinstance(item, dict) and item.get("zh")]
-        grammar_titles = [item.get("title_zh", "") for item in grammar[:2] if isinstance(item, dict) and item.get("title_zh")]
+        vocab_words = [item.get("ru", "") for item in vocab[:5] if isinstance(item, dict) and item.get("ru")]
+        grammar_titles = [item.get("title_ru", "") for item in grammar[:2] if isinstance(item, dict) and item.get("title_ru")]
 
         exercise = {
             "fallback": True,
@@ -60,15 +60,15 @@ class CourseTutorService:
             "rules": [
                 "Do not introduce another lesson topic.",
                 "Do not use unrelated vocabulary.",
-                "Keep exercises short and beginner-friendly for the current HSK level.",
+                "Keep exercises short and beginner-friendly for the current ТРКИ level.",
             ],
         }
         return exercise
 
     def _build_fallback_homework(self, lesson, vocab, dialogue, grammar):
         title = self._safe_text(getattr(lesson, "title", ""))
-        vocab_words = [item.get("zh", "") for item in vocab[:5] if isinstance(item, dict) and item.get("zh")]
-        grammar_titles = [item.get("title_zh", "") for item in grammar[:2] if isinstance(item, dict) and item.get("title_zh")]
+        vocab_words = [item.get("ru", "") for item in vocab[:5] if isinstance(item, dict) and item.get("ru")]
+        grammar_titles = [item.get("title_ru", "") for item in grammar[:2] if isinstance(item, dict) and item.get("title_ru")]
 
         homework = {
             "fallback": True,
@@ -86,8 +86,8 @@ class CourseTutorService:
 
     def _build_fallback_review(self, lesson, vocab, dialogue, grammar):
         title = self._safe_text(getattr(lesson, "title", ""))
-        review_words = [item.get("zh", "") for item in vocab[:3] if isinstance(item, dict) and item.get("zh")]
-        review_grammar = [item.get("title_zh", "") for item in grammar[:1] if isinstance(item, dict) and item.get("title_zh")]
+        review_words = [item.get("ru", "") for item in vocab[:3] if isinstance(item, dict) and item.get("ru")]
+        review_grammar = [item.get("title_ru", "") for item in grammar[:1] if isinstance(item, dict) and item.get("title_ru")]
 
         review = {
             "fallback": True,
@@ -188,7 +188,7 @@ class CourseTutorService:
         payload_text = json.dumps(step_payload, ensure_ascii=False, indent=2)
 
         return f"""
-You are an AI Chinese teacher running a structured HSK course lesson.
+You are an AI Russian teacher running a structured ТРКИ course lesson.
 
 STRICT GLOBAL RULES:
 1. Teach ONLY the current lesson.
@@ -260,7 +260,7 @@ Now respond for the current lesson and current step only.
         payload_text = json.dumps(payload, ensure_ascii=False, indent=2)
 
         return f"""
-You are evaluating a student's homework for a structured HSK course lesson.
+You are evaluating a student's homework for a structured ТРКИ course lesson.
 
 STRICT RULES:
 1. Evaluate ONLY inside the current lesson.
@@ -269,7 +269,7 @@ STRICT RULES:
 4. If the stored homework is missing or incomplete, evaluate only against the current lesson title, vocabulary, dialogue, and grammar.
 5. Feedback must be short, clear, and teacher-like.
 6. Give a score from 0 to 100.
-7. Decide passed = true only if the answer is acceptable for the current HSK lesson.
+7. Decide passed = true only if the answer is acceptable for the current ТРКИ lesson.
 8. Return JSON only.
 9. JSON format must be:
 {

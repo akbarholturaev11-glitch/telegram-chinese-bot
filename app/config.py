@@ -12,12 +12,12 @@ class Settings(BaseSettings):
     BOT_TOKEN: str = ""
     OPENAI_API_KEY: str = ""
 
-    DATABASE_URL: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/telegram_chinese_bot"
+    DATABASE_URL: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/telegram_russian_bot"
     REDIS_URL: str = "redis://localhost:6379/0"
 
     ADMIN_IDS: str = "7965751363"
     PAYMENT_DETAILS: str = ""
-    BOT_USERNAME: str = ""
+    BOT_USERNAME: str = "@AkbarShoh_RU_bot"
 
     DEFAULT_LANGUAGE: str = "tj"
     LOG_LEVEL: str = "INFO"
