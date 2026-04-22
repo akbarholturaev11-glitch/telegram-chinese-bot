@@ -5,7 +5,6 @@ from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton
 
 from app.bot.utils.response_effect import ResponseEffect
 from app.bot.handlers.course import get_course_keyboard_for_step
-from app.bot.handlers.subscription import build_subscription_main_text_for_user, build_subscription_main_keyboard_for_user
 from app.bot.keyboards.checkout import checkout_keyboard
 from app.bot.keyboards.referral import photo_limit_subscription_keyboard
 from app.bot.keyboards.referral import referral_daily_limit_keyboard
@@ -197,24 +196,6 @@ async def handle_text_message(message: Message, session):
             await message.answer(t("access_daily_limit_reached", user_lang))
             return
 
-        if message_key == "access_trial_expired":
-            await message.answer(t("access_trial_expired", user_lang))
-            await message.answer(
-                build_subscription_main_text_for_user(user, user_lang),
-                reply_markup=build_subscription_main_keyboard_for_user(user, user_lang),
-                disable_web_page_preview=True,
-            )
-            return
-
-        if message_key == "access_subscription_expired":
-            await message.answer(t("access_subscription_expired", user_lang))
-            await message.answer(
-                build_subscription_main_text_for_user(user, user_lang),
-                reply_markup=build_subscription_main_keyboard_for_user(user, user_lang),
-                disable_web_page_preview=True,
-            )
-            return
-
         await message.answer(t(message_key, user_lang))
         return
 
@@ -254,24 +235,6 @@ async def handle_image_message(message: Message, session):
             await message.answer(
                 t("access_daily_image_limit_reached", user_lang),
                 reply_markup=photo_limit_subscription_keyboard(user_lang),
-            )
-            return
-
-        if message_key == "access_trial_expired":
-            await message.answer(t("access_trial_expired", user_lang))
-            await message.answer(
-                build_subscription_main_text_for_user(user, user_lang),
-                reply_markup=build_subscription_main_keyboard_for_user(user, user_lang),
-                disable_web_page_preview=True,
-            )
-            return
-
-        if message_key == "access_subscription_expired":
-            await message.answer(t("access_subscription_expired", user_lang))
-            await message.answer(
-                build_subscription_main_text_for_user(user, user_lang),
-                reply_markup=build_subscription_main_keyboard_for_user(user, user_lang),
-                disable_web_page_preview=True,
             )
             return
 
