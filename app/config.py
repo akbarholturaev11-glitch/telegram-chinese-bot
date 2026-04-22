@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     BOT_TOKEN: str = ""
     OPENAI_API_KEY: str = ""
 
-    DATABASE_URL: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/telegram_chinese_bot"
+    DATABASE_URL: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/telegram_english_bot"
     REDIS_URL: str = "redis://localhost:6379/0"
 
     ADMIN_IDS: str = "7965751363"

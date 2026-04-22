@@ -19,12 +19,12 @@ def level_keyboard(lang: str) -> InlineKeyboardMarkup:
         inline_keyboard=[
             [InlineKeyboardButton(text=t("level_beginner", lang), callback_data="level:beginner")],
             [
-                InlineKeyboardButton(text="HSK 1", callback_data="level:hsk1"),
-                InlineKeyboardButton(text="HSK 2", callback_data="level:hsk2"),
+                InlineKeyboardButton(text="A1", callback_data="level:hsk1"),
+                InlineKeyboardButton(text="A2", callback_data="level:hsk2"),
             ],
             [
-                InlineKeyboardButton(text="HSK 3", callback_data="level:hsk3"),
-                InlineKeyboardButton(text="HSK 4", callback_data="level:hsk4"),
+                InlineKeyboardButton(text="B1", callback_data="level:hsk3"),
+                InlineKeyboardButton(text="B2", callback_data="level:hsk4"),
             ],
         ]
     )

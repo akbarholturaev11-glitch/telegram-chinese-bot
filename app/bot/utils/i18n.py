@@ -7,7 +7,7 @@ TEXTS = {
         "language_selected": "Забон интихоб шуд ✅",
         "level_saved_explained": "✅ Сатҳи шумо сабт шуд. Ин ба мо кӯмак мекунад, ки дарсҳоро ба шумо мувофиқ кунем.",
         "trial_started_info": "🎁 Ба шумо дастрасии ройгон кушода шуд.\nҲар рӯз то 5 матн ва 1 сурат фиристода метавонед — бо роҳат истифода баред.",
-        "send_first_message": "Акнун калима, ҷумла ё саволи хитоии худро фиристед — дарсро аз ҳамон ҷо оғоз мекунем.",
+        "send_first_message": "Акнун калима, ҷумла ё саволи англисии худро фиристед — дарсро аз ҳамон ҷо оғоз мекунем.",
         "level_beginner": "Аз 0",
 
         "menu_start_lesson": "📘 Оғози дарс",
@@ -62,6 +62,8 @@ TEXTS = {
 
         "subscription_discount_plan_10_days": "10 рӯз — 23 сомонӣ",
         "subscription_discount_plan_1_month": "1 моҳ — 71 сомонӣ",
+        "subscription_discount_plan_10_days_yuan": "10 рӯз — 23 ¥",
+        "subscription_discount_plan_1_month_yuan": "1 моҳ — 53 ¥",
 
         "subscription_checkout_title": "Шумо ин обунаро интихоб кардед:",
         "subscription_price_label": "Нарх",
@@ -104,7 +106,7 @@ TEXTS = {
         "language_selected": "Язык выбран ✅",
         "level_saved_explained": "✅ Ваш уровень сохранён. Это поможет нам подстроить уроки под вас.",
         "trial_started_info": "🎁 Вам открыт бесплатный доступ.\nКаждый день доступно до 5 текстов и 1 изображения — используйте с удовольствием.",
-        "send_first_message": "Теперь отправьте китайское слово, фразу или свой вопрос — и начнём урок с этого.",
+        "send_first_message": "Теперь отправьте английское слово, фразу или свой вопрос — и начнём урок с этого.",
         "level_beginner": "С нуля",
 
         "menu_start_lesson": "📘 Начать урок",
@@ -157,6 +159,8 @@ TEXTS = {
         "image_invalid_format": "Этот формат не поддерживается. Пожалуйста, отправьте изображение как фото или image-файл.",
         "subscription_discount_plan_10_days": "10 дней — 23 сомони",
         "subscription_discount_plan_1_month": "1 месяц — 71 сомони",
+        "subscription_discount_plan_10_days_yuan": "10 дней — 23 ¥",
+        "subscription_discount_plan_1_month_yuan": "1 месяц — 53 ¥",
 
         "subscription_checkout_title": "Вы выбрали эту подписку:",
         "subscription_price_label": "Цена",
@@ -197,7 +201,7 @@ TEXTS = {
         "language_selected": "Til tanlandi ✅",
         "level_saved_explained": "✅ Darajangiz saqlandi. Bu darslarni sizga moslashtirishga yordam beradi.",
         "trial_started_info": "🎁 Sizga bepul kirish ochildi.\nHar kuni 5 ta matn va 1 ta rasm yuborishingiz mumkin — bemalol foydalaning.",
-        "send_first_message": "Endi xitoycha so‘z, gap yoki savolingizni yuboring — darsni o‘sha yerdan boshlaymiz.",
+        "send_first_message": "Endi inglizcha so’z, gap yoki savolingizni yuboring — darsni o’sha yerdan boshlaymiz.",
         "level_beginner": "0 dan",
 
         "menu_start_lesson": "📘 Darsni boshlash",
@@ -248,6 +252,8 @@ TEXTS = {
 
         "subscription_discount_plan_10_days": "10 kunlik — 23 somoni",
         "subscription_discount_plan_1_month": "1 oylik — 71 somoni",
+        "subscription_discount_plan_10_days_yuan": "10 kunlik — 23 ¥",
+        "subscription_discount_plan_1_month_yuan": "1 oylik — 53 ¥",
 
         "subscription_checkout_title": "Siz ushbu obunani tanladingiz:",
         "subscription_price_label": "Narx",
@@ -310,14 +316,14 @@ def t(key: str, lang: str = "ru", **kwargs) -> str:
     return text
 COURSE_I18N = {
     "tj": {
-        "course_locked_title": "📚 Курси HSK танҳо барои обуначиён",
+        "course_locked_title": "📚 Курси CEFR танҳо барои обуначиён",
         "course_locked_text": "Режими курс танҳо барои корбарони фаъол кушода аст. Бо обуна ба дарсҳои пайдарпай, тест ва вазифаи хонагӣ дастрасӣ мегиред.",
-        "course_mode_subscription_benefit": "Бо обуна режими Курси HSK низ кушода мешавад.",
+        "course_mode_subscription_benefit": "Бо обуна режими Курси CEFR низ кушода мешавад.",
         "course_start_button": "📚 Оғози курс",
         "course_continue_button": "📖 Давом додани дарс",
         "course_back_to_qa_button": "↩️ Бозгашт ба савол-ҷавоб",
 
-        "course_menu_title": "📚 Режими Курси HSK",
+        "course_menu_title": "📚 Режими Курси CEFR",
         "course_continue": "📖 Давом додани дарс",
         "course_review_last": "🔁 Боздиди дарси охирин",
         "course_retry_test": "📝 Аз нав супоридани тест",
@@ -326,7 +332,7 @@ COURSE_I18N = {
         "course_back_to_qa": "↩️ Ба режими савол-ҷавоб",
         "qa_mode_title": "💬 Режими саволу ҷавоб",
         "course_mode_title": "📚 Режими курс",
-        "help_section_text": "<b>🤖 Бахши ёрӣ</b>\n\n<blockquote>💬 <b>Режими саволу ҷавоб</b>\n— Шумо метавонед ҳар гуна савол диҳед\n— Калима, ҷумла ва грамматикаро мефаҳмонад\n— Агар сурат фиристед, матнро дида мефаҳмонад\n— Барои истифодаи зуд ва озод\n\n📚 <b>Режими курс</b>\n— Омӯзиши дарс ба дарс\n— Дар ҳар дарс калимаҳо, грамматика ва машқҳо ҳастанд\n— Бо тартиб давом медиҳед\n— Барои пешрафти пайдарпай\n\n⚙️ <b>Фармонҳои асосӣ</b>\n👤 /profile — профили шумо\n💳 /subscription — бахши обуна\n🌐 /language — иваз кардани забон\n📖 /level — иваз кардани дараҷа\n📚 /course — режими курс\n💬 /qa — режими саволу ҷавоб\n🎁 /invite — силкаи даъват</blockquote>\n\n⚠️ <b>Aгар муаммо бошад, ба техподдержка нависед:</b>\n@akbarchina",
+        "help_section_text": "<b>🤖 Бахши ёрӣ</b>\n\n<blockquote>💬 <b>Режими саволу ҷавоб</b>\n— Шумо метавонед ҳар гуна савол диҳед\n— Калима, ҷумла ва грамматикаро мефаҳмонад\n— Агар сурат фиристед, матнро дида мефаҳмонад\n— Барои истифодаи зуд ва озод\n\n📚 <b>Режими курс</b>\n— Омӯзиши дарс ба дарс\n— Дар ҳар дарс калимаҳо, грамматика ва машқҳо ҳастанд\n— Бо тартиб давом медиҳед\n— Барои пешрафти пайдарпай\n\n⚙️ <b>Фармонҳои асосӣ</b>\n👤 /profile — профили шумо\n💳 /subscription — бахши обуна\n🌐 /language — иваз кардани забон\n📖 /level — иваз кардани дараҷа\n📚 /course — режими курс\n💬 /qa — режими саволу ҷавоб\n🎁 /invite — силкаи даъват</blockquote>\n\n⚠️ <b>Aгар муаммо бошад, ба техподдержка нависед:</b>\n@AkbarShoh_EN_bot",
 
         "course_intro_title": "📘 Муқаддимаи дарс",
         "course_vocab_title": "📝 Калимаҳои нав",
@@ -362,7 +368,7 @@ COURSE_I18N = {
         "course_next_lesson_offer": "Дарси навро оғоз мекунем?",
 
         "course_choose_lesson": "Аз кадом дарс мехоҳед оғоз кунед?",
-        "choose_mode_after_level": "<b>🤖 Шумо мехоҳед хитоиро бо кадом усул омӯзед?</b>\n\n<blockquote>💬 <b>Режими саволу ҷавоб</b> — ҷавобҳои зуд\n📸 <b>Кор бо сурат</b> — матн ва иероглифҳоро мефаҳмонам\n🗣 <b>Муоширати озод</b> — саволҳои оддӣ ва машқ</blockquote>\n\n<blockquote>📚 <b>Режими курс</b> — дарс ба дарс\n📝 <b>Машқ ва тест</b> — мустаҳкамкунӣ\n🎯 <b>Пешрафти пайдарпай</b> — омӯзиши тартибнок</blockquote>\n\n👇 <b>Режимро интихоб кунед</b>",
+        "choose_mode_after_level": "<b>🤖 Шумо мехоҳед англисиро бо кадом усул омӯзед?</b>\n\n<blockquote>💬 <b>Режими саволу ҷавоб</b> — ҷавобҳои зуд\n📸 <b>Кор бо сурат</b> — матн ва калимаҳоро мефаҳмонам\n🗣 <b>Муоширати озод</b> — саволҳои оддӣ ва машқ</blockquote>\n\n<blockquote>📚 <b>Режими курс</b> — дарс ба дарс\n📝 <b>Машқ ва тест</b> — мустаҳкамкунӣ\n🎯 <b>Пешрафти пайдарпай</b> — омӯзиши тартибнок</blockquote>\n\n👇 <b>Режимро интихоб кунед</b>",
         "course_lesson_satisfaction_question": "Мо ин дарсро пурра анҷом додем. Аз дарс қонеъ шудед?",
         "course_lesson_satisfied_yes": "✅ Ҳа",
         "course_lesson_satisfied_no": "❌ Не",
@@ -406,14 +412,14 @@ COURSE_I18N = {
     },
 
     "ru": {
-        "course_locked_title": "📚 Курс HSK только для подписчиков",
+        "course_locked_title": "📚 Курс CEFR только для подписчиков",
         "course_locked_text": "Режим курса открыт только для активных пользователей. С подпиской вы получите доступ к пошаговым урокам, тестам и домашним заданиям.",
-        "course_mode_subscription_benefit": "С подпиской также открывается режим Курса HSK.",
+        "course_mode_subscription_benefit": "С подпиской также открывается режим Курса CEFR.",
         "course_start_button": "📚 Начать курс",
         "course_continue_button": "📖 Продолжить урок",
         "course_back_to_qa_button": "↩️ Вернуться к вопрос-ответ",
 
-        "course_menu_title": "📚 Режим курса HSK",
+        "course_menu_title": "📚 Режим курса CEFR",
         "course_continue": "📖 Продолжить урок",
         "course_review_last": "🔁 Повторить последний урок",
         "course_retry_test": "📝 Пересдать тест",
@@ -422,7 +428,7 @@ COURSE_I18N = {
         "course_back_to_qa": "↩️ В режим вопрос-ответ",
         "qa_mode_title": "💬 Вопрос-ответ",
         "course_mode_title": "📚 Режим курса",
-        "help_section_text": "<b>🤖 Раздел помощи</b>\n\n<blockquote>💬 <b>Режим вопрос-ответ</b>\n— Вы можете задать любой вопрос по китайскому языку\n— Бот объясняет слова, предложения и грамматику\n— Если отправите фото, бот разберёт текст\n— Для быстрого и свободного использования\n\n📚 <b>Режим курса</b>\n— Пошаговое обучение\n— В каждом уроке есть слова, грамматика и упражнения\n— Вы продолжаете по порядку\n— Для последовательного прогресса\n\n⚙️ <b>Основные команды</b>\n👤 /profile — ваш профиль\n💳 /subscription — раздел подписки\n🌐 /language — сменить язык\n📖 /level — сменить уровень\n📚 /course — режим курса\n💬 /qa — режим вопрос-ответ\n🎁 /invite — пригласительная ссылка</blockquote>\n\n⚠️ <b>Если возникнет проблема, напишите в техподдержку:</b>\n@akbarchina",
+        "help_section_text": "<b>🤖 Раздел помощи</b>\n\n<blockquote>💬 <b>Режим вопрос-ответ</b>\n— Вы можете задать любой вопрос по английскому языку\n— Бот объясняет слова, предложения и грамматику\n— Если отправите фото, бот разберёт текст\n— Для быстрого и свободного использования\n\n📚 <b>Режим курса</b>\n— Пошаговое обучение\n— В каждом уроке есть слова, грамматика и упражнения\n— Вы продолжаете по порядку\n— Для последовательного прогресса\n\n⚙️ <b>Основные команды</b>\n👤 /profile — ваш профиль\n💳 /subscription — раздел подписки\n🌐 /language — сменить язык\n📖 /level — сменить уровень\n📚 /course — режим курса\n💬 /qa — режим вопрос-ответ\n🎁 /invite — пригласительная ссылка</blockquote>\n\n⚠️ <b>Если возникнет проблема, напишите в техподдержку:</b>\n@AkbarShoh_EN_bot",
 
         "course_intro_title": "📘 Введение в урок",
         "course_vocab_title": "📝 Новые слова",
@@ -449,7 +455,7 @@ COURSE_I18N = {
         "course_next_lesson_offer": "Начнём следующий урок?",
 
         "course_choose_lesson": "С какого урока хотите начать?",
-        "choose_mode_after_level": "<b>🤖 Как вы хотите изучать китайский язык?</b>\n\n<blockquote>💬 <b>Режим вопрос-ответ</b> — быстрые ответы\n📸 <b>Работа с фото</b> — разбор текста и иероглифов\n🗣 <b>Свободное общение</b> — простые вопросы и практика</blockquote>\n\n<blockquote>📚 <b>Режим курса</b> — пошаговые уроки\n📝 <b>Упражнения и тесты</b> — закрепление материала\n🎯 <b>Последовательный прогресс</b> — системное обучение</blockquote>\n\n👇 <b>Выберите режим</b>",
+        "choose_mode_after_level": "<b>🤖 Как вы хотите изучать английский язык?</b>\n\n<blockquote>💬 <b>Режим вопрос-ответ</b> — быстрые ответы\n📸 <b>Работа с фото</b> — разбор текста и слов\n🗣 <b>Свободное общение</b> — простые вопросы и практика</blockquote>\n\n<blockquote>📚 <b>Режим курса</b> — пошаговые уроки\n📝 <b>Упражнения и тесты</b> — закрепление материала\n🎯 <b>Последовательный прогресс</b> — системное обучение</blockquote>\n\n👇 <b>Выберите режим</b>",
         "course_lesson_satisfaction_question": "Мы полностью завершили этот урок. Вы довольны уроком?",
         "course_lesson_satisfied_yes": "✅ Да",
         "course_lesson_satisfied_no": "❌ Нет",
@@ -487,7 +493,7 @@ COURSE_I18N = {
         "course_reminder_disabled": "❌ Напоминание выключено.",
         "course_reminder_choose_time": "⏰ Выберите время напоминания.",
         "course_reminder_saved": "✅ Время напоминания сохранено.",
-        "course_reminder_text": "⏰ Пора заниматься. Продолжите ваш курс HSK.",
+        "course_reminder_text": "⏰ Пора заниматься. Продолжите ваш курс CEFR.",
 
         "course_no_lesson_found": "Урок не найден.",
         "course_lesson_not_unlocked": "Этот урок пока не открыт.",
@@ -502,14 +508,14 @@ COURSE_I18N = {
     },
 
     "uz": {
-        "course_locked_title": "📚 HSK kursi faqat obunachilar uchun",
+        "course_locked_title": "📚 CEFR kursi faqat obunachilar uchun",
         "course_locked_text": "Kurs rejimi faqat active foydalanuvchilar uchun ochiq. Obuna bilan siz bosqichma-bosqich darslar, testlar va uyga vazifalarga kirish olasiz.",
-        "course_mode_subscription_benefit": "Obuna bilan HSK Kurs rejimi ham ochiladi.",
+        "course_mode_subscription_benefit": "Obuna bilan CEFR Kurs rejimi ham ochiladi.",
         "course_start_button": "📚 Kursni boshlash",
         "course_continue_button": "📖 Darsni davom ettirish",
         "course_back_to_qa_button": "↩️ Savol-javobga qaytish",
 
-        "course_menu_title": "📚 HSK Kurs rejimi",
+        "course_menu_title": "📚 CEFR Kurs rejimi",
         "course_continue": "📖 Darsni davom ettirish",
         "course_review_last": "🔁 Oxirgi darsni qayta ko‘rish",
         "course_retry_test": "📝 Testni qayta topshirish",
@@ -518,7 +524,7 @@ COURSE_I18N = {
         "course_back_to_qa": "↩️ Savol-javob rejimiga qaytish",
         "qa_mode_title": "💬 Savol-javob",
         "course_mode_title": "📚 Kurs rejimi",
-        "help_section_text": "<b>🤖 Yordam bo‘limi</b>\n\n<blockquote>💬 <b>Savol-javob rejimi</b>\n— Xitoy tili bo‘yicha istalgan savol berasiz\n— So‘z, gap va grammatikani tushuntiradi\n— Foto yuborsangiz, matnni ko‘rib tushuntiradi\n— Tez va erkin foydalanish uchun\n\n📚 <b>Kurs rejimi</b>\n— Darsma-dars o‘rganasiz\n— Har bir dars ichida so‘zlar, grammatika va mashqlar bor\n— Tartib bilan davom etasiz\n— Izchil progress uchun\n\n⚙️ <b>Asosiy komandalar</b>\n👤 /profile — profilingiz\n💳 /subscription — obuna bo‘limi\n🌐 /language — tilni o‘zgartirish\n📖 /level — darajani o‘zgartirish\n📚 /course — kurs rejimi\n💬 /qa — savol-javob rejimi\n🎁 /invite — taklif havolasi</blockquote>\n\n⚠️ <b>Agar muammo bo‘lsa, tex yordamga yozing:</b>\n@akbarchina",
+        "help_section_text": "<b>🤖 Yordam bo’limi</b>\n\n<blockquote>💬 <b>Savol-javob rejimi</b>\n— Ingliz tili bo’yicha istalgan savol berasiz\n— So’z, gap va grammatikani tushuntiradi\n— Foto yuborsangiz, matnni ko’rib tushuntiradi\n— Tez va erkin foydalanish uchun\n\n📚 <b>Kurs rejimi</b>\n— Darsma-dars o’rganasiz\n— Har bir dars ichida so’zlar, grammatika va mashqlar bor\n— Tartib bilan davom etasiz\n— Izchil progress uchun\n\n⚙️ <b>Asosiy komandalar</b>\n👤 /profile — profilingiz\n💳 /subscription — obuna bo’limi\n🌐 /language — tilni o’zgartirish\n📖 /level — darajani o’zgartirish\n📚 /course — kurs rejimi\n💬 /qa — savol-javob rejimi\n🎁 /invite — taklif havolasi</blockquote>\n\n⚠️ <b>Agar muammo bo’lsa, tex yordamga yozing:</b>\n@AkbarShoh_EN_bot",
 
         "course_intro_title": "📘 Darsga kirish",
         "course_vocab_title": "📝 Yangi so‘zlar",
@@ -581,10 +587,10 @@ COURSE_I18N = {
         "course_reminder_disabled": "❌ Eslatma o‘chirildi.",
         "course_reminder_choose_time": "⏰ Eslatma vaqtini tanlang.",
         "course_reminder_saved": "✅ Eslatma vaqti saqlandi.",
-        "course_reminder_text": "⏰ Bugungi dars vaqti bo‘ldi. HSK kursingizni davom ettiring.",
+        "course_reminder_text": "⏰ Bugungi dars vaqti bo’ldi. CEFR kursingizni davom ettiring.",
 
         "course_choose_lesson": "Qaysi darsdan boshlamoqchisiz?",
-        "choose_mode_after_level": "<b>🤖 Xitoy tilini qaysi usulda o‘rganmoqchisiz?</b>\n\n<blockquote>💬 <b>Savol-javob rejimi</b> — tez javoblar\n📸 <b>Foto bilan ishlash</b> — matn va ierogliflarni tushuntiraman\n🗣 <b>Erkin muloqot</b> — oddiy savollar va practice</blockquote>\n\n<blockquote>📚 <b>Kurs rejimi</b> — darsma-dars\n📝 <b>Mashq va testlar</b> — mustahkamlash\n🎯 <b>Izchil progress</b> — tartibli o‘rganish</blockquote>\n\n👇 <b>Rejimni tanlang</b>",
+        "choose_mode_after_level": "<b>🤖 Ingliz tilini qaysi usulda o’rganmoqchisiz?</b>\n\n<blockquote>💬 <b>Savol-javob rejimi</b> — tez javoblar\n📸 <b>Foto bilan ishlash</b> — matn va so’zlarni tushuntiraman\n🗣 <b>Erkin muloqot</b> — oddiy savollar va practice</blockquote>\n\n<blockquote>📚 <b>Kurs rejimi</b> — darsma-dars\n📝 <b>Mashq va testlar</b> — mustahkamlash\n🎯 <b>Izchil progress</b> — tartibli o’rganish</blockquote>\n\n👇 <b>Rejimni tanlang</b>",
         "course_no_lesson_found": "Dars topilmadi.",
         "course_lesson_not_unlocked": "Bu dars hali ochilmagan.",
         "course_step_completed": "✅ Qism tugadi.",
