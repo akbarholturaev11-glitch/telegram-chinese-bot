@@ -62,6 +62,8 @@ TEXTS = {
 
         "subscription_discount_plan_10_days": "10 рӯз — 23 сомонӣ",
         "subscription_discount_plan_1_month": "1 моҳ — 71 сомонӣ",
+        "subscription_discount_plan_10_days_yuan": "10 рӯз — 23 ¥",
+        "subscription_discount_plan_1_month_yuan": "1 моҳ — 53 ¥",
 
         "subscription_checkout_title": "Шумо ин обунаро интихоб кардед:",
         "subscription_price_label": "Нарх",
@@ -71,6 +73,7 @@ TEXTS = {
         "subscription_discount_counter_progress": "{count}/3",
         "subscription_choose_plan_first": "Аввал тарифро интихоб кунед.",
         "subscription_expires_tomorrow": "Фардо рӯзи ба анҷом расидани обунаи шумост.",
+        "daily_limit_renewed": "✅ Лимити рӯзонаи шумо навшуд. Метавонед аз нав истифода баред.",
       
         "payment_details_label": "Реквизити пардохт",
         "payment_invalid_plan": "Тарифи интихобшуда нодуруст аст.",
@@ -123,6 +126,7 @@ TEXTS = {
         "referral_invite_button": "👥 Пригласить друга",
         "referral_bonus_received": "Ваше приглашение принято ✅\nВам начислено +5 бонусных вопросов. Теперь вы снова можете пользоваться ботом.",
         "subscription_expires_tomorrow": "Завтра день окончания вашей подписки.",
+        "daily_limit_renewed": "✅ Ваш дневной лимит обновлён. Снова можете пользоваться ботом.",
         "access_payment_pending_review": "Ваш платёж отправлен на проверку. Пожалуйста, дождитесь подтверждения администратора.",
         "subscription_discount_text_blocked": "Вы уже используете скидку. Вернитесь к обычной подписке.",
 
@@ -157,6 +161,8 @@ TEXTS = {
         "image_invalid_format": "Этот формат не поддерживается. Пожалуйста, отправьте изображение как фото или image-файл.",
         "subscription_discount_plan_10_days": "10 дней — 23 сомони",
         "subscription_discount_plan_1_month": "1 месяц — 71 сомони",
+        "subscription_discount_plan_10_days_yuan": "10 дней — 23 ¥",
+        "subscription_discount_plan_1_month_yuan": "1 месяц — 53 ¥",
 
         "subscription_checkout_title": "Вы выбрали эту подписку:",
         "subscription_price_label": "Цена",
@@ -248,6 +254,8 @@ TEXTS = {
 
         "subscription_discount_plan_10_days": "10 kunlik — 23 somoni",
         "subscription_discount_plan_1_month": "1 oylik — 71 somoni",
+        "subscription_discount_plan_10_days_yuan": "10 kunlik — 23 ¥",
+        "subscription_discount_plan_1_month_yuan": "1 oylik — 53 ¥",
 
         "subscription_checkout_title": "Siz ushbu obunani tanladingiz:",
         "subscription_price_label": "Narx",
@@ -256,7 +264,8 @@ TEXTS = {
         "subscription_discount_counter_done": "✅ 3/3",
         "subscription_discount_counter_progress": "{count}/3",
         "subscription_choose_plan_first": "Avval tarifni tanlang.",
-        "subscription_expires_tomorrow": "Ertaga obunangiz tugash kuni.", 
+        "subscription_expires_tomorrow": "Ertaga obunangiz tugash kuni.",
+        "daily_limit_renewed": "✅ Kunlik limitingiz yangilandi. Yana foydalana olasiz.",
         "access_payment_pending_review": "To‘lovingiz tekshiruvga yuborildi. Iltimos, admin tasdig‘ini kuting.",
 
         "payment_details_label": "To‘lov rekviziti",   

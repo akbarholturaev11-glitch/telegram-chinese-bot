@@ -22,6 +22,11 @@ class AccessService:
             return dt.date() < self._today_utc_date()
         return dt < self._today_utc_date()
 
+    async def _downgrade_expired_user(self, user) -> None:
+        user.status = "trial"
+        user.end_date = None
+        await self.session.flush()
+
     async def can_use_text_ai(self, telegram_id: int) -> Tuple[bool, str]:
         user = await self.user_repo.get_by_telegram_id(telegram_id)
         if not user:
@@ -37,11 +42,14 @@ class AccessService:
 
         if user.status == "active":
             if self._is_date_expired(user.end_date):
-                return False, "access_subscription_expired"
-            return True, ""
+                await self._downgrade_expired_user(user)
+                # falls through to trial logic below
+            else:
+                return True, ""
 
         if user.status == "expired":
-            return False, "access_subscription_expired"
+            await self._downgrade_expired_user(user)
+            # falls through to trial logic below
 
         from datetime import datetime, timedelta, timezone    
 
@@ -78,26 +86,26 @@ class AccessService:
 
         if user.status == "active":
             if self._is_date_expired(user.end_date):
-                return False, "access_subscription_expired"
-            return True, ""
+                await self._downgrade_expired_user(user)
+                # falls through to trial logic below
+            else:
+                return True, ""
 
         if user.status == "expired":
-            return False, "access_subscription_expired"
+            await self._downgrade_expired_user(user)
+            # falls through to trial logic below
 
         if user.status == "trial":
 
             from datetime import datetime, timedelta, timezone
             now = datetime.now(timezone.utc)
-        
+
             if not user.last_limit_reset_at:
                 user.last_limit_reset_at = now
                 user.questions_used = 0
             elif now - user.last_limit_reset_at >= timedelta(days=1):
                 user.last_limit_reset_at = now
                 user.questions_used = 0
-
-            if self._is_date_expired(user.end_date):
-                return False, "access_trial_expired"
 
             today_image_count = await self.message_repo.count_user_messages_today(
                 user_id=user.id,
