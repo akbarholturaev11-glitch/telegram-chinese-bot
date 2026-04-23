@@ -39,9 +39,9 @@ async def cmd_start(
         )
         return
 
-    welcome_msg = await message.answer(t("welcome", user.language, name=first_name))
+    welcome_msg = await message.answer(t("welcome", user.language or "en", name=first_name))
     choose_lang_msg = await message.answer(
-        t("choose_language", user.language),
+        t("choose_language", user.language or "en"),
         reply_markup=language_keyboard(),
     )
 

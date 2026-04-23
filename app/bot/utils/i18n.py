@@ -195,6 +195,106 @@ TEXTS = {
         "admin_approve_button": "✅ Подтвердить",
         "admin_reject_button": "❌ Отклонить",
     },
+    "en": {
+        "welcome": "Welcome, {name}!",
+        "welcome_back": "Welcome back, {name}!\nLet's continue your lesson.",
+        "choose_language": "Choose your language:",
+        "choose_level": "Choose your level:",
+        "language_selected": "Language selected ✅",
+        "level_saved_explained": "✅ Your level has been saved. This helps us tailor lessons to your needs.",
+        "trial_started_info": "🎁 Free access has been unlocked for you.\nYou can send up to 5 messages and 1 image per day — enjoy!",
+        "send_first_message": "Now send a Chinese word, sentence, or question — and we'll start your lesson from there.",
+        "level_beginner": "From scratch",
+
+        "menu_start_lesson": "📘 Start Lesson",
+        "menu_profile": "👤 Profile",
+        "menu_subscription": "💳 Subscription",
+
+        "access_start_first": "Please press /start first.",
+        "access_blocked": "Your profile has been blocked.",
+        "access_trial_expired": "Your trial period has ended. A subscription is required to continue.",
+        "access_daily_limit_reached": "You've reached your daily limit.",
+        "access_subscription_expired": "Your subscription has expired. Please subscribe again.",
+        "access_payment_pending_review": "Your payment has been sent for review. Please wait for admin confirmation.",
+
+        "referral_daily_limit_offer": "You've reached your daily limit. Invite a friend and get +5 bonus questions. Or you can subscribe.",
+
+        "access_daily_image_limit_reached": "<b>📸 Image limit reached</b>\n\n<blockquote>You've reached your daily image limit.\nSubscribe and use the bot without any restrictions.</blockquote>",
+        "referral_invite_button": "👥 Invite a Friend",
+        "referral_bonus_received": "Your invitation was accepted ✅\nYou've been given +5 bonus questions. You can now use the bot again.",
+
+        "payment_back": "⬅️ Back",
+        "btn_visa": "💳 VISA",
+        "btn_alipay": "Alipay",
+        "btn_wechat": "WeChatpay",
+
+        "payment_method_choose": "<b>💳 Choose a payment method:</b>",
+        "subscription_block": "<blockquote>\n💳 <b>Choose a subscription:</b>\n\n🚀 After subscribing, you can use the bot without any limits.\n\n📅 10 days — 29 ¥\n📅 1 month — 89 ¥\n\n👥 Invite 3 friends and get 🎁 20% off.\n\n📲 Scan the QR code to pay\n</blockquote>",
+        "subscription_checkout_block": "<blockquote>\n💳 <b>You have selected this subscription:</b>\n\n📦 Plan: <b>{plan}</b>\n💰 Price: <b>{price} ¥</b>\n\n📲 <b>Payment details:</b>\nPay via QR code\n\n👤 NAME: Akbarshoh\n\n📸 After payment, send a screenshot\n</blockquote>",
+
+        "subscription_main_title": "Choose a subscription:\nAfter subscribing, you can use the bot without any limits.",
+        "subscription_plan_10_days": "10 days — 29 somoni",
+        "subscription_plan_1_month": "1 month — 89 somoni",
+        "subscription_plan_10_days_yuan": "10 days — 29 ¥",
+        "subscription_plan_1_month_yuan": "1 month — 66 ¥",
+        "checkout_qr_scan": "Scan the QR code to pay.",
+        "checkout_title_visa": "💳 You have selected this subscription:",
+        "checkout_title_qr": "📱 Pay via QR code:",
+        "subscription_referral_discount_button": "👥 Invite a Friend",
+        "subscription_button_10_days": "10 days",
+        "subscription_button_1_month": "1 month",
+        "subscription_referral_hint": "Invite 3 new friends and get a 20% discount.",
+        "subscription_invite_button": "👥 Invite a Friend",
+        "subscription_back_to_main": "⬅️ Back to regular subscription",
+        "subscription_discount_text_blocked": "You are already in the 20% discount section. Please use the invite link or return to the regular subscription.",
+
+        "checkout_change_plan_button": "🔄 Change plan",
+        "payment_send_screenshot_only": "Please send only the payment screenshot.",
+
+        "subscription_discount_title": "You've chosen to get a 20% discount.",
+        "subscription_discount_link_label": "This is your invite link:",
+        "subscription_discount_progress": "Counter: {count}/3",
+        "subscription_discount_ready": "✅ 20% discount activated.",
+
+        "subscription_discount_plan_10_days": "10 days — 23 somoni",
+        "subscription_discount_plan_1_month": "1 month — 71 somoni",
+        "subscription_discount_plan_10_days_yuan": "10 days — 23 ¥",
+        "subscription_discount_plan_1_month_yuan": "1 month — 53 ¥",
+
+        "subscription_checkout_title": "You have selected this subscription:",
+        "subscription_price_label": "Price",
+        "subscription_discounted_price_label": "Discounted price",
+        "subscription_original_price_label": "Original price",
+        "subscription_discount_counter_done": "✅ 3/3",
+        "subscription_discount_counter_progress": "{count}/3",
+        "subscription_choose_plan_first": "Please select a plan first.",
+        "subscription_expires_tomorrow": "Tomorrow is the last day of your subscription.",
+        "daily_limit_renewed": "✅ Your daily limit has been renewed. You can use the bot again.",
+
+        "payment_details_label": "Payment details",
+        "payment_invalid_plan": "The selected plan is invalid.",
+        "payment_send_screenshot": "Please send the payment screenshot after paying.",
+        "payment_pending_created": "Payment request created.",
+        "payment_waiting_review": "Your subscription will be activated after review.",
+        "payment_screenshot_received": "Payment screenshot received ✅\nYour subscription will be activated after review.",
+        "subscription_payment_request_sent": "Payment request sent to admin.",
+
+        "admin_payment_not_found": "Payment not found.",
+        "admin_payment_already_reviewed": "This payment has already been reviewed.",
+        "user_payment_approved": "Your payment has been confirmed ✅\nYour subscription is now active.",
+        "user_payment_rejected": "Your payment was rejected ❌\nPlease check your payment and try again.",
+
+        "admin_payment_new_request": "New payment request",
+        "admin_payment_id": "Payment ID",
+        "admin_payment_user_id": "Telegram ID",
+        "admin_payment_full_name": "Name",
+        "admin_payment_plan": "Plan",
+        "admin_payment_amount": "Amount",
+
+        "admin_approve_button": "✅ Approve",
+        "admin_reject_button": "❌ Reject",
+        "image_invalid_format": "This format is not supported. Please send the image as a photo or image file.",
+    },
     "uz": {
         "welcome": "Xush kelibsiz, {name}!",
         "welcome_back": "Xush kelibsiz, {name}!\nDarsni davom ettiramiz.",
@@ -294,8 +394,8 @@ TEXTS = {
 }
 
 
-def t(key: str, lang: str = "ru", **kwargs) -> str:
-    lang = lang if lang in TEXTS else "ru"
+def t(key: str, lang: str = "en", **kwargs) -> str:
+    lang = lang if lang in TEXTS else "en"
 
     text = TEXTS.get(lang, {}).get(key)
 
@@ -510,6 +610,101 @@ COURSE_I18N = {
         "course_ai_followup_blocked": "Сейчас вы в режиме курса. Ваш вопрос будет обработан в рамках текущего урока."
     },
 
+    "en": {
+        "course_locked_title": "📚 HSK Course is for subscribers only",
+        "course_locked_text": "Course mode is available for active subscribers only. With a subscription you get access to step-by-step lessons, quizzes, and homework.",
+        "course_mode_subscription_benefit": "Subscribing also unlocks the HSK Course mode.",
+        "course_start_button": "📚 Start Course",
+        "course_continue_button": "📖 Continue Lesson",
+        "course_back_to_qa_button": "↩️ Back to Q&A",
+
+        "course_menu_title": "📚 HSK Course Mode",
+        "course_continue": "📖 Continue Lesson",
+        "course_review_last": "🔁 Review Last Lesson",
+        "course_retry_test": "📝 Retry Quiz",
+        "course_progress": "📊 Progress",
+        "course_reminder_settings": "⏰ Reminder Settings",
+        "course_back_to_qa": "↩️ Back to Q&A Mode",
+        "qa_mode_title": "💬 Q&A Mode",
+        "course_mode_title": "📚 Course Mode",
+        "help_section_text": "<b>🤖 Help Section</b>\n\n<blockquote>💬 <b>Q&amp;A Mode</b>\n— Ask any question about Chinese\n— Get explanations for words, sentences, and grammar\n— Send a photo and the bot will read and explain the text\n— For quick and flexible use\n\n📚 <b>Course Mode</b>\n— Step-by-step learning\n— Each lesson includes vocabulary, grammar, and exercises\n— Follow a structured path\n— For steady, systematic progress\n\n⚙️ <b>Main Commands</b>\n👤 /profile — your profile\n💳 /subscription — subscription section\n🌐 /language — change language\n📖 /level — change level\n📚 /course — course mode\n💬 /qa — Q&amp;A mode\n🎁 /invite — invite link</blockquote>\n\n⚠️ <b>If you have an issue, contact support:</b>\n@akbarchina",
+
+        "course_intro_title": "📘 Lesson Introduction",
+        "course_vocab_title": "📝 New Vocabulary",
+        "course_dialogue_title": "💬 Dialogue / Text",
+        "course_grammar_title": "📚 Grammar",
+        "course_exercise_title": "✍️ Exercise",
+        "course_quiz_title": "✅ Quiz",
+        "course_homework_title": "🏠 Homework",
+        "course_completed_title": "🎉 Lesson Completed",
+        "course_next_step": "➡️ Next Section",
+        "course_prev_step": "⬅️ Previous Section",
+        "course_start_quiz": "✅ Start Quiz",
+        "course_review": "🔁 Review",
+        "course_homework_button": "🏠 View Homework",
+
+        "course_passed": "✅ You passed the quiz.",
+        "course_failed": "❌ You didn't pass the quiz. Please try again.",
+        "course_score": "Score: {score}",
+        "course_next_lesson_unlocked": "🔓 Next lesson unlocked.",
+        "course_try_again": "🔁 Try Again",
+        "course_current_lesson": "Current Lesson",
+        "course_completed_lessons": "Completed Lessons",
+        "course_no_progress": "You don't have any saved progress yet.",
+
+        "course_resume_lesson": "📖 Continue Lesson",
+        "course_start_next_lesson": "🚀 Start Next Lesson",
+        "course_review_yesterday": "🔁 Review Yesterday's Lesson",
+        "course_skip_review": "➡️ Skip to New Lesson",
+        "course_start_homework": "🏠 View Homework",
+
+        "course_review_offer": "Shall we do a quick recap of yesterday's lesson?",
+        "course_resume_offer": "You have an unfinished lesson. Shall we continue?",
+        "course_next_lesson_offer": "Ready to start the next lesson?",
+
+        "course_choose_lesson": "Which lesson would you like to start from?",
+        "choose_mode_after_level": "<b>🤖 How would you like to learn Chinese?</b>\n\n<blockquote>💬 <b>Q&amp;A Mode</b> — quick answers\n📸 <b>Photo Mode</b> — explain text and characters from images\n🗣 <b>Free Chat</b> — casual questions and practice</blockquote>\n\n<blockquote>📚 <b>Course Mode</b> — step-by-step lessons\n📝 <b>Exercises &amp; Quizzes</b> — reinforce what you've learned\n🎯 <b>Steady Progress</b> — structured learning</blockquote>\n\n👇 <b>Choose a mode</b>",
+        "course_lesson_satisfaction_question": "We've completed this lesson. Are you happy with it?",
+        "course_lesson_satisfied_yes": "✅ Yes",
+        "course_lesson_satisfied_no": "❌ No",
+        "course_lesson_what_unclear": "Which part of the lesson was unclear to you?",
+        "course_lesson_reexplaining": "Sure, I'll explain that part more simply and with more examples.",
+        "course_lesson_homework_intro": "Great. Now for your homework:",
+        "course_lesson_completed_after_homework": "✅ Lesson completed. When you're ready, we'll move on to the next lesson.",
+        "course_homework_received": "✅ Homework received.",
+        "course_next_study_time_optional": "If you'd like, choose the time for your next lesson. Otherwise, feel free to skip.",
+        "course_next_study_time_skipped": "Got it, we'll continue without setting a time.",
+        "course_complete_homework_first": "Please submit your homework first.",
+        "yes": "Yes",
+        "no": "No",
+        "course_review_choice": "Shall we do a quick recap of the last lesson?",
+        "course_review_then_homework": "Sure, we'll do a quick recap first, then you can submit your homework.",
+        "course_skip_review_next_lesson": "Got it, skipping the recap and moving to the next lesson.",
+        "course_invalid_time_format": "Invalid time format. Example: 19:00",
+        "course_next_study_time_saved": "✅ Next lesson time saved.",
+
+        "course_yes_button": "✅ Yes",
+        "course_no_button": "❌ No",
+        "course_test_start_button": "✅ Start Quiz",
+        "course_next_lesson_button": "🚀 Next Lesson",
+
+        "course_reminder_enabled": "✅ Reminder enabled.",
+        "course_reminder_disabled": "❌ Reminder disabled.",
+        "course_reminder_choose_time": "⏰ Choose the reminder time.",
+        "course_reminder_saved": "✅ Reminder time saved.",
+        "course_reminder_text": "⏰ Time for today's lesson. Continue your HSK course.",
+
+        "course_no_lesson_found": "Lesson not found.",
+        "course_lesson_not_unlocked": "This lesson is not yet unlocked.",
+        "course_step_completed": "✅ Section completed.",
+        "course_wait_for_answer": "Please answer the question first.",
+        "course_only_active_users": "Course mode is only available for active subscribers.",
+        "course_choose_mode_first": "Please choose a course mode first.",
+        "course_lesson_started": "📚 Lesson started.",
+        "course_test_submitted": "📝 Quiz submitted.",
+        "course_homework_saved": "✅ Homework saved.",
+        "course_ai_followup_blocked": "You are currently in course mode. Your question will be processed within the current lesson."
+    },
     "uz": {
         "course_locked_title": "📚 HSK kursi faqat obunachilar uchun",
         "course_locked_text": "Kurs rejimi faqat active foydalanuvchilar uchun ochiq. Obuna bilan siz bosqichma-bosqich darslar, testlar va uyga vazifalarga kirish olasiz.",
