@@ -19,7 +19,7 @@ class Settings(BaseSettings):
     PAYMENT_DETAILS: str = ""
     BOT_USERNAME: str = ""
 
-    DEFAULT_LANGUAGE: str = "en"
+    DEFAULT_LANGUAGE: str = "tj"
     LOG_LEVEL: str = "INFO"
 
     AIRTABLE_API_KEY: str = ""

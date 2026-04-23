@@ -25,12 +25,12 @@ class CourseTutorService:
 
     def _build_fallback_intro(self, lesson, vocab, dialogue, grammar) -> str:
         title = self._safe_text(getattr(lesson, "title", ""))
-        vocab_words = [item.get("zh", "") for item in vocab[:3] if isinstance(item, dict) and item.get("zh")]
-        grammar_titles = [item.get("title_zh", "") for item in grammar[:2] if isinstance(item, dict) and item.get("title_zh")]
+        vocab_words = [item.get("en", "") for item in vocab[:3] if isinstance(item, dict) and item.get("en")]
+        grammar_titles = [item.get("title_en", "") for item in grammar[:2] if isinstance(item, dict) and item.get("title_en")]
 
         first_scene = ""
         if dialogue and isinstance(dialogue[0], dict):
-            first_scene = dialogue[0].get("scene_label_zh", "") or dialogue[0].get("section_label", "")
+            first_scene = dialogue[0].get("scene_label_en", "") or dialogue[0].get("section_label", "")
 
         parts = []
         if title:
@@ -48,8 +48,8 @@ class CourseTutorService:
 
     def _build_fallback_exercise(self, lesson, vocab, dialogue, grammar):
         title = self._safe_text(getattr(lesson, "title", ""))
-        vocab_words = [item.get("zh", "") for item in vocab[:5] if isinstance(item, dict) and item.get("zh")]
-        grammar_titles = [item.get("title_zh", "") for item in grammar[:2] if isinstance(item, dict) and item.get("title_zh")]
+        vocab_words = [item.get("en", "") for item in vocab[:5] if isinstance(item, dict) and item.get("en")]
+        grammar_titles = [item.get("title_en", "") for item in grammar[:2] if isinstance(item, dict) and item.get("title_en")]
 
         exercise = {
             "fallback": True,
@@ -67,8 +67,8 @@ class CourseTutorService:
 
     def _build_fallback_homework(self, lesson, vocab, dialogue, grammar):
         title = self._safe_text(getattr(lesson, "title", ""))
-        vocab_words = [item.get("zh", "") for item in vocab[:5] if isinstance(item, dict) and item.get("zh")]
-        grammar_titles = [item.get("title_zh", "") for item in grammar[:2] if isinstance(item, dict) and item.get("title_zh")]
+        vocab_words = [item.get("en", "") for item in vocab[:5] if isinstance(item, dict) and item.get("en")]
+        grammar_titles = [item.get("title_en", "") for item in grammar[:2] if isinstance(item, dict) and item.get("title_en")]
 
         homework = {
             "fallback": True,
@@ -86,8 +86,8 @@ class CourseTutorService:
 
     def _build_fallback_review(self, lesson, vocab, dialogue, grammar):
         title = self._safe_text(getattr(lesson, "title", ""))
-        review_words = [item.get("zh", "") for item in vocab[:3] if isinstance(item, dict) and item.get("zh")]
-        review_grammar = [item.get("title_zh", "") for item in grammar[:1] if isinstance(item, dict) and item.get("title_zh")]
+        review_words = [item.get("en", "") for item in vocab[:3] if isinstance(item, dict) and item.get("en")]
+        review_grammar = [item.get("title_en", "") for item in grammar[:1] if isinstance(item, dict) and item.get("title_en")]
 
         review = {
             "fallback": True,

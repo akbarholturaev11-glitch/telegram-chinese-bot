@@ -203,7 +203,7 @@ TEXTS = {
         "language_selected": "Language selected ✅",
         "level_saved_explained": "✅ Your level has been saved. This helps us tailor lessons to your needs.",
         "trial_started_info": "🎁 Free access has been unlocked for you.\nYou can send up to 5 messages and 1 image per day — enjoy!",
-        "send_first_message": "Now send a Chinese word, sentence, or question — and we'll start your lesson from there.",
+        "send_first_message": "Now send an English word, sentence, or question — and we'll start your lesson from there.",
         "level_beginner": "From scratch",
 
         "menu_start_lesson": "📘 Start Lesson",
@@ -611,14 +611,14 @@ COURSE_I18N = {
     },
 
     "en": {
-        "course_locked_title": "📚 HSK Course is for subscribers only",
+        "course_locked_title": "📚 CEFR Course is for subscribers only",
         "course_locked_text": "Course mode is available for active subscribers only. With a subscription you get access to step-by-step lessons, quizzes, and homework.",
-        "course_mode_subscription_benefit": "Subscribing also unlocks the HSK Course mode.",
+        "course_mode_subscription_benefit": "Subscribing also unlocks the CEFR Course mode.",
         "course_start_button": "📚 Start Course",
         "course_continue_button": "📖 Continue Lesson",
         "course_back_to_qa_button": "↩️ Back to Q&A",
 
-        "course_menu_title": "📚 HSK Course Mode",
+        "course_menu_title": "📚 CEFR Course Mode",
         "course_continue": "📖 Continue Lesson",
         "course_review_last": "🔁 Review Last Lesson",
         "course_retry_test": "📝 Retry Quiz",
@@ -627,7 +627,7 @@ COURSE_I18N = {
         "course_back_to_qa": "↩️ Back to Q&A Mode",
         "qa_mode_title": "💬 Q&A Mode",
         "course_mode_title": "📚 Course Mode",
-        "help_section_text": "<b>🤖 Help Section</b>\n\n<blockquote>💬 <b>Q&amp;A Mode</b>\n— Ask any question about Chinese\n— Get explanations for words, sentences, and grammar\n— Send a photo and the bot will read and explain the text\n— For quick and flexible use\n\n📚 <b>Course Mode</b>\n— Step-by-step learning\n— Each lesson includes vocabulary, grammar, and exercises\n— Follow a structured path\n— For steady, systematic progress\n\n⚙️ <b>Main Commands</b>\n👤 /profile — your profile\n💳 /subscription — subscription section\n🌐 /language — change language\n📖 /level — change level\n📚 /course — course mode\n💬 /qa — Q&amp;A mode\n🎁 /invite — invite link</blockquote>\n\n⚠️ <b>If you have an issue, contact support:</b>\n@akbarchina",
+        "help_section_text": "<b>🤖 Help Section</b>\n\n<blockquote>💬 <b>Q&amp;A Mode</b>\n— Ask any question about English\n— Get explanations for words, sentences, and grammar\n— Send a photo and the bot will read and explain the text\n— For quick and flexible use\n\n📚 <b>Course Mode</b>\n— Step-by-step learning\n— Each lesson includes vocabulary, grammar, and exercises\n— Follow a structured path\n— For steady, systematic progress\n\n⚙️ <b>Main Commands</b>\n👤 /profile — your profile\n💳 /subscription — subscription section\n🌐 /language — change language\n📖 /level — change level\n📚 /course — course mode\n💬 /qa — Q&amp;A mode\n🎁 /invite — invite link</blockquote>\n\n⚠️ <b>If you have an issue, contact support:</b>\n@akbarchina",
 
         "course_intro_title": "📘 Lesson Introduction",
         "course_vocab_title": "📝 New Vocabulary",
@@ -663,7 +663,7 @@ COURSE_I18N = {
         "course_next_lesson_offer": "Ready to start the next lesson?",
 
         "course_choose_lesson": "Which lesson would you like to start from?",
-        "choose_mode_after_level": "<b>🤖 How would you like to learn Chinese?</b>\n\n<blockquote>💬 <b>Q&amp;A Mode</b> — quick answers\n📸 <b>Photo Mode</b> — explain text and characters from images\n🗣 <b>Free Chat</b> — casual questions and practice</blockquote>\n\n<blockquote>📚 <b>Course Mode</b> — step-by-step lessons\n📝 <b>Exercises &amp; Quizzes</b> — reinforce what you've learned\n🎯 <b>Steady Progress</b> — structured learning</blockquote>\n\n👇 <b>Choose a mode</b>",
+        "choose_mode_after_level": "<b>🤖 How would you like to learn English?</b>\n\n<blockquote>💬 <b>Q&amp;A Mode</b> — quick answers\n📸 <b>Photo Mode</b> — explain text and vocabulary from images\n🗣 <b>Free Chat</b> — casual questions and practice</blockquote>\n\n<blockquote>📚 <b>Course Mode</b> — step-by-step lessons\n📝 <b>Exercises &amp; Quizzes</b> — reinforce what you've learned\n🎯 <b>Steady Progress</b> — structured learning</blockquote>\n\n👇 <b>Choose a mode</b>",
         "course_lesson_satisfaction_question": "We've completed this lesson. Are you happy with it?",
         "course_lesson_satisfied_yes": "✅ Yes",
         "course_lesson_satisfied_no": "❌ No",
@@ -692,7 +692,7 @@ COURSE_I18N = {
         "course_reminder_disabled": "❌ Reminder disabled.",
         "course_reminder_choose_time": "⏰ Choose the reminder time.",
         "course_reminder_saved": "✅ Reminder time saved.",
-        "course_reminder_text": "⏰ Time for today's lesson. Continue your HSK course.",
+        "course_reminder_text": "⏰ Time for today's lesson. Continue your CEFR course.",
 
         "course_no_lesson_found": "Lesson not found.",
         "course_lesson_not_unlocked": "This lesson is not yet unlocked.",
