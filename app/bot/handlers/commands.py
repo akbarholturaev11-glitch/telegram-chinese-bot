@@ -332,7 +332,7 @@ async def command_level_callback_handler(callback: CallbackQuery, session):
     except Exception:
         pass
 
-    level_label = level.upper() if level.startswith("hsk") else level
+    level_label = level.upper()
 
     if lang == "tj":
         msg = f"✅ Дараҷа нав шуд: {level_label}"

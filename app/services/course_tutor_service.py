@@ -60,7 +60,7 @@ class CourseTutorService:
             "rules": [
                 "Do not introduce another lesson topic.",
                 "Do not use unrelated vocabulary.",
-                "Keep exercises short and beginner-friendly for the current HSK level.",
+                "Keep exercises short and beginner-friendly for the current CEFR level.",
             ],
         }
         return exercise
@@ -188,7 +188,7 @@ class CourseTutorService:
         payload_text = json.dumps(step_payload, ensure_ascii=False, indent=2)
 
         return f"""
-You are an AI Chinese teacher running a structured HSK course lesson.
+You are an AI English teacher running a structured CEFR course lesson.
 
 STRICT GLOBAL RULES:
 1. Teach ONLY the current lesson.
@@ -260,7 +260,7 @@ Now respond for the current lesson and current step only.
         payload_text = json.dumps(payload, ensure_ascii=False, indent=2)
 
         return f"""
-You are evaluating a student's homework for a structured HSK course lesson.
+You are evaluating a student's homework for a structured CEFR course lesson.
 
 STRICT RULES:
 1. Evaluate ONLY inside the current lesson.
@@ -269,7 +269,7 @@ STRICT RULES:
 4. If the stored homework is missing or incomplete, evaluate only against the current lesson title, vocabulary, dialogue, and grammar.
 5. Feedback must be short, clear, and teacher-like.
 6. Give a score from 0 to 100.
-7. Decide passed = true only if the answer is acceptable for the current HSK lesson.
+7. Decide passed = true only if the answer is acceptable for the current CEFR lesson.
 8. Return JSON only.
 9. JSON format must be:
 {

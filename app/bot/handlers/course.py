@@ -219,7 +219,7 @@ async def _run_course_entry_flow(
     if not progress.current_lesson_id:
         lessons = await engine.lesson_repo.list_by_level(user.level)
         await respond(
-            f"HSK {user.level[-1] if user.level and user.level.startswith('hsk') else user.level}. {t('course_choose_lesson', lang)}",
+            f"{user.level.upper() if user.level else 'A1'}. {t('course_choose_lesson', lang)}",
             reply_markup=lesson_selection_keyboard(lessons),
         )
         return

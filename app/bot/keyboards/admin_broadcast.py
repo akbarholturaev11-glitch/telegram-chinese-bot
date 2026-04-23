@@ -45,9 +45,9 @@ def broadcast_panel_keyboard(
         ],
         [
             level_btn(None, "Hammasi"),
-            level_btn("hsk1", "HSK1"),
-            level_btn("hsk2", "HSK2"),
-            level_btn("hsk3", "HSK3"),
+            level_btn("a1", "A1"),
+            level_btn("a2", "A2"),
+            level_btn("b1", "B1"),
         ],
         [InlineKeyboardButton(text="✏️ Matn kiritish", callback_data="bc:enter_text")],
         [InlineKeyboardButton(text="❌ Bekor qilish", callback_data="bc:cancel")],

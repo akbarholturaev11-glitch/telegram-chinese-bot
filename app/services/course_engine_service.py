@@ -214,7 +214,7 @@ class CourseEngineService:
             return {"error_key": "course_homework_empty"}
 
         user_lang = user.language if getattr(user, "language", None) else "ru"
-        user_level = user.level if getattr(user, "level", None) else "hsk1"
+        user_level = user.level if getattr(user, "level", None) else "a1"
 
         evaluation = await self.tutor.evaluate_homework(
             user_language=user_lang,
