@@ -21,7 +21,7 @@ TEXTS = {
         "access_subscription_expired": "Муҳлати обунаи шумо ба анҷом расид. Аз нав обуна гиред.",
         "access_payment_pending_review": "Пардохти шумо барои санҷиш фиристода шуд. Лутфан интизори тасдиқи админ шавед.",
 
-        "referral_daily_limit_offer": "Лимити имрӯзаи шумо ба анҷом расид. Дӯсти худро даъват кунед ва +5 саволи бонусӣ гиред. Ё метавонед обуна гиред.",
+        "referral_daily_limit_offer": "<b>📸 Лимити имрӯзаи шумо ба анҷом расид</b>\n\n<blockquote>Лимити имрӯз ба анҷом расид. Дӯсти худро даъват кунед ва +5 саволи бонусӣ гиред.\n\nЁ шумо метавонед обуна гиред.</blockquote>",
 
         "access_daily_image_limit_reached": "<b>📸 Лимити сурат ба анҷом расид</b>\n\n<blockquote>Лимити сурати имрӯзаи шумо ба анҷом расид.\nОбуна гиред ва ботро бе ягон маҳдудият истифода баред.</blockquote>",
         "referral_invite_button": "👥 Дӯст даъват кардан",
@@ -80,7 +80,7 @@ TEXTS = {
         "payment_send_screenshot": "Бад аз пардохт скриншоти фиристед.",
         "payment_pending_created": "Дархости пардохт сабт шуд.",
         "payment_waiting_review": "Пас аз санҷиш обунаи шумо фаъол карда мешавад.",
-        "payment_screenshot_received": "Скриншоти пардохт қабул шуд ✅\nПас аз санҷиш обунаи шумо фаъол карда мешавад.",
+        "payment_screenshot_received": "<b>Скриншоти пардохт қабул шуд ✅</b>\n\n<blockquote>Пас аз санҷиш обунаи шумо фаъол карда мешавад.</blockquote>",
         "subscription_payment_request_sent": "Дархости пардохт ба админ фиристода шуд.",
 
         "admin_payment_not_found": "Пардохт ёфт нашуд.",
@@ -120,7 +120,7 @@ TEXTS = {
         "access_daily_limit_reached": "Ваш лимит на сегодня закончился.",
         "access_subscription_expired": "Срок вашей подписки закончился. Оформите подписку заново.",
 
-        "referral_daily_limit_offer": "Ваш лимит на сегодня закончился. Пригласите друга и получите +5 бонусных вопросов. Или вы можете оформить подписку.",
+        "referral_daily_limit_offer": "<b>📸 Ваш лимит на сегодня закончился</b>\n\n<blockquote>Лимит на сегодня исчерпан. Пригласите друга и получите +5 бонусных вопросов.\n\nИли вы можете оформить подписку.</blockquote>",
 
         "access_daily_image_limit_reached": "<b>📸 Лимит изображений исчерпан</b>\n\n<blockquote>Ваш лимит на изображения на сегодня закончился.\nОформите подписку и пользуйтесь ботом без ограничений.</blockquote>",
         "referral_invite_button": "👥 Пригласить друга",
@@ -177,7 +177,7 @@ TEXTS = {
         "payment_send_screenshot": "После оплаты отправьте скриншот.",
         "payment_pending_created": "Запрос на оплату создан.",
         "payment_waiting_review": "После проверки ваша подписка будет активирована.",
-        "payment_screenshot_received": "Скриншот оплаты получен ✅\nПосле проверки ваша подписка будет активирована.",
+        "payment_screenshot_received": "<b>Скриншот оплаты получен ✅</b>\n\n<blockquote>После проверки ваша подписка будет активирована.</blockquote>",
         "subscription_payment_request_sent": "Запрос на оплату отправлен администратору.",
 
         "admin_payment_not_found": "Платёж не найден.",
@@ -316,13 +316,14 @@ TEXTS = {
         "access_daily_limit_reached": "Bugungi limitingiz tugagan.",
         "access_subscription_expired": "Obuna vaqti tugadi. Yangitdan obuna oling.",
 
-        "referral_daily_limit_offer": "Bugungi limitingiz tugadi. Do‘stingizni taklif qiling va +5 bonus savol oling. Yoki obuna oling.",
+        "referral_daily_limit_offer": "<b>📸 Kunlik limitingiz tugadi</b>\n\n<blockquote>Bugungi limit tugadi. Do‘stingizni taklif qiling va +5 bonus savol oling.\n\nYoki obuna rasmiylashtirishingiz mumkin.</blockquote>",
 
         "access_daily_image_limit_reached": "<b>📸 Rasm limiti tugadi</b>\n\n<blockquote>Bugungi rasm limiti tugadi.\nObuna oling va botdan hech qanday cheklovsiz foydalaning.</blockquote>",
         "referral_invite_button": "👥 Do‘st chaqirish",
         "referral_bonus_received": "Taklifingiz qabul qilindi ✅\nSizga +5 bonus savol berildi. Endi botdan yana foydalanishingiz mumkin.",
 
         "payment_back": "⬅️ Orqaga",
+
         "payment_method_choose": "<b>💳 To‘lov usulini tanlang:</b>",
         "subscription_block": "<blockquote>\n💳 <b>Obunani tanlang:</b>\n\n🚀 Obuna olganingizdan keyin botdan hech qanday limitsiz foydalanasiz.\n\n📅 10 kunlik — 29 ¥\n📅 1 oylik — 89 ¥\n\n👥 3 ta yangi do‘st taklif qiling va 🎁 20% chegirma oling.\n\n📲 QR kodni skaner qilib to‘lov qiling\n</blockquote>",
         "subscription_checkout_block": "<blockquote>\n💳 <b>Siz ushbu obunani tanladingiz:</b>\n\n📦 Tarif: <b>{plan}</b>\n💰 Narx: <b>{price} ¥</b>\n\n📲 <b>To‘lov rekviziti:</b>\nQR kod orqali to‘lov qiling\n\n👤 NAME: Akbarshoh\n\n📸 To‘lov qilib bo‘lgach, skrinshotini yuboring\n</blockquote>",
@@ -373,7 +374,7 @@ TEXTS = {
         "payment_send_screenshot": "To‘lov qlib bo'lgach skrinshotini yuboring.",
         "payment_pending_created": "To‘lov so‘rovi yaratildi.",
         "payment_waiting_review": "Tekshiruvdan keyin obunangiz faollashtiriladi.",
-        "payment_screenshot_received": "To‘lov skrinshoti qabul qilindi ✅\nTekshiruvdan keyin obunangiz faollashtiriladi.",
+        "payment_screenshot_received": "<b>To‘lov skrinshoti qabul qilindi ✅</b>\n\n<blockquote>Tekshiruvdan so‘ng obunangiz faollashtiriladi.</blockquote>",
         "subscription_payment_request_sent": "To‘lov so‘rovi adminga yuborildi.",
 
         "admin_payment_not_found": "To‘lov topilmadi.",
