@@ -58,7 +58,7 @@ class AIService:
         )
 
         response = await self.client.chat.completions.create(
-            model="gpt-4.1",
+            model="gpt-4o-mini",
             messages=messages,
         )
 
@@ -74,7 +74,7 @@ class AIService:
         data_url = f"data:{mime_type};base64,{image_b64}"
 
         response = await self.client.chat.completions.create(
-            model="o4-mini",
+            model="gpt-4o-mini",
             messages=[
                 {
                     "role": "user",

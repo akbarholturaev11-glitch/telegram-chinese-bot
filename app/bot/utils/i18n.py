@@ -6,7 +6,7 @@ TEXTS = {
         "choose_level": "Сатҳи худро интихоб кунед:",
         "language_selected": "Забон интихоб шуд ✅",
         "level_saved_explained": "✅ Сатҳи шумо сабт шуд. Ин ба мо кӯмак мекунад, ки дарсҳоро ба шумо мувофиқ кунем.",
-        "trial_started_info": "🎁 Ба шумо дастрасии ройгон кушода шуд.\nҲар рӯз то 5 матн ва 1 сурат фиристода метавонед — бо роҳат истифода баред.",
+        "trial_started_info": "🎁 Ба шумо дастрасии ройгон кушода шуд.",
         "send_first_message": "Акнун калима, ҷумла ё саволи хитоии худро фиристед — дарсро аз ҳамон ҷо оғоз мекунем.",
         "level_beginner": "Аз 0",
 
@@ -106,7 +106,7 @@ TEXTS = {
         "choose_level": "Выберите уровень:",
         "language_selected": "Язык выбран ✅",
         "level_saved_explained": "✅ Ваш уровень сохранён. Это поможет нам подстроить уроки под вас.",
-        "trial_started_info": "🎁 Вам открыт бесплатный доступ.\nКаждый день доступно до 5 текстов и 1 изображения — используйте с удовольствием.",
+        "trial_started_info": "🎁 Вам открыт бесплатный доступ.",
         "send_first_message": "Теперь отправьте китайское слово, фразу или свой вопрос — и начнём урок с этого.",
         "level_beginner": "С нуля",
 
@@ -202,7 +202,7 @@ TEXTS = {
         "choose_level": "Darajani tanlang:",
         "language_selected": "Til tanlandi ✅",
         "level_saved_explained": "✅ Darajangiz saqlandi. Bu darslarni sizga moslashtirishga yordam beradi.",
-        "trial_started_info": "🎁 Sizga bepul kirish ochildi.\nHar kuni 5 ta matn va 1 ta rasm yuborishingiz mumkin — bemalol foydalaning.",
+        "trial_started_info": "🎁 Sizga bepul kirish ochildi.",
         "send_first_message": "Endi xitoycha so‘z, gap yoki savolingizni yuboring — darsni o‘sha yerdan boshlaymiz.",
         "level_beginner": "0 dan",
 
