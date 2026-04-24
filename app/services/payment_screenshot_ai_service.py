@@ -1,26 +1,26 @@
+import json
 from app.services.ai_service import AIService
 
 PAYMENT_VERIFY_PROMPT = """
-You are a payment screenshot verifier for a Telegram bot.
+You are a payment screenshot verifier.
 
-Analyze the payment screenshot and extract the following information.
+Analyze the payment screenshot and extract information.
 
-Respond ONLY in this exact JSON format, nothing else:
+Respond ONLY in this exact JSON format, no other text:
 {
   "amount": <number or null>,
   "currency": <"somoni" or "CNY" or "USD" or "unknown">,
   "date": <"today" or "recent" or "old" or "unknown">,
   "payment_system": <"Alipay" or "WeChat" or "Visa" or "bank_transfer" or "unknown">,
   "verdict": <"trusted" or "suspicious" or "rejected">,
-  "reason": <short reason string in Russian, max 10 words>
+  "reason": <short reason in Russian, max 8 words>
 }
 
 Rules:
-- "trusted": amount is visible, date looks recent (today or yesterday), screenshot looks real
-- "suspicious": amount found but date unclear or something looks off
-- "rejected": no amount found, clearly fake, or unrelated image
-- If you cannot determine something, use null or "unknown"
-- Do not add any text outside the JSON
+- trusted: amount visible, date is today or yesterday, looks real
+- suspicious: amount found but date unclear or something looks off
+- rejected: no amount, clearly fake, or unrelated image
+- Return ONLY the JSON, no markdown, no explanation
 """
 
 
@@ -35,20 +35,6 @@ class PaymentScreenshotAIService:
         expected_amount: int,
         currency: str,
     ) -> dict:
-        """
-        Returns dict:
-        {
-            "amount": int or None,
-            "currency": str,
-            "date": str,
-            "payment_system": str,
-            "verdict": "trusted" | "suspicious" | "rejected",
-            "reason": str,
-            "amount_match": bool,
-        }
-        """
-        import json
-
         raw = await self.ai_service.generate_vision_reply(
             image_bytes=image_bytes,
             mime_type=mime_type,
@@ -57,7 +43,7 @@ class PaymentScreenshotAIService:
 
         try:
             cleaned = raw.strip()
-            if cleaned.startswith("```"):
+            if "```" in cleaned:
                 cleaned = cleaned.split("```")[1]
                 if cleaned.startswith("json"):
                     cleaned = cleaned[4:]
