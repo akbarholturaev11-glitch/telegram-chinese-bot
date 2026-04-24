@@ -2,7 +2,6 @@ from aiogram import Router, F
 from aiogram.dispatcher.event.bases import SkipHandler
 from aiogram.types import Message
 from datetime import datetime, timezone
-
 from app.repositories.user_repo import UserRepository
 from app.repositories.payment_repo import PaymentRepository
 from app.services.payment_service import PaymentService
@@ -24,19 +23,18 @@ def _waiting_message(lang: str, is_night: bool) -> str:
             "uz": "📸 Skrinshot qabul qilindi.\n\nAdmin ish vaqti: 08:00–23:00. To'lovingiz ertalab tasdiqlanadi.",
             "tj": "📸 Скриншот қабул шуд.\n\nВақти корӣ: 08:00–23:00. Пардохт субҳ тасдиқ карда мешавад.",
             "ru": "📸 Скриншот получен.\n\nЧасы работы: 08:00–23:00. Платёж будет проверен утром.",
-        }.get(lang, "📸 Screenshot received. Will be reviewed in the morning.")
+        }.get(lang, "📸 Screenshot received.")
     return {
         "uz": "📸 Skrinshot qabul qilindi.\n\nO'rtacha tekshiruv vaqti: 5–15 daqiqa.",
         "tj": "📸 Скриншот қабул шуд.\n\nВақти тафтиш: 5–15 дақиқа.",
         "ru": "📸 Скриншот получен.\n\nСреднее время проверки: 5–15 минут.",
-    }.get(lang, "📸 Screenshot received. Average review time: 5–15 minutes.")
+    }.get(lang, "📸 Screenshot received.")
 
 
 @router.message(F.photo)
 async def payment_screenshot_handler(message: Message, session):
     user_repo = UserRepository(session)
     payment_service = PaymentService(session)
-    payment_repo = PaymentRepository(session)
     admin_notify_service = AdminNotifyService()
 
     user = await user_repo.get_by_telegram_id(message.from_user.id)
@@ -75,6 +73,7 @@ async def payment_screenshot_handler(message: Message, session):
 
     await message.answer(_waiting_message(lang, _is_night()))
 
+    payment_repo = PaymentRepository(session)
     pending_count = await payment_repo.count_pending()
 
     ai_result = None
