@@ -1,8 +1,7 @@
-from datetime import datetime, timezone
-
 from aiogram import Router, F
 from aiogram.dispatcher.event.bases import SkipHandler
 from aiogram.types import Message
+from datetime import datetime, timezone
 
 from app.repositories.user_repo import UserRepository
 from app.repositories.payment_repo import PaymentRepository
@@ -11,34 +10,26 @@ from app.services.admin_notify_service import AdminNotifyService
 from app.services.payment_screenshot_ai_service import PaymentScreenshotAIService
 from app.bot.utils.i18n import t
 
-
 router = Router()
-
-NIGHT_START = 23
-NIGHT_END = 8
 
 
 def _is_night() -> bool:
-    hour = datetime.now(timezone.utc).hour
-    # UTC+5 for Tajikistan
-    local_hour = (hour + 5) % 24
-    return local_hour >= NIGHT_START or local_hour < NIGHT_END
+    local_hour = (datetime.now(timezone.utc).hour + 5) % 24
+    return local_hour >= 23 or local_hour < 8
 
 
 def _waiting_message(lang: str, is_night: bool) -> str:
     if is_night:
-        msgs = {
+        return {
             "uz": "📸 Skrinshot qabul qilindi.\n\nAdmin ish vaqti: 08:00–23:00. To'lovingiz ertalab tasdiqlanadi.",
             "tj": "📸 Скриншот қабул шуд.\n\nВақти корӣ: 08:00–23:00. Пардохт субҳ тасдиқ карда мешавад.",
             "ru": "📸 Скриншот получен.\n\nЧасы работы: 08:00–23:00. Платёж будет проверен утром.",
-        }
-    else:
-        msgs = {
-            "uz": "📸 Skrinshot qabul qilindi.\n\nO'rtacha tekshiruv vaqti: 5–15 daqiqa. Tasdiqlanishi bilan xabar beramiz.",
-            "tj": "📸 Скриншот қабул шуд.\n\nВақти тафтиш: 5–15 дақиқа. Пас аз тасдиқ хабар мефиристем.",
-            "ru": "📸 Скриншот получен.\n\nСреднее время проверки: 5–15 минут. Уведомим после подтверждения.",
-        }
-    return msgs.get(lang, msgs["ru"])
+        }.get(lang, "📸 Screenshot received. Will be reviewed in the morning.")
+    return {
+        "uz": "📸 Skrinshot qabul qilindi.\n\nO'rtacha tekshiruv vaqti: 5–15 daqiqa.",
+        "tj": "📸 Скриншот қабул шуд.\n\nВақти тафтиш: 5–15 дақиқа.",
+        "ru": "📸 Скриншот получен.\n\nСреднее время проверки: 5–15 минут.",
+    }.get(lang, "📸 Screenshot received. Average review time: 5–15 minutes.")
 
 
 @router.message(F.photo)
@@ -82,19 +73,18 @@ async def payment_screenshot_handler(message: Message, session):
     await user_repo.set_selected_plan_type(user, None)
     await session.commit()
 
-    night = _is_night()
-    await message.answer(_waiting_message(lang, night))
+    await message.answer(_waiting_message(lang, _is_night()))
 
     pending_count = await payment_repo.count_pending()
 
     ai_result = None
     try:
-        ai_service = PaymentScreenshotAIService()
+        ai_svc = PaymentScreenshotAIService()
         file = await message.bot.get_file(photo.file_id)
         file_bytes = await message.bot.download_file(file.file_path)
         file_bytes.seek(0)
         image_bytes = file_bytes.read()
-        ai_result = await ai_service.verify_screenshot(
+        ai_result = await ai_svc.verify_screenshot(
             image_bytes=image_bytes,
             mime_type="image/jpeg",
             expected_amount=payment.amount,
