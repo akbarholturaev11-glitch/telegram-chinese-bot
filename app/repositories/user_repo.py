@@ -201,9 +201,15 @@ class UserRepository:
         ]
 
     async def delete_by_telegram_id(self, telegram_id: int) -> bool:
+        from sqlalchemy import delete as sql_delete
+        from app.db.models.message import Message
+
         user = await self.get_by_telegram_id(telegram_id)
         if not user:
             return False
+        await self.session.execute(
+            sql_delete(Message).where(Message.user_id == user.id)
+        )
         await self.session.delete(user)
         await self.session.flush()
         return True

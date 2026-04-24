@@ -11,7 +11,7 @@ class Message(Base):
     __tablename__ = "messages"
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True, nullable=False)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True, nullable=False)
     telegram_message_id: Mapped[Optional[int]] = mapped_column(BigInteger, nullable=True)
 
     role: Mapped[str] = mapped_column(String(16), nullable=False)  # user / assistant / system
