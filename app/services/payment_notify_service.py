@@ -3,22 +3,22 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 from app.bot.utils.i18n import t
 
+REASON_TRANSLATIONS = {
+    "wrong_amount":       {"uz": "Summa noto'g'ri",    "tj": "Маблағ нодуруст",     "ru": "Неверная сумма"},
+    "unclear_screenshot": {"uz": "Screenshot noaniq",  "tj": "Скриншот норавшан",   "ru": "Скриншот нечёткий"},
+    "fake_suspected":     {"uz": "Shubhali to'lov",    "tj": "Пардохти шубҳанок",   "ru": "Подозрительный платёж"},
+    "old_payment":        {"uz": "Eski to'lov",        "tj": "Пардохти кӯҳна",      "ru": "Старый платёж"},
+    "other":              {"uz": "Boshqa sabab",        "tj": "Сабаби дигар",        "ru": "Другая причина"},
+}
+
+
+def _translate_reason(reason_code: str, lang: str) -> str:
+    return REASON_TRANSLATIONS.get(reason_code, {}).get(lang, reason_code)
+
 
 def _retry_keyboard(lang: str) -> InlineKeyboardMarkup:
-    label = {
-        "uz": "🔄 Qayta yuborish",
-        "tj": "🔄 Аз нав фиристодан",
-        "ru": "🔄 Отправить снова",
-    }.get(lang, "🔄 Qayta yuborish")
-
-    return InlineKeyboardMarkup(
-        inline_keyboard=[[
-            InlineKeyboardButton(
-                text=label,
-                callback_data="payment:retry",
-            )
-        ]]
-    )
+    label = {"uz": "🔄 Qayta yuborish", "tj": "🔄 Аз нав фиристодан", "ru": "🔄 Отправить снова"}.get(lang, "🔄 Qayta yuborish")
+    return InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text=label, callback_data="payment:retry")]])
 
 
 class PaymentNotifyService:
@@ -27,41 +27,20 @@ class PaymentNotifyService:
             return
         lang = user.language if user.language else "ru"
         try:
-            await bot.send_message(
-                chat_id=user.telegram_id,
-                text=t("user_payment_approved", lang),
-            )
+            await bot.send_message(chat_id=user.telegram_id, text=t("user_payment_approved", lang))
         except Exception:
             pass
 
-    async def notify_payment_rejected(
-        self,
-        bot: Bot,
-        user,
-        reason: str = None,
-        plan_type: str = None,
-    ) -> None:
+    async def notify_payment_rejected(self, bot: Bot, user, reason: str = None, plan_type: str = None) -> None:
         if not user:
             return
         lang = user.language if user.language else "ru"
-
-        base_text = t("user_payment_rejected", lang)
-
+        text = t("user_payment_rejected", lang)
         if reason:
-            reason_prefix = {
-                "uz": f"\n\nSabab: {reason}",
-                "tj": f"\n\nСабаб: {reason}",
-                "ru": f"\n\nПричина: {reason}",
-            }.get(lang, f"\n\nSabab: {reason}")
-            text = base_text + reason_prefix
-        else:
-            text = base_text
-
+            translated = _translate_reason(reason, lang)
+            prefix = {"uz": "Sabab", "tj": "Сабаб", "ru": "Причина"}.get(lang, "Sabab")
+            text += f"\n\n{prefix}: {translated}"
         try:
-            await bot.send_message(
-                chat_id=user.telegram_id,
-                text=text,
-                reply_markup=_retry_keyboard(lang),
-            )
+            await bot.send_message(chat_id=user.telegram_id, text=text, reply_markup=_retry_keyboard(lang))
         except Exception:
             pass

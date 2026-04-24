@@ -131,6 +131,6 @@ async def admin_payment_reject_with_reason_handler(callback: CallbackQuery, sess
     await payment_notify_service.notify_payment_rejected(
         bot=callback.bot,
         user=user,
-        reason=reason_label,
+        reason=reason_code,
         plan_type=payment.plan_type,
     )

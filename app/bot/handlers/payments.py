@@ -92,7 +92,8 @@ async def payment_screenshot_handler(message: Message, session):
         ai_service = PaymentScreenshotAIService()
         file = await message.bot.get_file(photo.file_id)
         file_bytes = await message.bot.download_file(file.file_path)
-        image_bytes = file_bytes.read() if hasattr(file_bytes, "read") else bytes(file_bytes)
+        file_bytes.seek(0)
+        image_bytes = file_bytes.read()
         ai_result = await ai_service.verify_screenshot(
             image_bytes=image_bytes,
             mime_type="image/jpeg",
