@@ -84,141 +84,172 @@ async def process_language(callback: CallbackQuery, state: FSMContext, session):
     await state.set_state(OnboardingStates.choosing_level)
 
 
-def _get_demo_lesson(level: str, lang: str) -> str:
-    lessons = {
+def _get_demo_lesson(level: str, lang: str) -> tuple:
+    """Returns (display_text, ai_context) tuple."""
+
+    challenges = {
         "beginner": {
             "tj": (
-                "🎯 <b>Дарси аввал — Салом гуфтан</b>\n\n"
-                "🇨🇳 <b>你好</b> — <i>Nǐ hǎo</i> — Салом\n"
-                "🇨🇳 <b>谢谢</b> — <i>Xièxiè</i> — Ташаккур\n"
-                "🇨🇳 <b>再见</b> — <i>Zàijiàn</i> — Хайр\n\n"
-                "💬 Ҳоло ба бот бинависед: <b>你好 чӣ маъно дорад?</b>"
+                "🎮 <b>Омода-ед? Бозӣ мекунем!</b>\n\n"
+                "Ман ба шумо 3 калима медиҳам:\n\n"
+                "✨ <b>你好</b> · <b>谢谢</b> · <b>再见</b>\n\n"
+                "Аз ин калимаҳо як ҷумла созед — хато ҳам бошад, бот тасҳеҳ мекунад 😄",
+                "The user just started learning Chinese (beginner level). "
+                "You gave them a challenge: make a sentence using 你好, 谢谢, 再见. "
+                "Their next message is their attempt. Encourage them, correct gently, explain the words."
             ),
             "uz": (
-                "🎯 <b>Birinchi dars — Salomlashish</b>\n\n"
-                "🇨🇳 <b>你好</b> — <i>Nǐ hǎo</i> — Salom\n"
-                "🇨🇳 <b>谢谢</b> — <i>Xièxiè</i> — Rahmat\n"
-                "🇨🇳 <b>再见</b> — <i>Zàijiàn</i> — Xayr\n\n"
-                "💬 Endi botga yozing: <b>你好 nima degani?</b>"
+                "🎮 <b>Tayyor bo'ldingizmi? O'yin boshlanadi!</b>\n\n"
+                "Sizga 3 ta so'z beraman:\n\n"
+                "✨ <b>你好</b> · <b>谢谢</b> · <b>再见</b>\n\n"
+                "Shu so'zlardan bitta gap tuzing — xato bo'lsa ham, bot tuzatadi 😄",
+                "The user just started learning Chinese (beginner level). "
+                "You gave them a challenge: make a sentence using 你好, 谢谢, 再见. "
+                "Their next message is their attempt. Encourage them, correct gently, explain the words."
             ),
             "ru": (
-                "🎯 <b>Первый урок — Приветствие</b>\n\n"
-                "🇨🇳 <b>你好</b> — <i>Nǐ hǎo</i> — Привет\n"
-                "🇨🇳 <b>谢谢</b> — <i>Xièxiè</i> — Спасибо\n"
-                "🇨🇳 <b>再见</b> — <i>Zàijiàn</i> — Пока\n\n"
-                "💬 Напишите боту: <b>что значит 你好?</b>"
+                "🎮 <b>Готовы? Начинаем игру!</b>\n\n"
+                "Даю вам 3 слова:\n\n"
+                "✨ <b>你好</b> · <b>谢谢</b> · <b>再见</b>\n\n"
+                "Составьте из них предложение — ошибки не страшны, бот поправит 😄",
+                "The user just started learning Chinese (beginner level). "
+                "You gave them a challenge: make a sentence using 你好, 谢谢, 再见. "
+                "Their next message is their attempt. Encourage them, correct gently, explain the words."
             ),
         },
         "hsk1": {
             "tj": (
-                "🎯 <b>Дарси аввал — Рақамҳо</b>\n\n"
-                "🇨🇳 <b>一</b> yī — 1 &nbsp;&nbsp; <b>二</b> èr — 2 &nbsp;&nbsp; <b>三</b> sān — 3\n"
-                "🇨🇳 <b>四</b> sì — 4 &nbsp;&nbsp; <b>五</b> wǔ — 5 &nbsp;&nbsp; <b>十</b> shí — 10\n\n"
-                "💬 Ба бот бинависед: <b>چӣ тавр бигӯям «ман 20 сол дорам»?</b>"
+                "🎯 <b>HSK1 — Мушкилӣ дорад!</b>\n\n"
+                "Ин 3 рақамро хонед:\n\n"
+                "🔢 <b>三</b> · <b>十</b> · <b>百</b>\n\n"
+                "Ҷумлае бо рақамҳо бисозед — масалан синнатон ё шумораи чизе 🕵️",
+                "The user is HSK1 level. You gave them a challenge: "
+                "make a sentence using Chinese numbers 三(3), 十(10), 百(100). "
+                "Their next message is their attempt. Correct and encourage."
             ),
             "uz": (
-                "🎯 <b>Birinchi dars — Raqamlar</b>\n\n"
-                "🇨🇳 <b>一</b> yī — 1 &nbsp;&nbsp; <b>二</b> èr — 2 &nbsp;&nbsp; <b>三</b> sān — 3\n"
-                "🇨🇳 <b>四</b> sì — 4 &nbsp;&nbsp; <b>五</b> wǔ — 5 &nbsp;&nbsp; <b>十</b> shí — 10\n\n"
-                "💬 Botga yozing: <b>«men 20 yoshdaman» xitoycha qanday?</b>"
+                "🎯 <b>HSK1 — Qiyin emas!</b>\n\n"
+                "Bu 3 raqamni o'qing:\n\n"
+                "🔢 <b>三</b> · <b>十</b> · <b>百</b>\n\n"
+                "Raqamlar bilan gap tuzing — masalan yoshingiz yoki biror narsa soni 🕵️",
+                "The user is HSK1 level. You gave them a challenge: "
+                "make a sentence using Chinese numbers 三(3), 十(10), 百(100). "
+                "Their next message is their attempt. Correct and encourage."
             ),
             "ru": (
-                "🎯 <b>Первый урок — Числа</b>\n\n"
-                "🇨🇳 <b>一</b> yī — 1 &nbsp;&nbsp; <b>二</b> èr — 2 &nbsp;&nbsp; <b>三</b> sān — 3\n"
-                "🇨🇳 <b>四</b> sì — 4 &nbsp;&nbsp; <b>五</b> wǔ — 5 &nbsp;&nbsp; <b>十</b> shí — 10\n\n"
-                "💬 Напишите боту: <b>как сказать «мне 20 лет»?</b>"
+                "🎯 <b>HSK1 — Это несложно!</b>\n\n"
+                "Прочитайте эти 3 числа:\n\n"
+                "🔢 <b>三</b> · <b>十</b> · <b>百</b>\n\n"
+                "Составьте предложение с числами — например ваш возраст или количество чего-то 🕵️",
+                "The user is HSK1 level. You gave them a challenge: "
+                "make a sentence using Chinese numbers 三(3), 十(10), 百(100). "
+                "Their next message is their attempt. Correct and encourage."
             ),
         },
         "hsk2": {
             "tj": (
-                "🎯 <b>Дарси аввал — Вақт</b>\n\n"
-                "🇨🇳 <b>现在几点？</b> — <i>Xiànzài jǐ diǎn?</i>\n"
-                "— Ҳоло соат чанд?\n\n"
-                "🇨🇳 <b>今天星期几？</b> — <i>Jīntiān xīngqī jǐ?</i>\n"
-                "— Имрӯз рӯзи ҳафта чанд?\n\n"
-                "💬 Ба бот бинависед: <b>«Фардо душанбе» хитоӣ чӣ мешавад?</b>"
+                "🕵️ <b>HSK2 — Сир нигоҳ доред!</b>\n\n"
+                "Дар ин ҷумла як иборае пинҳон аст:\n\n"
+                "🇨🇳 <b>高兴 · 认识 · 你</b>\n\n"
+                "Ин калимаҳоро дар як ҷумла ҷамъ кунед — ибораи машҳур ҳосил мешавад 😏",
+                "The user is HSK2 level. You gave them a challenge: "
+                "combine 高兴(happy), 认识(meet/know), 你(you) into a sentence. "
+                "The hidden phrase is 很高兴认识你. Their next message is their attempt. "
+                "Reveal the famous phrase if they get close, explain it warmly."
             ),
             "uz": (
-                "🎯 <b>Birinchi dars — Vaqt</b>\n\n"
-                "🇨🇳 <b>现在几点？</b> — <i>Xiànzài jǐ diǎn?</i>\n"
-                "— Hozir soat necha?\n\n"
-                "🇨🇳 <b>今天星期几？</b> — <i>Jīntiān xīngqī jǐ?</i>\n"
-                "— Bugun haftaning nechanchi kuni?\n\n"
-                "💬 Botga yozing: <b>«Ertaga dushanba» xitoycha qanday?</b>"
+                "🕵️ <b>HSK2 — Sir saqlang!</b>\n\n"
+                "Bu so'zlarda mashhur ibora yashiringan:\n\n"
+                "🇨🇳 <b>高兴 · 认识 · 你</b>\n\n"
+                "Ulardan gap tuzing — nima hosil bo'lishini ko'ramiz 😏",
+                "The user is HSK2 level. You gave them a challenge: "
+                "combine 高兴(happy), 认识(meet/know), 你(you) into a sentence. "
+                "The hidden phrase is 很高兴认识你. Their next message is their attempt. "
+                "Reveal the famous phrase if they get close, explain it warmly."
             ),
             "ru": (
-                "🎯 <b>Первый урок — Время</b>\n\n"
-                "🇨🇳 <b>现在几点？</b> — <i>Xiànzài jǐ diǎn?</i>\n"
-                "— Который сейчас час?\n\n"
-                "🇨🇳 <b>今天星期几？</b> — <i>Jīntiān xīngqī jǐ?</i>\n"
-                "— Какой сегодня день недели?\n\n"
-                "💬 Напишите боту: <b>как сказать «завтра понедельник»?</b>"
+                "🕵️ <b>HSK2 — Держите в тайне!</b>\n\n"
+                "В этих словах спрятана знаменитая фраза:\n\n"
+                "🇨🇳 <b>高兴 · 认识 · 你</b>\n\n"
+                "Составьте из них предложение — посмотрим что получится 😏",
+                "The user is HSK2 level. You gave them a challenge: "
+                "combine 高兴(happy), 认识(meet/know), 你(you) into a sentence. "
+                "The hidden phrase is 很高兴认识你. Their next message is their attempt. "
+                "Reveal the famous phrase if they get close, explain it warmly."
             ),
         },
         "hsk3": {
             "tj": (
-                "🎯 <b>Дарси аввал — Эҳсосот</b>\n\n"
-                "🇨🇳 <b>我很高兴认识你</b>\n"
-                "<i>Wǒ hěn gāoxìng rènshi nǐ</i>\n"
-                "— Аз шинос шудан бо шумо хурсандам\n\n"
-                "💬 Ба бот бинависед: <b>ин ҷумларо тавзеҳ деҳ ва мисоли дигар биёр</b>"
+                "🔥 <b>HSK3 — Имтиҳони зудӣ!</b>\n\n"
+                "Ин ҷумларо тарҷума кунед:\n\n"
+                "🇨🇳 <b>你今天心情怎么样？</b>\n\n"
+                "Ҷавобро ба хитоӣ бинависед — ҳеҷ луғат истифода набаред 😤",
+                "The user is HSK3 level. You gave them a challenge: "
+                "translate 你今天心情怎么样 (How are you feeling today?) and answer in Chinese without a dictionary. "
+                "Their next message is their attempt. Evaluate their Chinese, correct errors, praise effort."
             ),
             "uz": (
-                "🎯 <b>Birinchi dars — His-tuyg'ular</b>\n\n"
-                "🇨🇳 <b>我很高兴认识你</b>\n"
-                "<i>Wǒ hěn gāoxìng rènshi nǐ</i>\n"
-                "— Siz bilan tanishganimdan xursandman\n\n"
-                "💬 Botga yozing: <b>bu jumlani tushuntir va boshqa misol keltir</b>"
+                "🔥 <b>HSK3 — Tezkor imtihon!</b>\n\n"
+                "Bu jumlani tarjima qiling:\n\n"
+                "🇨🇳 <b>你今天心情怎么样？</b>\n\n"
+                "Javobni xitoycha yozing — lug'atsiz 😤",
+                "The user is HSK3 level. You gave them a challenge: "
+                "translate 你今天心情怎么样 (How are you feeling today?) and answer in Chinese without a dictionary. "
+                "Their next message is their attempt. Evaluate their Chinese, correct errors, praise effort."
             ),
             "ru": (
-                "🎯 <b>Первый урок — Эмоции</b>\n\n"
-                "🇨🇳 <b>我很高兴认识你</b>\n"
-                "<i>Wǒ hěn gāoxìng rènshi nǐ</i>\n"
-                "— Рад с вами познакомиться\n\n"
-                "💬 Напишите боту: <b>объясни это предложение и дай ещё примеры</b>"
+                "🔥 <b>HSK3 — Быстрый тест!</b>\n\n"
+                "Переведите это предложение:\n\n"
+                "🇨🇳 <b>你今天心情怎么样？</b>\n\n"
+                "Ответьте по-китайски — без словаря 😤",
+                "The user is HSK3 level. You gave them a challenge: "
+                "translate 你今天心情怎么样 (How are you feeling today?) and answer in Chinese without a dictionary. "
+                "Their next message is their attempt. Evaluate their Chinese, correct errors, praise effort."
             ),
         },
         "hsk4": {
             "tj": (
-                "🎯 <b>Дарси аввал — Ибораҳои расмӣ</b>\n\n"
-                "🇨🇳 <b>请多关照</b> — <i>Qǐng duō guānzhào</i>\n"
-                "— Лутфан мадад кунед (ибораи расмӣ)\n\n"
-                "🇨🇳 <b>麻烦你了</b> — <i>Máfan nǐ le</i>\n"
-                "— Ба шумо мушкилӣ овардам\n\n"
-                "💬 Ба бот бинависед: <b>кай истифода мешаванд ин иборахо?</b>"
+                "⚡ <b>HSK4 — Устодро санҷем!</b>\n\n"
+                "Ин ибораро дар як ҷумлаи мураккаб истифода баред:\n\n"
+                "🇨🇳 <b>虽然...但是...</b>\n\n"
+                "Ҳарчи мавзуъ — аз зиндагии худатон мисол оред 🎓",
+                "The user is HSK4 level. You gave them a challenge: "
+                "use the grammar pattern 虽然...但是... (although...but...) in a complex sentence about their life. "
+                "Their next message is their attempt. Analyze grammar deeply, suggest improvements."
             ),
             "uz": (
-                "🎯 <b>Birinchi dars — Rasmiy iboralar</b>\n\n"
-                "🇨🇳 <b>请多关照</b> — <i>Qǐng duō guānzhào</i>\n"
-                "— Iltimos yordam bering (rasmiy ibora)\n\n"
-                "🇨🇳 <b>麻烦你了</b> — <i>Máfan nǐ le</i>\n"
-                "— Sizni bezovta qildim\n\n"
-                "💬 Botga yozing: <b>bu iboralar qachon ishlatiladi?</b>"
+                "⚡ <b>HSK4 — Ustani sinaylik!</b>\n\n"
+                "Bu grammatik konstruktsiyani murakkab gapda ishlating:\n\n"
+                "🇨🇳 <b>虽然...但是...</b>\n\n"
+                "Mavzu istalgan — o'z hayotingizdan misol keltiring 🎓",
+                "The user is HSK4 level. You gave them a challenge: "
+                "use the grammar pattern 虽然...但是... (although...but...) in a complex sentence about their life. "
+                "Their next message is their attempt. Analyze grammar deeply, suggest improvements."
             ),
             "ru": (
-                "🎯 <b>Первый урок — Формальные выражения</b>\n\n"
-                "🇨🇳 <b>请多关照</b> — <i>Qǐng duō guānzhào</i>\n"
-                "— Прошу вашей поддержки (формальное)\n\n"
-                "🇨🇳 <b>麻烦你了</b> — <i>Máfan nǐ le</i>\n"
-                "— Я вас побеспокоил\n\n"
-                "💬 Напишите боту: <b>когда используются эти выражения?</b>"
+                "⚡ <b>HSK4 — Проверим мастера!</b>\n\n"
+                "Используйте эту конструкцию в сложном предложении:\n\n"
+                "🇨🇳 <b>虽然...但是...</b>\n\n"
+                "Тема любая — возьмите пример из своей жизни 🎓",
+                "The user is HSK4 level. You gave them a challenge: "
+                "use the grammar pattern 虽然...但是... (although...but...) in a complex sentence about their life. "
+                "Their next message is their attempt. Analyze grammar deeply, suggest improvements."
             ),
         },
     }
 
-    level_key = level.lower().replace(" ", "")
+    level_key = level.lower().replace(" ", "").replace("_", "")
     lang_key = lang if lang in ("tj", "uz", "ru") else "ru"
 
     level_map = {
-        "beginner": "beginner",
-        "az0": "beginner",
-        "hsk1": "hsk1",
-        "hsk2": "hsk2",
-        "hsk3": "hsk3",
-        "hsk4": "hsk4",
+        "beginner": "beginner", "az0": "beginner",
+        "hsk1": "hsk1", "hsk2": "hsk2", "hsk3": "hsk3", "hsk4": "hsk4",
     }
     mapped = level_map.get(level_key, "beginner")
-    return lessons.get(mapped, {}).get(lang_key, "")
+    result = challenges.get(mapped, {}).get(lang_key)
+    if result:
+        return result
+    return ("", "")
 
 
 @router.callback_query(OnboardingStates.choosing_level)
@@ -250,10 +281,20 @@ async def process_level(callback: CallbackQuery, state: FSMContext, session):
     except Exception:
         pass
 
-    # First demo lesson based on level
-    demo = _get_demo_lesson(level, user.language)
-    if demo:
-        await callback.message.answer(demo, parse_mode="HTML")
+    display_text, ai_context = _get_demo_lesson(level, user.language)
+
+    if display_text:
+        await callback.message.answer(display_text, parse_mode="HTML")
+
+    if ai_context:
+        from app.repositories.message_repo import MessageRepository
+        msg_repo = MessageRepository(session)
+        await msg_repo.create(
+            user_id=user.id,
+            role="system",
+            content=ai_context,
+            content_type="onboarding_challenge",
+        )
 
     await callback.message.answer(t("trial_started_info", user.language))
     await callback.message.answer(t("send_first_message", user.language))

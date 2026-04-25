@@ -63,6 +63,19 @@ class QAService:
                 },
             )
 
+        onboarding_challenge = await self.message_repo.get_latest_by_content_type(
+            user_id=user.id,
+            content_type="onboarding_challenge",
+        )
+        if onboarding_challenge:
+            history.insert(
+                0,
+                {
+                    "role": "system",
+                    "content": onboarding_challenge.content,
+                },
+            )
+
         await self.message_repo.create(
             user_id=user.id,
             role="user",

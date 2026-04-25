@@ -75,3 +75,18 @@ class MessageRepository:
             .limit(1)
         )
         return result.scalar_one_or_none()
+
+    async def get_latest_by_content_type(
+        self,
+        user_id: int,
+        content_type: str,
+    ):
+        from sqlalchemy import select, desc
+        result = await self.session.execute(
+            select(Message)
+            .where(Message.user_id == user_id)
+            .where(Message.content_type == content_type)
+            .order_by(desc(Message.created_at))
+            .limit(1)
+        )
+        return result.scalar_one_or_none()
