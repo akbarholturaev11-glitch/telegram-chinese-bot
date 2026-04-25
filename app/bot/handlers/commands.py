@@ -538,13 +538,12 @@ async def profile_menu_language(callback: CallbackQuery, session):
 
 @router.callback_query(F.data == "profile_menu:level")
 async def profile_menu_level(callback: CallbackQuery, session):
-    from app.bot.keyboards.onboarding import level_keyboard
     user = await UserRepository(session).get_by_telegram_id(callback.from_user.id)
     lang = user.language if user and user.language else "ru"
     await callback.answer()
     await callback.message.answer(
         t("choose_level", lang),
-        reply_markup=level_keyboard(lang),
+        reply_markup=command_level_keyboard(lang),
     )
 
 @router.callback_query(F.data == "profile_menu:course")
