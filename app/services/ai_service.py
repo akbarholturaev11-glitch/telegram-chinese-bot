@@ -25,6 +25,7 @@ class AIService:
         user_language: str,
         user_level: str,
         history: Optional[List[Dict[str, str]]] = None,
+        model_override: str = None,
     ) -> str:
         system_prompt = self._build_system_prompt(
             user_language=user_language,
@@ -51,7 +52,7 @@ class AIService:
         )
 
         response = await self.client.chat.completions.create(
-            model="gpt-4o",
+            model=model_override or "gpt-4o-mini",
             messages=messages,
             temperature=0.7,
         )

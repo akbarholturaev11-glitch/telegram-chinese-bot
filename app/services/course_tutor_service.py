@@ -1,14 +1,14 @@
 import json
 from typing import Any
-
 from app.services.ai_service import AIService
 
+COURSE_MODEL = "gpt-4o"
 
 class CourseTutorService:
     def __init__(self):
         self.ai_service = AIService()
 
-    def _parse_json_field(self, value: Any, default: Any):
+    def _parse(self, value: Any, default: Any):
         if value is None or value == "":
             return default
         if isinstance(value, (dict, list)):
@@ -18,342 +18,247 @@ class CourseTutorService:
         except Exception:
             return default
 
-    def _safe_text(self, value: Any) -> str:
-        if value is None:
-            return ""
-        return str(value).strip()
+    def _safe(self, value: Any) -> str:
+        return str(value).strip() if value else ""
 
-    def _build_fallback_intro(self, lesson, vocab, dialogue, grammar) -> str:
-        title = self._safe_text(getattr(lesson, "title", ""))
-        vocab_words = [item.get("zh", "") for item in vocab[:3] if isinstance(item, dict) and item.get("zh")]
-        grammar_titles = [item.get("title_zh", "") for item in grammar[:2] if isinstance(item, dict) and item.get("title_zh")]
+    # ─── STEP PROMPTS ───────────────────────────────────────────
 
-        first_scene = ""
-        if dialogue and isinstance(dialogue[0], dict):
-            first_scene = dialogue[0].get("scene_label_zh", "") or dialogue[0].get("section_label", "")
+    def _prompt_intro(self, lesson, user_language, user_level) -> tuple:
+        vocab = self._parse(getattr(lesson, "vocabulary_json", None), [])
+        dialogue = self._parse(getattr(lesson, "dialogue_json", None), [])
+        grammar = self._parse(getattr(lesson, "grammar_json", None), [])
+        intro_text = self._safe(getattr(lesson, "intro_text", ""))
+        title = self._safe(getattr(lesson, "title", ""))
 
-        parts = []
-        if title:
-            parts.append(f"Lesson topic: {title}")
-        if first_scene:
-            parts.append(f"Main scene: {first_scene}")
-        if vocab_words:
-            parts.append(f"Key words: {', '.join(vocab_words)}")
-        if grammar_titles:
-            parts.append(f"Grammar focus: {', '.join(grammar_titles)}")
-
-        if not parts:
-            return "Use the lesson title and available content to give a short introduction to the lesson."
-        return " | ".join(parts)
-
-    def _build_fallback_exercise(self, lesson, vocab, dialogue, grammar):
-        title = self._safe_text(getattr(lesson, "title", ""))
-        vocab_words = [item.get("zh", "") for item in vocab[:5] if isinstance(item, dict) and item.get("zh")]
-        grammar_titles = [item.get("title_zh", "") for item in grammar[:2] if isinstance(item, dict) and item.get("title_zh")]
-
-        exercise = {
-            "fallback": True,
-            "instruction": "Create 2 short exercises only from the current lesson theme and content.",
+        data = {
             "lesson_title": title,
-            "allowed_vocabulary": vocab_words,
-            "allowed_grammar": grammar_titles,
-            "rules": [
-                "Do not introduce another lesson topic.",
-                "Do not use unrelated vocabulary.",
-                "Keep exercises short and beginner-friendly for the current HSK level.",
-            ],
+            "intro_text": intro_text,
+            "vocabulary_preview": vocab[:3],
+            "grammar_preview": grammar[:2],
+            "dialogue_preview": dialogue[:1],
         }
-        return exercise
 
-    def _build_fallback_homework(self, lesson, vocab, dialogue, grammar):
-        title = self._safe_text(getattr(lesson, "title", ""))
-        vocab_words = [item.get("zh", "") for item in vocab[:5] if isinstance(item, dict) and item.get("zh")]
-        grammar_titles = [item.get("title_zh", "") for item in grammar[:2] if isinstance(item, dict) and item.get("title_zh")]
+        prompt = f"""You are an HSK Chinese teacher. Your task: introduce this lesson warmly and clearly.
 
-        homework = {
-            "fallback": True,
-            "instruction": "Create 1 short homework task only from the current lesson theme.",
+LESSON DATA:
+{json.dumps(data, ensure_ascii=False, indent=2)}
+
+RULES:
+- Reply ONLY in {user_language}
+- Level: {user_level}
+- Give a short, engaging introduction (3-5 lines)
+- Preview what the student will learn: vocabulary, grammar, dialogue topic
+- Do NOT teach yet — just introduce
+- End with: "Ready? Let's begin!" (in {user_language})"""
+
+        return prompt, data
+
+    def _prompt_vocab(self, lesson, user_language, user_level) -> tuple:
+        vocab = self._parse(getattr(lesson, "vocabulary_json", None), [])
+        title = self._safe(getattr(lesson, "title", ""))
+
+        data = {"lesson_title": title, "vocabulary": vocab}
+
+        prompt = f"""You are an HSK Chinese teacher. Your task: teach the vocabulary for this lesson.
+
+VOCABULARY DATA:
+{json.dumps(data, ensure_ascii=False, indent=2)}
+
+RULES:
+- Reply ONLY in {user_language}
+- Level: {user_level}
+- Present ONLY the words in the vocabulary list above — no other words
+- For each word show: Chinese character, pinyin, meaning in {user_language}, 1 short example sentence
+- If the user asks about a word — explain only from this list
+- If the user asks about something outside this list — politely redirect to the current vocabulary
+- Keep it clear and structured"""
+
+        return prompt, data
+
+    def _prompt_dialogue(self, lesson, user_language, user_level) -> tuple:
+        dialogue = self._parse(getattr(lesson, "dialogue_json", None), [])
+        title = self._safe(getattr(lesson, "title", ""))
+
+        data = {"lesson_title": title, "dialogue": dialogue}
+
+        prompt = f"""You are an HSK Chinese teacher. Your task: teach the dialogue for this lesson.
+
+DIALOGUE DATA:
+{json.dumps(data, ensure_ascii=False, indent=2)}
+
+RULES:
+- Reply ONLY in {user_language}
+- Level: {user_level}
+- Present ONLY the dialogue above — no other scenarios
+- Explain each line: Chinese, pinyin, meaning in {user_language}
+- Explain the context and when this dialogue would be used
+- If user asks questions — answer only about this dialogue
+- Do NOT introduce new vocabulary outside the dialogue"""
+
+        return prompt, data
+
+    def _prompt_grammar(self, lesson, user_language, user_level) -> tuple:
+        grammar = self._parse(getattr(lesson, "grammar_json", None), [])
+        vocab = self._parse(getattr(lesson, "vocabulary_json", None), [])
+        title = self._safe(getattr(lesson, "title", ""))
+
+        data = {
             "lesson_title": title,
-            "allowed_vocabulary": vocab_words,
-            "allowed_grammar": grammar_titles,
-            "rules": [
-                "Homework must stay inside this lesson topic.",
-                "Do not create another lesson.",
-                "Do not use unrelated scenarios.",
-            ],
+            "grammar_points": grammar,
+            "lesson_vocabulary": vocab[:5],
         }
-        return homework
 
-    def _build_fallback_review(self, lesson, vocab, dialogue, grammar):
-        title = self._safe_text(getattr(lesson, "title", ""))
-        review_words = [item.get("zh", "") for item in vocab[:3] if isinstance(item, dict) and item.get("zh")]
-        review_grammar = [item.get("title_zh", "") for item in grammar[:1] if isinstance(item, dict) and item.get("title_zh")]
+        prompt = f"""You are an HSK Chinese teacher. Your task: teach the grammar points for this lesson.
 
-        review = {
-            "fallback": True,
-            "instruction": "Create a short review from the current lesson only.",
+GRAMMAR DATA:
+{json.dumps(data, ensure_ascii=False, indent=2)}
+
+RULES:
+- Reply ONLY in {user_language}
+- Level: {user_level}
+- Teach ONLY the grammar points listed above
+- For each grammar point: explain the rule, show the pattern, give 2 examples using lesson vocabulary
+- Examples must use ONLY the lesson_vocabulary list above
+- Do NOT introduce grammar from other lessons
+- Keep explanations clear and concise"""
+
+        return prompt, data
+
+    def _prompt_exercise(self, lesson, user_language, user_level) -> tuple:
+        exercise = self._parse(getattr(lesson, "exercise_json", None), [])
+        vocab = self._parse(getattr(lesson, "vocabulary_json", None), [])
+        grammar = self._parse(getattr(lesson, "grammar_json", None), [])
+        answers = self._parse(getattr(lesson, "answers_json", None), [])
+        title = self._safe(getattr(lesson, "title", ""))
+
+        if not exercise:
+            exercise = {
+                "instruction": "Create 3 exercises from the lesson vocabulary and grammar only.",
+                "allowed_vocabulary": [w.get("zh","") for w in vocab[:8] if isinstance(w,dict)],
+                "allowed_grammar": [g.get("title_zh","") for g in grammar[:3] if isinstance(g,dict)],
+            }
+
+        data = {
             "lesson_title": title,
-            "review_words": review_words,
-            "review_grammar": review_grammar,
-            "rules": [
-                "Review only this lesson.",
-                "Give short revision only.",
-                "No new topic.",
-            ],
-        }
-        return review
-
-    def _build_step_payload(self, lesson, step: str) -> dict:
-        vocab = self._parse_json_field(getattr(lesson, "vocabulary_json", None), [])
-        dialogue = self._parse_json_field(getattr(lesson, "dialogue_json", None), [])
-        grammar = self._parse_json_field(getattr(lesson, "grammar_json", None), [])
-        exercise = self._parse_json_field(getattr(lesson, "exercise_json", None), [])
-        answers = self._parse_json_field(getattr(lesson, "answers_json", None), [])
-        homework = self._parse_json_field(getattr(lesson, "homework_json", None), [])
-        review = self._parse_json_field(getattr(lesson, "review_json", None), [])
-        intro_text = self._safe_text(getattr(lesson, "intro_text", ""))
-
-        base = {
-            "lesson_code": getattr(lesson, "lesson_code", ""),
-            "lesson_title": getattr(lesson, "title", ""),
-            "step": step,
+            "exercises": exercise,
+            "correct_answers": answers,
+            "allowed_vocabulary": vocab[:8],
+            "allowed_grammar": grammar[:3],
         }
 
-        if step == "intro":
-            base["intro"] = intro_text or self._build_fallback_intro(lesson, vocab, dialogue, grammar)
-            base["supporting_context"] = {
-                "vocabulary_preview": vocab[:3],
-                "dialogue_preview": dialogue[:1],
-                "grammar_preview": grammar[:2],
-            }
-            return base
+        prompt = f"""You are an HSK Chinese teacher. Your task: conduct exercises for this lesson.
 
-        if step == "vocabulary":
-            base["vocabulary"] = vocab
-            return base
+EXERCISE DATA:
+{json.dumps(data, ensure_ascii=False, indent=2)}
 
-        if step == "dialogue":
-            base["dialogue"] = dialogue
-            return base
+RULES:
+- Reply ONLY in {user_language}
+- Level: {user_level}
+- Give exercises using ONLY the allowed_vocabulary and allowed_grammar above
+- Do NOT use vocabulary or grammar from other lessons
+- Check the user's answers against correct_answers if provided
+- Give clear feedback: what is correct, what needs improvement
+- Encourage the student briefly"""
 
-        if step == "grammar":
-            base["grammar"] = grammar
-            base["vocabulary_preview"] = vocab[:5]
-            return base
+        return prompt, data
 
-        if step == "exercise":
-            base["exercise"] = exercise if exercise else self._build_fallback_exercise(lesson, vocab, dialogue, grammar)
-            base["answers"] = answers
-            base["allowed_context"] = {
-                "vocabulary": vocab[:8],
-                "dialogue": dialogue[:2],
-                "grammar": grammar[:3],
-            }
-            return base
+    def _prompt_quiz(self, lesson, user_language, user_level) -> tuple:
+        vocab = self._parse(getattr(lesson, "vocabulary_json", None), [])
+        grammar = self._parse(getattr(lesson, "grammar_json", None), [])
+        title = self._safe(getattr(lesson, "title", ""))
 
-        if step == "homework":
-            base["homework"] = homework if homework else self._build_fallback_homework(lesson, vocab, dialogue, grammar)
-            base["allowed_context"] = {
-                "vocabulary": vocab[:8],
-                "dialogue": dialogue[:2],
-                "grammar": grammar[:3],
-            }
-            return base
-
-        if step == "review":
-            base["review"] = review if review else self._build_fallback_review(lesson, vocab, dialogue, grammar)
-            return base
-
-        if step == "satisfaction_check":
-            base["instruction"] = "Ask if the user understood the lesson. Do not move to another lesson."
-            return base
-
-        base["generic_context"] = {
-            "intro": intro_text or self._build_fallback_intro(lesson, vocab, dialogue, grammar),
-            "vocabulary": vocab[:5],
-            "dialogue": dialogue[:1],
-            "grammar": grammar[:2],
+        data = {
+            "lesson_title": title,
+            "test_vocabulary": vocab[:10],
+            "test_grammar": grammar[:3],
         }
-        return base
 
-    def _build_prompt(
-        self,
-        user_language: str,
-        user_level: str,
-        lesson,
-        step: str,
-        user_message: str = "",
-    ) -> str:
-        step_payload = self._build_step_payload(lesson, step)
-        payload_text = json.dumps(step_payload, ensure_ascii=False, indent=2)
+        prompt = f"""You are an HSK Chinese teacher. Your task: conduct a quiz for this lesson.
 
-        return f"""
-You are an AI Chinese teacher running a structured HSK course lesson.
+QUIZ DATA:
+{json.dumps(data, ensure_ascii=False, indent=2)}
 
-STRICT GLOBAL RULES:
-1. Teach ONLY the current lesson.
-2. Never switch to another lesson.
-3. Never introduce another topic, another homework, another test, or another scenario from outside the current lesson.
-4. If a section is missing in lesson data, create fallback content ONLY from the current lesson title, current lesson vocabulary, current lesson dialogue, and current lesson grammar.
-5. All AI-generated exercises, tests, homework, examples, and review must stay inside the current lesson theme and context.
-6. Do not invent unrelated vocabulary or unrelated grammar.
-7. Respect the current step strictly. Do not jump to another step unless the user explicitly asks for clarification.
-8. Explain in the user's language.
-9. Keep the response structured, clear, and teacher-like.
-10. If the user asks a follow-up question, answer only inside the current lesson and current step.
+RULES:
+- Reply ONLY in {user_language}
+- Level: {user_level}
+- Create a short quiz using ONLY test_vocabulary and test_grammar above
+- Quiz format: 3-5 questions (multiple choice or fill in the blank)
+- Do NOT test vocabulary or grammar outside the lists above
+- When user answers: check correctness, give score, explain mistakes
+- Be encouraging"""
 
-USER CONTEXT:
-- user_language: {user_language}
-- user_level: {user_level}
-- current_step: {step}
+        return prompt, data
 
-CURRENT LESSON STEP DATA:
-{payload_text}
+    def _prompt_satisfaction_check(self, lesson, user_language, user_level) -> tuple:
+        title = self._safe(getattr(lesson, "title", ""))
+        data = {"lesson_title": title}
 
-USER MESSAGE:
-{user_message}
+        prompt = f"""You are an HSK Chinese teacher. Your task: check if the student understood this lesson.
 
-STEP-SPECIFIC INSTRUCTIONS:
-- intro: briefly introduce only this lesson and what will be learned.
-- vocabulary: teach only the current lesson vocabulary.
-- dialogue: explain only the current lesson dialogue.
-- grammar: explain only the listed grammar points for this lesson.
-- exercise: check or generate exercises only inside this lesson context.
-- homework: give or check homework only inside this lesson context.
-- review: review only this lesson, not another lesson.
-- satisfaction_check: ask whether the user understood the lesson, without moving forward automatically.
+LESSON: {title}
 
-Now respond for the current lesson and current step only.
-""".strip()
+RULES:
+- Reply ONLY in {user_language}
+- Ask ONE simple question: did the student understand the lesson?
+- Offer two choices: yes (understood) or no (need more explanation)
+- Do NOT teach new content here
+- Do NOT move to the next step yourself — wait for the student's answer"""
 
+        return prompt, data
 
-    def _build_homework_evaluation_prompt(
-        self,
-        user_language: str,
-        user_level: str,
-        lesson,
-        submission_text: str,
-    ) -> str:
-        vocab = self._parse_json_field(getattr(lesson, "vocabulary_json", None), [])
-        dialogue = self._parse_json_field(getattr(lesson, "dialogue_json", None), [])
-        grammar = self._parse_json_field(getattr(lesson, "grammar_json", None), [])
-        homework = self._parse_json_field(getattr(lesson, "homework_json", None), [])
-
-        title = self._safe_text(getattr(lesson, "title", ""))
-        lesson_code = self._safe_text(getattr(lesson, "lesson_code", ""))
+    def _prompt_homework(self, lesson, user_language, user_level) -> tuple:
+        homework = self._parse(getattr(lesson, "homework_json", None), [])
+        vocab = self._parse(getattr(lesson, "vocabulary_json", None), [])
+        grammar = self._parse(getattr(lesson, "grammar_json", None), [])
+        title = self._safe(getattr(lesson, "title", ""))
 
         if not homework:
-            homework = self._build_fallback_homework(lesson, vocab, dialogue, grammar)
+            homework = {
+                "instruction": "Create 1 homework task using only lesson vocabulary and grammar.",
+                "allowed_vocabulary": [w.get("zh","") for w in vocab[:8] if isinstance(w,dict)],
+                "allowed_grammar": [g.get("title_zh","") for g in grammar[:3] if isinstance(g,dict)],
+            }
 
-        payload = {
-            "lesson_code": lesson_code,
+        data = {
             "lesson_title": title,
             "homework": homework,
-            "allowed_context": {
-                "vocabulary": vocab[:8],
-                "dialogue": dialogue[:2],
-                "grammar": grammar[:3],
-            },
-            "submission_text": submission_text,
+            "allowed_vocabulary": vocab[:8],
+            "allowed_grammar": grammar[:3],
         }
 
-        payload_text = json.dumps(payload, ensure_ascii=False, indent=2)
+        prompt = f"""You are an HSK Chinese teacher. Your task: give and check homework for this lesson.
 
-        return f"""
-You are evaluating a student's homework for a structured HSK course lesson.
+HOMEWORK DATA:
+{json.dumps(data, ensure_ascii=False, indent=2)}
 
-STRICT RULES:
-1. Evaluate ONLY inside the current lesson.
-2. Do not use another lesson topic.
-3. Do not use unrelated vocabulary or grammar.
-4. If the stored homework is missing or incomplete, evaluate only against the current lesson title, vocabulary, dialogue, and grammar.
-5. Feedback must be short, clear, and teacher-like.
-6. Give a score from 0 to 100.
-7. Decide passed = true only if the answer is acceptable for the current HSK lesson.
-8. Return JSON only.
-9. JSON format must be:
-{
-  "score": 0,
-  "passed": false,
-  "feedback_text": "..."
-}
+RULES:
+- Reply ONLY in {user_language}
+- Level: {user_level}
+- Give homework using ONLY allowed_vocabulary and allowed_grammar above
+- Do NOT create tasks outside this lesson scope
+- When student submits: check it, give clear feedback, give score 0-100
+- Be encouraging and specific about what was good and what needs work"""
 
-USER CONTEXT:
-- user_language: {user_language}
-- user_level: {user_level}
+        return prompt, data
 
-CURRENT LESSON HOMEWORK DATA:
-{payload_text}
-""".strip()
+    # ─── STEP ROUTER ────────────────────────────────────────────
 
-    async def evaluate_homework(
-        self,
-        user_language: str,
-        user_level: str,
-        lesson,
-        submission_text: str,
-    ) -> dict:
-        submission_text = (submission_text or "").strip()
-        if not submission_text:
-            return {
-                "score": 0,
-                "passed": False,
-                "feedback_text": "Homework submission is empty.",
-            }
-
-        prompt = self._build_homework_evaluation_prompt(
-            user_language=user_language,
-            user_level=user_level,
-            lesson=lesson,
-            submission_text=submission_text,
-        )
-
-        raw_reply = await self.ai_service.generate_reply(
-            text=prompt,
-            user_language=user_language,
-            user_level=user_level,
-            history=[],
-        )
-
-        try:
-            data = json.loads(raw_reply)
-        except Exception:
-            data = {
-                "score": 60,
-                "passed": True,
-                "feedback_text": raw_reply.strip() if raw_reply.strip() else "Homework received.",
-            }
-
-        score = data.get("score", 60)
-        passed = data.get("passed", True)
-        feedback_text = str(data.get("feedback_text", "")).strip()
-
-        try:
-            score = int(score)
-        except Exception:
-            score = 60
-
-        if score < 0:
-            score = 0
-        if score > 100:
-            score = 100
-
-        if not isinstance(passed, bool):
-            passed = bool(passed)
-
-        if not feedback_text:
-            if user_language == "tj":
-                feedback_text = f"✅ Вазифа санҷида шуд. Баҳо: {score}/100"
-            elif user_language == "uz":
-                feedback_text = f"✅ Uy vazifa tekshirildi. Baho: {score}/100"
-            else:
-                feedback_text = f"✅ Домашнее задание проверено. Оценка: {score}/100"
-
-        return {
-            "score": score,
-            "passed": passed,
-            "feedback_text": feedback_text,
+    def _build_prompt_for_step(self, lesson, step: str, user_language: str, user_level: str) -> tuple:
+        handlers = {
+            "intro":               self._prompt_intro,
+            "vocab":               self._prompt_vocab,
+            "vocabulary":          self._prompt_vocab,
+            "dialogue":            self._prompt_dialogue,
+            "grammar":             self._prompt_grammar,
+            "exercise":            self._prompt_exercise,
+            "quiz":                self._prompt_quiz,
+            "satisfaction_check":  self._prompt_satisfaction_check,
+            "homework":            self._prompt_homework,
         }
+        handler = handlers.get(step, self._prompt_intro)
+        return handler(lesson, user_language, user_level)
+
+    # ─── PUBLIC METHODS ──────────────────────────────────────────
 
     async def generate_step_response(
         self,
@@ -362,18 +267,81 @@ CURRENT LESSON HOMEWORK DATA:
         lesson,
         step: str,
         user_message: str = "",
+        history: list = None,
     ) -> str:
-        prompt = self._build_prompt(
-            user_language=user_language,
-            user_level=user_level,
-            lesson=lesson,
-            step=step,
-            user_message=user_message,
-        )
+        prompt, _ = self._build_prompt_for_step(lesson, step, user_language, user_level)
+
+        full_text = prompt
+        if user_message:
+            full_text += f"\n\nSTUDENT MESSAGE:\n{user_message}"
 
         return await self.ai_service.generate_reply(
+            text=full_text,
+            user_language=user_language,
+            user_level=user_level,
+            history=history or [],
+            model_override=COURSE_MODEL,
+        )
+
+    def _build_homework_evaluation_prompt(self, user_language, user_level, lesson, submission_text) -> str:
+        vocab = self._parse(getattr(lesson, "vocabulary_json", None), [])
+        grammar = self._parse(getattr(lesson, "grammar_json", None), [])
+        homework = self._parse(getattr(lesson, "homework_json", None), [])
+        title = self._safe(getattr(lesson, "title", ""))
+
+        if not homework:
+            homework = {
+                "instruction": "Evaluate based on lesson vocabulary and grammar.",
+                "allowed_vocabulary": [w.get("zh","") for w in vocab[:8] if isinstance(w,dict)],
+            }
+
+        payload = {
+            "lesson_title": title,
+            "homework": homework,
+            "allowed_vocabulary": vocab[:8],
+            "allowed_grammar": grammar[:3],
+            "student_submission": submission_text,
+        }
+
+        return f"""You are evaluating a student's homework for an HSK lesson.
+
+DATA:
+{json.dumps(payload, ensure_ascii=False, indent=2)}
+
+RULES:
+- Evaluate ONLY against the homework and lesson content above
+- Give score 0-100
+- decided passed = true if score >= 60
+- feedback_text must be in {user_language}, short and clear
+- Return ONLY valid JSON, nothing else:
+{{"score": 0, "passed": false, "feedback_text": "..."}}"""
+
+    async def evaluate_homework(self, user_language, user_level, lesson, submission_text) -> dict:
+        submission_text = (submission_text or "").strip()
+        if not submission_text:
+            return {"score": 0, "passed": False, "feedback_text": "Empty submission."}
+
+        prompt = self._build_homework_evaluation_prompt(user_language, user_level, lesson, submission_text)
+
+        raw = await self.ai_service.generate_reply(
             text=prompt,
             user_language=user_language,
             user_level=user_level,
             history=[],
+            model_override=COURSE_MODEL,
         )
+
+        try:
+            cleaned = raw.strip().replace("```json","").replace("```","")
+            data = json.loads(cleaned)
+        except Exception:
+            data = {"score": 60, "passed": True, "feedback_text": raw.strip()}
+
+        score = max(0, min(100, int(data.get("score", 60))))
+        passed = bool(data.get("passed", True))
+        feedback = str(data.get("feedback_text", "")).strip()
+
+        if not feedback:
+            feedback = f"✅ {score}/100"
+
+        return {"score": score, "passed": passed, "feedback_text": feedback}
