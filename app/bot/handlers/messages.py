@@ -84,10 +84,6 @@ async def handle_text_message(message: Message, session):
         )
         return
 
-    if user and user.discount_progress_message_id and user.status != "active":
-        await message.answer(t("subscription_discount_text_blocked", user_lang))
-        return
-
     if user and user.learning_mode == "course":
         engine = CourseEngineService(session)
         tutor = CourseTutorService()
