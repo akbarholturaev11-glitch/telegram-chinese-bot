@@ -296,6 +296,4 @@ async def process_level(callback: CallbackQuery, state: FSMContext, session):
             content_type="onboarding_challenge",
         )
 
-    await callback.message.answer(t("trial_started_info", user.language))
-    await callback.message.answer(t("send_first_message", user.language))
     await state.clear()
