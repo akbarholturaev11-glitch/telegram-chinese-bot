@@ -47,6 +47,27 @@ async def _block_if_course_disabled(callback, session):
 router = Router()
 
 
+def _course_level_candidates(level: str | None) -> tuple[str, ...]:
+    normalized = (level or "").strip().lower()
+    fallback_map = {
+        "beginner": ("hsk1",),
+        "hsk1": ("hsk1",),
+        "hsk2": ("hsk2", "hsk1"),
+        "hsk3": ("hsk3", "hsk2", "hsk1"),
+        "hsk4": ("hsk4", "hsk3", "hsk2", "hsk1"),
+    }
+    return fallback_map.get(normalized, ("hsk1",))
+
+
+async def _resolve_lessons_for_user_level(engine: CourseEngineService, level: str | None):
+    candidates = _course_level_candidates(level)
+    for candidate in candidates:
+        lessons = await engine.lesson_repo.list_by_level(candidate)
+        if lessons:
+            return lessons, candidate
+    return [], candidates[0]
+
+
 def _format_homework_text(lang: str, homework_raw) -> str:
     title = t("course_homework_title", lang)
 
@@ -119,7 +140,7 @@ async def course_lessons_page_handler(callback: CallbackQuery, session):
     except Exception:
         page = 0
 
-    lessons = await engine.lesson_repo.list_by_level(user.level)
+    lessons, _ = await _resolve_lessons_for_user_level(engine, user.level)
 
     await callback.answer()
     await callback.message.edit_reply_markup(
@@ -256,17 +277,13 @@ async def _run_course_entry_flow(
         )
 
     if not progress.current_lesson_id:
-        lessons = await engine.lesson_repo.list_by_level(user.level)
-
-        if not lessons:
-            # Fallback: try hsk2 if no lessons for current level
-            lessons = await engine.lesson_repo.list_by_level("hsk2")
+        lessons, resolved_level = await _resolve_lessons_for_user_level(engine, user.level)
 
         if not lessons:
             await respond(t("course_no_lessons_available", lang))
             return
 
-        level_label = user.level.upper() if user.level else "HSK"
+        level_label = resolved_level.upper() if resolved_level else "HSK"
         await respond(
             f"{level_label}. {t('course_choose_lesson', lang)}",
             reply_markup=lesson_selection_keyboard(lessons, page=0, lang=lang),

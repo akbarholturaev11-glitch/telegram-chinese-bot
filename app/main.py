@@ -7,14 +7,12 @@ from fastapi import FastAPI
 
 from app.config import settings
 from app.bot.create_bot import create_bot
-from app.bot.middlewares.db_session import DbSessionMiddleware
-from app.db.session import async_session_maker
+from app.db.session import async_session_maker, init_db
 from app.services.daily_reset_service import DailyResetService
 from app.services.expiry_reminder_service import ExpiryReminderService
 
 
 bot, dp = create_bot(settings)
-dp.update.middleware(DbSessionMiddleware())
 
 
 async def _background_scheduler(bot: Bot) -> None:
@@ -31,6 +29,7 @@ async def _background_scheduler(bot: Bot) -> None:
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    await init_db()
     polling_task = asyncio.create_task(dp.start_polling(bot))
     scheduler_task = asyncio.create_task(_background_scheduler(bot))
     try:

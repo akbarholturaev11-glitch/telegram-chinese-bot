@@ -50,13 +50,17 @@ def lesson_selection_keyboard(
     total = len(lessons)
 
     buttons = []
-    for lesson in page_lessons:
-        buttons.append([
-            InlineKeyboardButton(
-                text=f"{lesson.lesson_order}. {lesson.title}",
-                callback_data=f"course:pick_lesson:{lesson.id}",
-            )
-        ])
+    for i in range(0, len(page_lessons), 2):
+        row = [InlineKeyboardButton(
+            text=str(page_lessons[i].lesson_order),
+            callback_data=f"course:pick_lesson:{page_lessons[i].id}",
+        )]
+        if i + 1 < len(page_lessons):
+            row.append(InlineKeyboardButton(
+                text=str(page_lessons[i + 1].lesson_order),
+                callback_data=f"course:pick_lesson:{page_lessons[i + 1].id}",
+            ))
+        buttons.append(row)
 
     nav = []
     if level == "hsk4":
@@ -71,16 +75,16 @@ def lesson_selection_keyboard(
                 callback_data=f"course:lessons_page:{page + 1}",
             ))
     else:
-        prev_labels = {"tj": "⬅️ Қабл", "uz": "⬅️ Oldingi", "ru": "⬅️ Назад"}
-        next_labels = {"tj": "Баъд ➡️", "uz": "Keyingi ➡️", "ru": "Далее ➡️"}
+        prev_labels = {"tj": "👈🏽 қабл", "uz": "👈🏽 oldingi", "ru": "👈🏽 назад"}
+        next_labels = {"tj": "давом👉🏽", "uz": "davom👉🏽", "ru": "далее👉🏽"}
         if page > 0:
             nav.append(InlineKeyboardButton(
-                text=prev_labels.get(lang, "⬅️"),
+                text=prev_labels.get(lang, "👈🏽"),
                 callback_data=f"course:lessons_page:{page - 1}",
             ))
         if end < total:
             nav.append(InlineKeyboardButton(
-                text=next_labels.get(lang, "➡️"),
+                text=next_labels.get(lang, "👉🏽"),
                 callback_data=f"course:lessons_page:{page + 1}",
             ))
 
