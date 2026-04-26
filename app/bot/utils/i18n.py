@@ -371,6 +371,7 @@ COURSE_I18N = {
         "course_next_lesson_offer": "Дарси навро оғоз мекунем?",
 
         "course_choose_lesson": "Аз кадом дарс мехоҳед оғоз кунед?",
+        "course_no_lessons_available": "Дарсҳо барои ин сатҳ ҳоло дастрас нестанд.",
         "choose_mode_after_level": "<b>🤖 Шумо мехоҳед хитоиро бо кадом усул омӯзед?</b>\n\n<blockquote>💬 <b>Режими саволу ҷавоб</b> — ҷавобҳои зуд\n📸 <b>Кор бо сурат</b> — матн ва иероглифҳоро мефаҳмонам\n🗣 <b>Муоширати озод</b> — саволҳои оддӣ ва машқ</blockquote>\n\n<blockquote>📚 <b>Режими курс</b> — дарс ба дарс\n📝 <b>Машқ ва тест</b> — мустаҳкамкунӣ\n🎯 <b>Пешрафти пайдарпай</b> — омӯзиши тартибнок</blockquote>\n\n👇 <b>Режимро интихоб кунед</b>",
         "course_lesson_satisfaction_question": "Мо ин дарсро пурра анҷом додем. Аз дарс қонеъ шудед?",
         "course_lesson_satisfied_yes": "✅ Ҳа",
@@ -458,6 +459,7 @@ COURSE_I18N = {
         "course_next_lesson_offer": "Начнём следующий урок?",
 
         "course_choose_lesson": "С какого урока хотите начать?",
+        "course_no_lessons_available": "Для этого уровня пока нет доступных уроков.",
         "choose_mode_after_level": "<b>🤖 Как вы хотите изучать китайский язык?</b>\n\n<blockquote>💬 <b>Режим вопрос-ответ</b> — быстрые ответы\n📸 <b>Работа с фото</b> — разбор текста и иероглифов\n🗣 <b>Свободное общение</b> — простые вопросы и практика</blockquote>\n\n<blockquote>📚 <b>Режим курса</b> — пошаговые уроки\n📝 <b>Упражнения и тесты</b> — закрепление материала\n🎯 <b>Последовательный прогресс</b> — системное обучение</blockquote>\n\n👇 <b>Выберите режим</b>",
         "course_lesson_satisfaction_question": "Мы полностью завершили этот урок. Вы довольны уроком?",
         "course_lesson_satisfied_yes": "✅ Да",
@@ -593,6 +595,7 @@ COURSE_I18N = {
         "course_reminder_text": "⏰ Bugungi dars vaqti bo‘ldi. HSK kursingizni davom ettiring.",
 
         "course_choose_lesson": "Qaysi darsdan boshlamoqchisiz?",
+        "course_no_lessons_available": "Bu daraja uchun hozircha darslar mavjud emas.",
         "choose_mode_after_level": "<b>🤖 Xitoy tilini qaysi usulda o‘rganmoqchisiz?</b>\n\n<blockquote>💬 <b>Savol-javob rejimi</b> — tez javoblar\n📸 <b>Foto bilan ishlash</b> — matn va ierogliflarni tushuntiraman\n🗣 <b>Erkin muloqot</b> — oddiy savollar va practice</blockquote>\n\n<blockquote>📚 <b>Kurs rejimi</b> — darsma-dars\n📝 <b>Mashq va testlar</b> — mustahkamlash\n🎯 <b>Izchil progress</b> — tartibli o‘rganish</blockquote>\n\n👇 <b>Rejimni tanlang</b>",
         "course_no_lesson_found": "Dars topilmadi.",
         "course_lesson_not_unlocked": "Bu dars hali ochilmagan.",
