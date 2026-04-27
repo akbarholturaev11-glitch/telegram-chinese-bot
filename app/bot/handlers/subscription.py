@@ -22,8 +22,14 @@ router = Router()
 _STATIC_PAYMENTS = Path(__file__).parent.parent.parent / "static" / "payments"
 
 QR_PHOTO_PATHS = {
-    "alipay": str(_STATIC_PAYMENTS / "alipay.jpg"),
-    "wechat": str(_STATIC_PAYMENTS / "wechat.jpg"),
+    "alipay_10_days":          str(_STATIC_PAYMENTS / "alipay_10_days.jpg"),
+    "alipay_10_days_discount": str(_STATIC_PAYMENTS / "alipay_10_days_discount.jpg"),
+    "alipay_1_month":          str(_STATIC_PAYMENTS / "alipay_1_month.jpg"),
+    "alipay_1_month_discount": str(_STATIC_PAYMENTS / "alipay_1_month_discount.jpg"),
+    "wechat_10_days":          str(_STATIC_PAYMENTS / "wechat_10_days.jpg"),
+    "wechat_10_days_discount": str(_STATIC_PAYMENTS / "wechat_10_days_discount.jpg"),
+    "wechat_1_month":          str(_STATIC_PAYMENTS / "wechat_1_month.jpg"),
+    "wechat_1_month_discount": str(_STATIC_PAYMENTS / "wechat_1_month_discount.jpg"),
 }
 
 
@@ -379,8 +385,11 @@ async def subscription_plan_handler(callback: CallbackQuery, session):
     keyboard = checkout_keyboard(lang)
 
     if checkout_info["currency"] == "¥":
-        # Send QR photo for Alipay / WeChat
-        photo_path = QR_PHOTO_PATHS.get(user.payment_method)
+        # Send QR photo for Alipay / WeChat — pick correct image by method + plan + discount
+        qr_key = f"{user.payment_method}_{plan}"
+        if checkout_info.get("discount_applied"):
+            qr_key += "_discount"
+        photo_path = QR_PHOTO_PATHS.get(qr_key)
         if photo_path:
             photo = FSInputFile(photo_path)
             try:
