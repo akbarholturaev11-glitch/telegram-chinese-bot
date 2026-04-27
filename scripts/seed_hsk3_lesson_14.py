@@ -12,8 +12,8 @@ LESSON = {
     "lesson_order": 14,
     "lesson_code": "HSK3-L14",
     "title": "你把水果拿过来",
-    "goal": "buyruq, tartib va yo'nalishni ifodalash",
-    "intro_text": "Bu dars buyruq, tartib va yo'nalishni ifodalashga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda “把”字句 3：A 把 B + V + 结果补语/趋向补语 va 先……，再/又……，然后…… kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "goal": "expressing commands, sequence, and direction",
+    "intro_text": "This lesson is dedicated to expressing commands, sequence, and direction. It uses 5 key vocabulary words and covers core grammar patterns such as "把"字句 3：A 把 B + V + 结果补语/趋向补语 and 先……，再/又……，然后……",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -21,35 +21,35 @@ LESSON = {
                         "zh": "水果",
                         "pinyin": "shuǐguǒ",
                         "pos": "n.",
-                        "meaning": "meva"
+                        "meaning": "fruit"
                 },
                 {
                         "no": 2,
                         "zh": "打扫",
                         "pinyin": "dǎsǎo",
                         "pos": "v.",
-                        "meaning": "tozalamoq"
+                        "meaning": "to clean, to sweep"
                 },
                 {
                         "no": 3,
                         "zh": "冰箱",
                         "pinyin": "bīngxiāng",
                         "pos": "n.",
-                        "meaning": "muzlatkich"
+                        "meaning": "refrigerator"
                 },
                 {
                         "no": 4,
                         "zh": "香蕉",
                         "pinyin": "xiāngjiāo",
                         "pos": "n.",
-                        "meaning": "banan"
+                        "meaning": "banana"
                 },
                 {
                         "no": 5,
                         "zh": "月亮",
                         "pinyin": "yuèliang",
                         "pos": "n.",
-                        "meaning": "oy"
+                        "meaning": "moon"
                 }
         ],
         ensure_ascii=False,
@@ -65,13 +65,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "你把水果拿过来。",
                                         "pinyin": "",
-                                        "translation": "Mevalarni bu yerga olib kel."
+                                        "translation": "Bring the fruit over here."
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "好，我先从冰箱里拿出来。",
                                         "pinyin": "",
-                                        "translation": "Xo'p, avval muzlatkichdan olaman."
+                                        "translation": "Sure, I'll take it out of the fridge first."
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "你先打扫桌子，然后洗水果。",
                                         "pinyin": "",
-                                        "translation": "Avval stolni tozala, keyin mevalarni yuv."
+                                        "translation": "Clean the table first, then wash the fruit."
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "洗好了以后，我再拿香蕉过来。",
                                         "pinyin": "",
-                                        "translation": "Yuvib bo'lgach, keyin bananlarni olib kelaman."
+                                        "translation": "After washing them, I'll bring the bananas over."
                                 }
                         ]
                 }
@@ -101,35 +101,35 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "title_zh": "“把”字句 3：A 把 B + V + 结果补语/趋向补语",
-                        "explanation": "Bu qolip harakatning muvaffaqiyatli yoki qoniqarli tugaganini bildiradi.",
+                        "title_zh": ""把"字句 3：A 把 B + V + 结果补语/趋向补语",
+                        "explanation": "This pattern indicates that an action has been completed successfully or satisfactorily.",
                         "examples": [
                                 {
                                         "zh": "我准备好了。",
                                         "pinyin": "",
-                                        "meaning": "Men tayyor bo'ldim."
+                                        "meaning": "I'm ready."
                                 },
                                 {
                                         "zh": "电影票买好了。",
                                         "pinyin": "",
-                                        "meaning": "Kinoga bilet sotib olinib bo'ldi."
+                                        "meaning": "The movie tickets have been bought."
                                 }
                         ]
                 },
                 {
                         "no": 2,
                         "title_zh": "先……，再/又……，然后……",
-                        "explanation": "Bu grammatika mavzusi darsdagi asosiy gap qoliplarini amalda ishlatishga yordam beradi.",
+                        "explanation": "This grammar topic helps to practise the core sentence patterns of the lesson in context.",
                         "examples": [
                                 {
                                         "zh": "你把水果拿过来。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有水果和打扫。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 水果 va 打扫 ishlatilgan."
+                                        "meaning": "This sentence uses 水果 and 打扫."
                                 }
                         ]
                 }
@@ -141,25 +141,25 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
-                                        "prompt": "meva",
+                                        "prompt": "fruit",
                                         "answer": "水果",
                                         "pinyin": "shuǐguǒ"
                                 },
                                 {
-                                        "prompt": "tozalamoq",
+                                        "prompt": "to clean, to sweep",
                                         "answer": "打扫",
                                         "pinyin": "dǎsǎo"
                                 },
                                 {
-                                        "prompt": "muzlatkich",
+                                        "prompt": "refrigerator",
                                         "answer": "冰箱",
                                         "pinyin": "bīngxiāng"
                                 },
                                 {
-                                        "prompt": "banan",
+                                        "prompt": "banana",
                                         "answer": "香蕉",
                                         "pinyin": "xiāngjiāo"
                                 }
@@ -168,26 +168,26 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "水果",
-                                        "answer": "meva",
+                                        "answer": "fruit",
                                         "pinyin": "shuǐguǒ"
                                 },
                                 {
                                         "prompt": "打扫",
-                                        "answer": "tozalamoq",
+                                        "answer": "to clean, to sweep",
                                         "pinyin": "dǎsǎo"
                                 },
                                 {
                                         "prompt": "冰箱",
-                                        "answer": "muzlatkich",
+                                        "answer": "refrigerator",
                                         "pinyin": "bīngxiāng"
                                 },
                                 {
                                         "prompt": "香蕉",
-                                        "answer": "banan",
+                                        "answer": "banana",
                                         "pinyin": "xiāngjiāo"
                                 }
                         ]
@@ -209,10 +209,10 @@ LESSON = {
                 {
                         "no": 2,
                         "answers": [
-                                "meva",
-                                "tozalamoq",
-                                "muzlatkich",
-                                "banan"
+                                "fruit",
+                                "to clean, to sweep",
+                                "refrigerator",
+                                "banana"
                         ]
                 }
         ],
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Make 3 sentences using the following words:",
                         "words": [
                                 "水果",
                                 "打扫",
@@ -232,7 +232,7 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
+                        "instruction": "Write a short paragraph of 4-5 sentences about the lesson topic:",
                         "topic": "你把水果拿过来"
                 }
         ],

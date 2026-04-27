@@ -1,3 +1,4 @@
+import asyncio
 from datetime import datetime
 
 from aiogram import F, Router
@@ -8,6 +9,7 @@ from app.bot.handlers.course import get_course_keyboard_for_step
 from app.bot.keyboards.checkout import checkout_keyboard
 from app.bot.keyboards.referral import photo_limit_subscription_keyboard
 from app.bot.keyboards.referral import referral_daily_limit_keyboard
+from app.repositories.message_repo import MessageRepository
 from app.repositories.user_repo import UserRepository
 from app.services.access_service import AccessService
 from app.services.course_engine_service import CourseEngineService
@@ -162,13 +164,65 @@ async def handle_text_message(message: Message, session):
             await message.answer(t("course_next_study_time_saved", user_lang))
             return
 
+        message_repo = MessageRepository(session)
+        recent = await message_repo.get_recent_by_user(
+            user_id=current_user.id,
+            limit=10,
+        )
+
+        current_step = progress.current_step
+        # For intro step, don't use history to avoid repetition
+        if current_step == "intro":
+            course_history = []
+        else:
+            course_history = [
+                {"role": m.role, "content": m.content}
+                for m in recent
+                if m.content_type == "course" and m.role in ("user", "assistant")
+            ][-4:]
+
+        await message_repo.create(
+            user_id=current_user.id,
+            role="user",
+            content=message.text or "",
+            content_type="course",
+        )
+
+        emojis = ["🪄", "💫", "🪄", "💫", "🪄", "💫"]
+        anim_msg = await message.answer(emojis[0])
+
+        async def animate():
+            for i in range(1, 20):
+                await asyncio.sleep(1)
+                try:
+                    await anim_msg.edit_text(emojis[i % len(emojis)])
+                except Exception:
+                    break
+
+        anim_task = asyncio.create_task(animate())
+
         tutor_text = await tutor.generate_step_response(
             user_language=current_user.language,
             user_level=current_user.level,
             lesson=lesson,
             step=progress.current_step,
             user_message=message.text or "",
+            history=course_history,
         )
+
+        anim_task.cancel()
+        try:
+            await anim_msg.delete()
+        except Exception:
+            pass
+
+        await message_repo.create(
+            user_id=current_user.id,
+            role="assistant",
+            content=tutor_text,
+            content_type="course",
+        )
+        await session.commit()
 
         await message.answer(
             tutor_text,

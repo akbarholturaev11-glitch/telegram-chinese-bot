@@ -12,8 +12,8 @@ LESSON = {
     "lesson_order": 19,
     "lesson_code": "HSK3-L19",
     "title": "你没看出来吗",
-    "goal": "natijaviy yo'nalish va sababchini ifodalash",
-    "intro_text": "Bu dars natijaviy yo'nalish va sababchini ifodalashga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda 趋向补语的引申义 va “使”“叫”“让” kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "goal": "expressing resultative direction and causation",
+    "intro_text": "This lesson is dedicated to expressing resultative direction and causation. It uses 5 key vocabulary words and covers core grammar patterns such as 趋向补语的引申义 and "使""叫""让".",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -21,35 +21,35 @@ LESSON = {
                         "zh": "认出来",
                         "pinyin": "rènchūlai",
                         "pos": "v.",
-                        "meaning": "tanib olmoq"
+                        "meaning": "to recognise, to identify"
                 },
                 {
                         "no": 2,
                         "zh": "耳朵",
                         "pinyin": "ěrduo",
                         "pos": "n.",
-                        "meaning": "quloq"
+                        "meaning": "ear"
                 },
                 {
                         "no": 3,
                         "zh": "船",
                         "pinyin": "chuán",
                         "pos": "n.",
-                        "meaning": "qayiq, kema"
+                        "meaning": "boat, ship"
                 },
                 {
                         "no": 4,
                         "zh": "黄河",
                         "pinyin": "Huánghé",
                         "pos": "n.",
-                        "meaning": "Sariq daryo"
+                        "meaning": "Yellow River"
                 },
                 {
                         "no": 5,
                         "zh": "经过",
                         "pinyin": "jīngguò",
                         "pos": "v.",
-                        "meaning": "yonidan o'tmoq"
+                        "meaning": "to pass by, to go past"
                 }
         ],
         ensure_ascii=False,
@@ -65,13 +65,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "你没看出来吗？",
                                         "pinyin": "",
-                                        "translation": "Sen uni tanimadingmi?"
+                                        "translation": "Couldn't you recognise him?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "没有，他戴了帽子，我一下没认出来。",
                                         "pinyin": "",
-                                        "translation": "Yo'q, u bosh kiyim kiygan ekan, birdan tanimadim."
+                                        "translation": "No, he was wearing a hat so I didn't recognise him at first."
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "这条船经过黄河的时候很慢。",
                                         "pinyin": "",
-                                        "translation": "Bu qayiq Sariq daryodan o'tayotganda juda sekin yurdi."
+                                        "translation": "This boat moved very slowly as it passed through the Yellow River."
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "风太大了，让大家都很紧张。",
                                         "pinyin": "",
-                                        "translation": "Shamol juda kuchli edi, hammaga taranglik berdi."
+                                        "translation": "The wind was very strong, making everyone nervous."
                                 }
                         ]
                 }
@@ -102,34 +102,34 @@ LESSON = {
                 {
                         "no": 1,
                         "title_zh": "趋向补语的引申义",
-                        "explanation": "Bu mavzu harakatning qaysi tomonga yo'nalganini yoki natijada qayerga kelganini ko'rsatadi.",
+                        "explanation": "This topic shows the extended meaning of a directional complement — indicating a perceptible result rather than literal movement.",
                         "examples": [
                                 {
                                         "zh": "你没看出来吗。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有认出来和耳朵。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 认出来 va 耳朵 ishlatilgan."
+                                        "meaning": "This sentence uses 认出来 and 耳朵."
                                 }
                         ]
                 },
                 {
                         "no": 2,
-                        "title_zh": "“使”“叫”“让”",
-                        "explanation": "Bu grammatika mavzusi darsdagi asosiy gap qoliplarini amalda ishlatishga yordam beradi.",
+                        "title_zh": ""使""叫""让"",
+                        "explanation": "This grammar topic helps to practise the core sentence patterns of the lesson in context.",
                         "examples": [
                                 {
                                         "zh": "你没看出来吗。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有认出来和耳朵。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 认出来 va 耳朵 ishlatilgan."
+                                        "meaning": "This sentence uses 认出来 and 耳朵."
                                 }
                         ]
                 }
@@ -141,25 +141,25 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
-                                        "prompt": "tanib olmoq",
+                                        "prompt": "to recognise, to identify",
                                         "answer": "认出来",
                                         "pinyin": "rènchūlai"
                                 },
                                 {
-                                        "prompt": "quloq",
+                                        "prompt": "ear",
                                         "answer": "耳朵",
                                         "pinyin": "ěrduo"
                                 },
                                 {
-                                        "prompt": "qayiq, kema",
+                                        "prompt": "boat, ship",
                                         "answer": "船",
                                         "pinyin": "chuán"
                                 },
                                 {
-                                        "prompt": "Sariq daryo",
+                                        "prompt": "Yellow River",
                                         "answer": "黄河",
                                         "pinyin": "Huánghé"
                                 }
@@ -168,26 +168,26 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "认出来",
-                                        "answer": "tanib olmoq",
+                                        "answer": "to recognise, to identify",
                                         "pinyin": "rènchūlai"
                                 },
                                 {
                                         "prompt": "耳朵",
-                                        "answer": "quloq",
+                                        "answer": "ear",
                                         "pinyin": "ěrduo"
                                 },
                                 {
                                         "prompt": "船",
-                                        "answer": "qayiq, kema",
+                                        "answer": "boat, ship",
                                         "pinyin": "chuán"
                                 },
                                 {
                                         "prompt": "黄河",
-                                        "answer": "Sariq daryo",
+                                        "answer": "Yellow River",
                                         "pinyin": "Huánghé"
                                 }
                         ]
@@ -209,10 +209,10 @@ LESSON = {
                 {
                         "no": 2,
                         "answers": [
-                                "tanib olmoq",
-                                "quloq",
-                                "qayiq, kema",
-                                "Sariq daryo"
+                                "to recognise, to identify",
+                                "ear",
+                                "boat, ship",
+                                "Yellow River"
                         ]
                 }
         ],
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Make 3 sentences using the following words:",
                         "words": [
                                 "认出来",
                                 "耳朵",
@@ -232,7 +232,7 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
+                        "instruction": "Write a short paragraph of 4-5 sentences about the lesson topic:",
                         "topic": "你没看出来吗"
                 }
         ],

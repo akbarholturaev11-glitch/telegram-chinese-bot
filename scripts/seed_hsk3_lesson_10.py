@@ -12,8 +12,8 @@ LESSON = {
     "lesson_order": 10,
     "lesson_code": "HSK3-L10",
     "title": "数学比历史难多了",
-    "goal": "qiyoslash va daraja farqini ko'rsatish",
-    "intro_text": "Bu dars qiyoslash va daraja farqini ko'rsatishga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda 比较句 2：A 比 B + Adj + 一点儿/一些/得多/多了 va 概数的表达 1 kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "goal": "expressing comparison and difference in degree",
+    "intro_text": "This lesson is dedicated to expressing comparison and difference in degree. It introduces 5 key vocabulary words and covers core grammar patterns such as 比较句 2：A 比 B + Adj + 一点儿/一些/得多/多了 and 概数的表达 1.",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -21,35 +21,35 @@ LESSON = {
                         "zh": "数学",
                         "pinyin": "shùxué",
                         "pos": "n.",
-                        "meaning": "matematika"
+                        "meaning": "mathematics"
                 },
                 {
                         "no": 2,
                         "zh": "历史",
                         "pinyin": "lìshǐ",
                         "pos": "n.",
-                        "meaning": "tarix"
+                        "meaning": "history"
                 },
                 {
                         "no": 3,
                         "zh": "体育",
                         "pinyin": "tǐyù",
                         "pos": "n.",
-                        "meaning": "jismoniy tarbiya"
+                        "meaning": "physical education / sports"
                 },
                 {
                         "no": 4,
                         "zh": "自行车",
                         "pinyin": "zìxíngchē",
                         "pos": "n.",
-                        "meaning": "velosiped"
+                        "meaning": "bicycle"
                 },
                 {
                         "no": 5,
                         "zh": "附近",
                         "pinyin": "fùjìn",
                         "pos": "n.",
-                        "meaning": "yaqin atrof"
+                        "meaning": "nearby; in the vicinity"
                 }
         ],
         ensure_ascii=False,
@@ -65,13 +65,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "数学比历史难多了。",
                                         "pinyin": "",
-                                        "translation": "Matematika tarixdan ancha qiyin."
+                                        "translation": "Math is much harder than history."
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "我觉得体育比数学轻松一些。",
                                         "pinyin": "",
-                                        "translation": "Menga ko'ra jismoniy tarbiya matematikadan osonroq."
+                                        "translation": "I think PE is a bit more relaxed than math."
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "学校离你家远吗？",
                                         "pinyin": "",
-                                        "translation": "Maktab uyingdan uzoqmi?"
+                                        "translation": "Is the school far from your home?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "不太远，骑自行车二十分钟左右。",
                                         "pinyin": "",
-                                        "translation": "Unchalik emas, velosipedda taxminan yigirma daqiqa."
+                                        "translation": "Not too far — about twenty minutes by bicycle."
                                 }
                         ]
                 }
@@ -102,34 +102,34 @@ LESSON = {
                 {
                         "no": 1,
                         "title_zh": "比较句 2：A 比 B + Adj + 一点儿/一些/得多/多了",
-                        "explanation": "Bu qolip ikki narsa yoki odamni daraja jihatidan qiyoslash uchun ishlatiladi.",
+                        "explanation": "This pattern is used to compare two things or people in terms of degree.",
                         "examples": [
                                 {
                                         "zh": "数学比历史难多了。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi qiyoslash namunasi."
+                                        "meaning": "A comparison example from the lesson title."
                                 },
                                 {
                                         "zh": "数学比历史更重要。",
                                         "pinyin": "",
-                                        "meaning": "数学 历史dan ham muhimroq."
+                                        "meaning": "数学 is even more important than 历史."
                                 }
                         ]
                 },
                 {
                         "no": 2,
                         "title_zh": "概数的表达 1",
-                        "explanation": "Bu mavzu taxminiy son yoki vaqtni yumshoq usulda ifodalashga yordam beradi.",
+                        "explanation": "This topic helps express approximate numbers or time in a soft, flexible way.",
                         "examples": [
                                 {
                                         "zh": "数学比历史难多了。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The key pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有数学和历史。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 数学 va 历史 ishlatilgan."
+                                        "meaning": "This sentence uses 数学 and 历史."
                                 }
                         ]
                 }
@@ -141,25 +141,25 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
-                                        "prompt": "matematika",
+                                        "prompt": "mathematics",
                                         "answer": "数学",
                                         "pinyin": "shùxué"
                                 },
                                 {
-                                        "prompt": "tarix",
+                                        "prompt": "history",
                                         "answer": "历史",
                                         "pinyin": "lìshǐ"
                                 },
                                 {
-                                        "prompt": "jismoniy tarbiya",
+                                        "prompt": "physical education / sports",
                                         "answer": "体育",
                                         "pinyin": "tǐyù"
                                 },
                                 {
-                                        "prompt": "velosiped",
+                                        "prompt": "bicycle",
                                         "answer": "自行车",
                                         "pinyin": "zìxíngchē"
                                 }
@@ -168,26 +168,26 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "数学",
-                                        "answer": "matematika",
+                                        "answer": "mathematics",
                                         "pinyin": "shùxué"
                                 },
                                 {
                                         "prompt": "历史",
-                                        "answer": "tarix",
+                                        "answer": "history",
                                         "pinyin": "lìshǐ"
                                 },
                                 {
                                         "prompt": "体育",
-                                        "answer": "jismoniy tarbiya",
+                                        "answer": "physical education / sports",
                                         "pinyin": "tǐyù"
                                 },
                                 {
                                         "prompt": "自行车",
-                                        "answer": "velosiped",
+                                        "answer": "bicycle",
                                         "pinyin": "zìxíngchē"
                                 }
                         ]
@@ -209,10 +209,10 @@ LESSON = {
                 {
                         "no": 2,
                         "answers": [
-                                "matematika",
-                                "tarix",
-                                "jismoniy tarbiya",
-                                "velosiped"
+                                "mathematics",
+                                "history",
+                                "physical education / sports",
+                                "bicycle"
                         ]
                 }
         ],
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Write 3 sentences using the following words:",
                         "words": [
                                 "数学",
                                 "历史",
@@ -232,7 +232,7 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
+                        "instruction": "Write a short passage of 4–5 sentences about the lesson topic:",
                         "topic": "数学比历史难多了"
                 }
         ],

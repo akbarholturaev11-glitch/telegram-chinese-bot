@@ -12,8 +12,8 @@ LESSON = {
     "lesson_order": 2,
     "lesson_code": "HSK3-L02",
     "title": "他什么时候回来",
-    "goal": "qaytish va ketma-ket harakatlarni ifodalash",
-    "intro_text": "Bu dars qaytish va ketma-ket harakatlarni ifodalashga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda 简单趋向补语 va 两个动作连续发生 kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "goal": "expressing returning and sequential actions",
+    "intro_text": "This lesson is dedicated to expressing returning and sequential actions. It uses 5 key vocabulary words and covers core grammar patterns such as simple directional complements and two actions occurring in succession.",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -21,35 +21,35 @@ LESSON = {
                         "zh": "回来",
                         "pinyin": "huílai",
                         "pos": "v.",
-                        "meaning": "qaytib kelmoq"
+                        "meaning": "to come back"
                 },
                 {
                         "no": 2,
                         "zh": "办公室",
                         "pinyin": "bàngōngshì",
                         "pos": "n.",
-                        "meaning": "ofis"
+                        "meaning": "office"
                 },
                 {
                         "no": 3,
                         "zh": "拿",
                         "pinyin": "ná",
                         "pos": "v.",
-                        "meaning": "olmoq"
+                        "meaning": "to take, to get"
                 },
                 {
                         "no": 4,
                         "zh": "伞",
                         "pinyin": "sǎn",
                         "pos": "n.",
-                        "meaning": "soyabon"
+                        "meaning": "umbrella"
                 },
                 {
                         "no": 5,
                         "zh": "腿",
                         "pinyin": "tuǐ",
                         "pos": "n.",
-                        "meaning": "oyoq"
+                        "meaning": "leg"
                 }
         ],
         ensure_ascii=False,
@@ -65,13 +65,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "他什么时候回来？",
                                         "pinyin": "",
-                                        "translation": "U qachon qaytib keladi?"
+                                        "translation": "When will he come back?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "他先去办公室拿文件，马上就回来。",
                                         "pinyin": "",
-                                        "translation": "U avval ofisga hujjat olgani ketdi, hozir qaytadi."
+                                        "translation": "He went to the office to get some documents first, he'll be back shortly."
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "外边下雨了，你把伞拿回来了吗？",
                                         "pinyin": "",
-                                        "translation": "Tashqarida yomg'ir yog'yapti, soyabonni olib keldingmi?"
+                                        "translation": "It's raining outside, did you bring the umbrella back?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "拿回来了，不过我的腿还有点儿疼。",
                                         "pinyin": "",
-                                        "translation": "Olib keldim, lekin oyog'im hali biroz og'riyapti."
+                                        "translation": "I brought it back, but my leg still hurts a little."
                                 }
                         ]
                 }
@@ -102,34 +102,34 @@ LESSON = {
                 {
                         "no": 1,
                         "title_zh": "简单趋向补语",
-                        "explanation": "Bu mavzu harakatning qaysi tomonga yo'nalganini yoki natijada qayerga kelganini ko'rsatadi.",
+                        "explanation": "This topic shows the direction of movement of an action, or where the subject ends up as a result.",
                         "examples": [
                                 {
                                         "zh": "他什么时候回来。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有回来和办公室。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 回来 va 办公室 ishlatilgan."
+                                        "meaning": "This sentence uses 回来 and 办公室."
                                 }
                         ]
                 },
                 {
                         "no": 2,
                         "title_zh": "两个动作连续发生",
-                        "explanation": "Bu grammatika mavzusi darsdagi asosiy gap qoliplarini amalda ishlatishga yordam beradi.",
+                        "explanation": "This grammar topic helps to practice the core sentence patterns of the lesson in context.",
                         "examples": [
                                 {
                                         "zh": "他什么时候回来。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有回来和办公室。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 回来 va 办公室 ishlatilgan."
+                                        "meaning": "This sentence uses 回来 and 办公室."
                                 }
                         ]
                 }
@@ -141,25 +141,25 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
-                                        "prompt": "qaytib kelmoq",
+                                        "prompt": "to come back",
                                         "answer": "回来",
                                         "pinyin": "huílai"
                                 },
                                 {
-                                        "prompt": "ofis",
+                                        "prompt": "office",
                                         "answer": "办公室",
                                         "pinyin": "bàngōngshì"
                                 },
                                 {
-                                        "prompt": "olmoq",
+                                        "prompt": "to take, to get",
                                         "answer": "拿",
                                         "pinyin": "ná"
                                 },
                                 {
-                                        "prompt": "soyabon",
+                                        "prompt": "umbrella",
                                         "answer": "伞",
                                         "pinyin": "sǎn"
                                 }
@@ -168,26 +168,26 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "回来",
-                                        "answer": "qaytib kelmoq",
+                                        "answer": "to come back",
                                         "pinyin": "huílai"
                                 },
                                 {
                                         "prompt": "办公室",
-                                        "answer": "ofis",
+                                        "answer": "office",
                                         "pinyin": "bàngōngshì"
                                 },
                                 {
                                         "prompt": "拿",
-                                        "answer": "olmoq",
+                                        "answer": "to take, to get",
                                         "pinyin": "ná"
                                 },
                                 {
                                         "prompt": "伞",
-                                        "answer": "soyabon",
+                                        "answer": "umbrella",
                                         "pinyin": "sǎn"
                                 }
                         ]
@@ -209,10 +209,10 @@ LESSON = {
                 {
                         "no": 2,
                         "answers": [
-                                "qaytib kelmoq",
-                                "ofis",
-                                "olmoq",
-                                "soyabon"
+                                "to come back",
+                                "office",
+                                "to take, to get",
+                                "umbrella"
                         ]
                 }
         ],
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Make 3 sentences using the following words:",
                         "words": [
                                 "回来",
                                 "办公室",
@@ -232,7 +232,7 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
+                        "instruction": "Write a short paragraph of 4-5 sentences about the lesson topic:",
                         "topic": "他什么时候回来"
                 }
         ],

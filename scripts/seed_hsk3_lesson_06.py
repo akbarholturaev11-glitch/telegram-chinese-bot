@@ -12,8 +12,8 @@ LESSON = {
     "lesson_order": 6,
     "lesson_code": "HSK3-L06",
     "title": "怎么突然找不到了",
-    "goal": "yo'qolgan narsani qidirish va joy haqida so'rash",
-    "intro_text": "Bu dars yo'qolgan narsani qidirish va joy haqida so'rashga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda 可能补语：V得/不 + Complements va “呢”问处所 kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "goal": "searching for lost items and asking about location",
+    "intro_text": "This lesson is dedicated to searching for lost items and asking about location. It uses 5 key vocabulary words and covers core grammar patterns such as 可能补语：V得/不 + Complements and "呢" asking about location.",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -21,21 +21,21 @@ LESSON = {
                         "zh": "眼镜",
                         "pinyin": "yǎnjìng",
                         "pos": "n.",
-                        "meaning": "ko'zoynak"
+                        "meaning": "glasses, spectacles"
                 },
                 {
                         "no": 2,
                         "zh": "突然",
                         "pinyin": "tūrán",
                         "pos": "adv.",
-                        "meaning": "birdan"
+                        "meaning": "suddenly"
                 },
                 {
                         "no": 3,
                         "zh": "离开",
                         "pinyin": "líkāi",
                         "pos": "v.",
-                        "meaning": "ketmoq"
+                        "meaning": "to leave"
                 },
                 {
                         "no": 4,
@@ -49,7 +49,7 @@ LESSON = {
                         "zh": "明白",
                         "pinyin": "míngbai",
                         "pos": "v./adj.",
-                        "meaning": "tushunmoq, ravshan"
+                        "meaning": "to understand, clear"
                 }
         ],
         ensure_ascii=False,
@@ -65,13 +65,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "我的眼镜怎么突然找不到了？",
                                         "pinyin": "",
-                                        "translation": "Ko'zoynagim nega birdan topilmay qoldi?"
+                                        "translation": "Why can't I suddenly find my glasses?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "你刚才是不是离开教室了？",
                                         "pinyin": "",
-                                        "translation": "Sen hozirgina sinfdan chiqib ketmadingmi?"
+                                        "translation": "Didn't you just leave the classroom?"
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "小王呢？",
                                         "pinyin": "",
-                                        "translation": "Xiao Wang qayerda?"
+                                        "translation": "Where is Xiao Wang?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "他在公园那边，等会儿回来。",
                                         "pinyin": "",
-                                        "translation": "U park tomonda, saldan keyin qaytadi."
+                                        "translation": "He's over by the park, he'll be back soon."
                                 }
                         ]
                 }
@@ -102,34 +102,34 @@ LESSON = {
                 {
                         "no": 1,
                         "title_zh": "可能补语：V得/不 + Complements",
-                        "explanation": "Bu grammatika mavzusi darsdagi asosiy gap qoliplarini amalda ishlatishga yordam beradi.",
+                        "explanation": "This grammar topic helps to practise the core sentence patterns of the lesson in context.",
                         "examples": [
                                 {
                                         "zh": "怎么突然找不到了。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有眼镜和突然。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 眼镜 va 突然 ishlatilgan."
+                                        "meaning": "This sentence uses 眼镜 and 突然."
                                 }
                         ]
                 },
                 {
                         "no": 2,
-                        "title_zh": "“呢”问处所",
-                        "explanation": "Bu qo'llanish joy, holat yoki davom etayotgan savolni yumshoq tarzda so'rashda ishlatiladi.",
+                        "title_zh": ""呢"问处所",
+                        "explanation": "This usage is used to softly ask about location, state, or an ongoing situation.",
                         "examples": [
                                 {
                                         "zh": "怎么突然找不到了。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有眼镜和突然。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 眼镜 va 突然 ishlatilgan."
+                                        "meaning": "This sentence uses 眼镜 and 突然."
                                 }
                         ]
                 }
@@ -141,20 +141,20 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
-                                        "prompt": "ko'zoynak",
+                                        "prompt": "glasses, spectacles",
                                         "answer": "眼镜",
                                         "pinyin": "yǎnjìng"
                                 },
                                 {
-                                        "prompt": "birdan",
+                                        "prompt": "suddenly",
                                         "answer": "突然",
                                         "pinyin": "tūrán"
                                 },
                                 {
-                                        "prompt": "ketmoq",
+                                        "prompt": "to leave",
                                         "answer": "离开",
                                         "pinyin": "líkāi"
                                 },
@@ -168,21 +168,21 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "眼镜",
-                                        "answer": "ko'zoynak",
+                                        "answer": "glasses, spectacles",
                                         "pinyin": "yǎnjìng"
                                 },
                                 {
                                         "prompt": "突然",
-                                        "answer": "birdan",
+                                        "answer": "suddenly",
                                         "pinyin": "tūrán"
                                 },
                                 {
                                         "prompt": "离开",
-                                        "answer": "ketmoq",
+                                        "answer": "to leave",
                                         "pinyin": "líkāi"
                                 },
                                 {
@@ -209,9 +209,9 @@ LESSON = {
                 {
                         "no": 2,
                         "answers": [
-                                "ko'zoynak",
-                                "birdan",
-                                "ketmoq",
+                                "glasses, spectacles",
+                                "suddenly",
+                                "to leave",
                                 "park"
                         ]
                 }
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Make 3 sentences using the following words:",
                         "words": [
                                 "眼镜",
                                 "突然",
@@ -232,7 +232,7 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
+                        "instruction": "Write a short paragraph of 4-5 sentences about the lesson topic:",
                         "topic": "怎么突然找不到了"
                 }
         ],

@@ -12,8 +12,8 @@ LESSON = {
     "lesson_order": 11,
     "lesson_code": "HSK3-L11",
     "title": "别忘了把空调关了",
-    "goal": "eslatma berish va “把” gapini ishlatish",
-    "intro_text": "Bu dars eslatma berish va “把” gapini ishlatishga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda “把”字句 1：A 把 B + V + …… va 概数的表达 2：左右 kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "goal": "giving reminders and using the 把 sentence structure",
+    "intro_text": "This lesson is dedicated to giving reminders and using the 把 sentence structure. It uses 5 key vocabulary words and covers core grammar patterns such as "把"字句 1：A 把 B + V + …… and 概数的表达 2：左右.",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -21,35 +21,35 @@ LESSON = {
                         "zh": "空调",
                         "pinyin": "kōngtiáo",
                         "pos": "n.",
-                        "meaning": "konditsioner"
+                        "meaning": "air conditioner"
                 },
                 {
                         "no": 2,
                         "zh": "图书馆",
                         "pinyin": "túshūguǎn",
                         "pos": "n.",
-                        "meaning": "kutubxona"
+                        "meaning": "library"
                 },
                 {
                         "no": 3,
                         "zh": "词典",
                         "pinyin": "cídiǎn",
                         "pos": "n.",
-                        "meaning": "lug'at"
+                        "meaning": "dictionary"
                 },
                 {
                         "no": 4,
                         "zh": "地铁",
                         "pinyin": "dìtiě",
                         "pos": "n.",
-                        "meaning": "metro"
+                        "meaning": "subway, metro"
                 },
                 {
                         "no": 5,
                         "zh": "关",
                         "pinyin": "guān",
                         "pos": "v.",
-                        "meaning": "yopmoq, o'chirmoq"
+                        "meaning": "to close, to turn off"
                 }
         ],
         ensure_ascii=False,
@@ -65,13 +65,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "别忘了把空调关了。",
                                         "pinyin": "",
-                                        "translation": "Konditsionerni o'chirishni unutma."
+                                        "translation": "Don't forget to turn off the air conditioner."
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "好，我把门也关上。",
                                         "pinyin": "",
-                                        "translation": "Xo'p, eshikni ham yopaman."
+                                        "translation": "Sure, I'll close the door too."
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "你要借这本词典吗？",
                                         "pinyin": "",
-                                        "translation": "Sen bu lug'atni olmoqchimisan?"
+                                        "translation": "Do you want to borrow this dictionary?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "要，坐地铁过去大概二十分钟左右。",
                                         "pinyin": "",
-                                        "translation": "Ha, metro bilan taxminan yigirma daqiqada yetaman."
+                                        "translation": "Yes, it's about twenty minutes by subway."
                                 }
                         ]
                 }
@@ -101,35 +101,35 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "title_zh": "“把”字句 1：A 把 B + V + ……",
-                        "explanation": "Bu tuzilma ta'sir qilinayotgan ob'ektni oldinga chiqarib, natijani yoki yo'nalishni ta'kidlaydi.",
+                        "title_zh": ""把"字句 1：A 把 B + V + ……",
+                        "explanation": "This structure moves the affected object to the front to emphasise the result or direction.",
                         "examples": [
                                 {
                                         "zh": "别忘了把空调关了。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi qolip namunasi."
+                                        "meaning": "A sample pattern from the lesson title."
                                 },
                                 {
                                         "zh": "请把空调放这儿。",
                                         "pinyin": "",
-                                        "meaning": "Iltimos, 空调ni bu yerga qo'ying."
+                                        "meaning": "Please put the 空调 here."
                                 }
                         ]
                 },
                 {
                         "no": 2,
                         "title_zh": "概数的表达 2：左右",
-                        "explanation": "Bu mavzu taxminiy son yoki vaqtni yumshoq usulda ifodalashga yordam beradi.",
+                        "explanation": "This topic helps to express approximate numbers or time in a natural way.",
                         "examples": [
                                 {
                                         "zh": "别忘了把空调关了。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有空调和图书馆。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 空调 va 图书馆 ishlatilgan."
+                                        "meaning": "This sentence uses 空调 and 图书馆."
                                 }
                         ]
                 }
@@ -141,25 +141,25 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
-                                        "prompt": "konditsioner",
+                                        "prompt": "air conditioner",
                                         "answer": "空调",
                                         "pinyin": "kōngtiáo"
                                 },
                                 {
-                                        "prompt": "kutubxona",
+                                        "prompt": "library",
                                         "answer": "图书馆",
                                         "pinyin": "túshūguǎn"
                                 },
                                 {
-                                        "prompt": "lug'at",
+                                        "prompt": "dictionary",
                                         "answer": "词典",
                                         "pinyin": "cídiǎn"
                                 },
                                 {
-                                        "prompt": "metro",
+                                        "prompt": "subway, metro",
                                         "answer": "地铁",
                                         "pinyin": "dìtiě"
                                 }
@@ -168,26 +168,26 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "空调",
-                                        "answer": "konditsioner",
+                                        "answer": "air conditioner",
                                         "pinyin": "kōngtiáo"
                                 },
                                 {
                                         "prompt": "图书馆",
-                                        "answer": "kutubxona",
+                                        "answer": "library",
                                         "pinyin": "túshūguǎn"
                                 },
                                 {
                                         "prompt": "词典",
-                                        "answer": "lug'at",
+                                        "answer": "dictionary",
                                         "pinyin": "cídiǎn"
                                 },
                                 {
                                         "prompt": "地铁",
-                                        "answer": "metro",
+                                        "answer": "subway, metro",
                                         "pinyin": "dìtiě"
                                 }
                         ]
@@ -209,10 +209,10 @@ LESSON = {
                 {
                         "no": 2,
                         "answers": [
-                                "konditsioner",
-                                "kutubxona",
-                                "lug'at",
-                                "metro"
+                                "air conditioner",
+                                "library",
+                                "dictionary",
+                                "subway, metro"
                         ]
                 }
         ],
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Make 3 sentences using the following words:",
                         "words": [
                                 "空调",
                                 "图书馆",
@@ -232,7 +232,7 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
+                        "instruction": "Write a short paragraph of 4-5 sentences about the lesson topic:",
                         "topic": "别忘了把空调关了"
                 }
         ],

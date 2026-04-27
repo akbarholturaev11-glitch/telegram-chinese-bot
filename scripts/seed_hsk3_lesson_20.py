@@ -12,8 +12,8 @@ LESSON = {
     "lesson_order": 20,
     "lesson_code": "HSK3-L20",
     "title": "我被他影响了",
-    "goal": "passiv va cheklovchi shartlarni ishlatish",
-    "intro_text": "Bu dars passiv va cheklovchi shartlarni ishlatishga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda “被”字句 va 只有……才…… kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "goal": "using passive voice and restrictive conditions",
+    "intro_text": "This lesson is dedicated to using passive voice and restrictive conditions. It uses 5 key vocabulary words and covers core grammar patterns such as "被"字句 and 只有……才……",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -21,35 +21,35 @@ LESSON = {
                         "zh": "被",
                         "pinyin": "bèi",
                         "pos": "prep.",
-                        "meaning": "tomonidan, passiv ko'rsatkich"
+                        "meaning": "by (passive marker)"
                 },
                 {
                         "no": 2,
                         "zh": "影响",
                         "pinyin": "yǐngxiǎng",
                         "pos": "v./n.",
-                        "meaning": "ta'sir qilmoq, ta'sir"
+                        "meaning": "to influence, influence"
                 },
                 {
                         "no": 3,
                         "zh": "解决",
                         "pinyin": "jiějué",
                         "pos": "v.",
-                        "meaning": "hal qilmoq"
+                        "meaning": "to solve, to resolve"
                 },
                 {
                         "no": 4,
                         "zh": "关心",
                         "pinyin": "guānxīn",
                         "pos": "v.",
-                        "meaning": "qiziqmoq, g'amxo'rlik qilmoq"
+                        "meaning": "to care about, to show concern"
                 },
                 {
                         "no": 5,
                         "zh": "照相机",
                         "pinyin": "zhàoxiàngjī",
                         "pos": "n.",
-                        "meaning": "fotoapparat"
+                        "meaning": "camera"
                 }
         ],
         ensure_ascii=False,
@@ -65,13 +65,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "你怎么开始认真学习了？",
                                         "pinyin": "",
-                                        "translation": "Sen nega jiddiy o'qishni boshlading?"
+                                        "translation": "Why did you start studying seriously?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "我被他影响了。",
                                         "pinyin": "",
-                                        "translation": "Men unga ta'sirlanib qoldim."
+                                        "translation": "I was influenced by him."
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "这个问题怎么解决？",
                                         "pinyin": "",
-                                        "translation": "Bu muammoni qanday hal qilamiz?"
+                                        "translation": "How do we solve this problem?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "只有大家一起努力，才会解决。",
                                         "pinyin": "",
-                                        "translation": "Faqat hamma birga harakat qilsa, hal bo'ladi."
+                                        "translation": "Only if everyone works together will it be solved."
                                 }
                         ]
                 }
@@ -101,35 +101,35 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "title_zh": "“被”字句",
-                        "explanation": "Bu tuzilma passiv ma'noni beradi va ish kimga ta'sir qilganini ko'rsatadi.",
+                        "title_zh": ""被"字句",
+                        "explanation": "This structure expresses a passive meaning and shows who or what is affected by the action.",
                         "examples": [
                                 {
                                         "zh": "我被他影响了。",
                                         "pinyin": "",
-                                        "meaning": "Men unga ta'sirlanib qoldim."
+                                        "meaning": "I was influenced by him."
                                 },
                                 {
                                         "zh": "他被老师表扬了。",
                                         "pinyin": "",
-                                        "meaning": "U ustoz tomonidan maqtaldi."
+                                        "meaning": "He was praised by the teacher."
                                 }
                         ]
                 },
                 {
                         "no": 2,
                         "title_zh": "只有……才……",
-                        "explanation": "Bu qolip yagona zarur shartni alohida ta'kidlaydi.",
+                        "explanation": "This pattern emphasises the one and only necessary condition.",
                         "examples": [
                                 {
                                         "zh": "只有认真学习，才会成功。",
                                         "pinyin": "",
-                                        "meaning": "Faqat jiddiy o'qisang, muvaffaqiyat qozonasan."
+                                        "meaning": "Only by studying seriously will you succeed."
                                 },
                                 {
                                         "zh": "只有解决问题，大家才放心。",
                                         "pinyin": "",
-                                        "meaning": "Faqat muammo hal bo'lsa, hamma xotirjam bo'ladi."
+                                        "meaning": "Only when the problem is solved will everyone be at ease."
                                 }
                         ]
                 }
@@ -141,25 +141,25 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
-                                        "prompt": "tomonidan, passiv ko'rsatkich",
+                                        "prompt": "by (passive marker)",
                                         "answer": "被",
                                         "pinyin": "bèi"
                                 },
                                 {
-                                        "prompt": "ta'sir qilmoq, ta'sir",
+                                        "prompt": "to influence, influence",
                                         "answer": "影响",
                                         "pinyin": "yǐngxiǎng"
                                 },
                                 {
-                                        "prompt": "hal qilmoq",
+                                        "prompt": "to solve, to resolve",
                                         "answer": "解决",
                                         "pinyin": "jiějué"
                                 },
                                 {
-                                        "prompt": "qiziqmoq, g'amxo'rlik qilmoq",
+                                        "prompt": "to care about, to show concern",
                                         "answer": "关心",
                                         "pinyin": "guānxīn"
                                 }
@@ -168,26 +168,26 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "被",
-                                        "answer": "tomonidan, passiv ko'rsatkich",
+                                        "answer": "by (passive marker)",
                                         "pinyin": "bèi"
                                 },
                                 {
                                         "prompt": "影响",
-                                        "answer": "ta'sir qilmoq, ta'sir",
+                                        "answer": "to influence, influence",
                                         "pinyin": "yǐngxiǎng"
                                 },
                                 {
                                         "prompt": "解决",
-                                        "answer": "hal qilmoq",
+                                        "answer": "to solve, to resolve",
                                         "pinyin": "jiějué"
                                 },
                                 {
                                         "prompt": "关心",
-                                        "answer": "qiziqmoq, g'amxo'rlik qilmoq",
+                                        "answer": "to care about, to show concern",
                                         "pinyin": "guānxīn"
                                 }
                         ]
@@ -209,10 +209,10 @@ LESSON = {
                 {
                         "no": 2,
                         "answers": [
-                                "tomonidan, passiv ko'rsatkich",
-                                "ta'sir qilmoq, ta'sir",
-                                "hal qilmoq",
-                                "qiziqmoq, g'amxo'rlik qilmoq"
+                                "by (passive marker)",
+                                "to influence, influence",
+                                "to solve, to resolve",
+                                "to care about, to show concern"
                         ]
                 }
         ],
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Make 3 sentences using the following words:",
                         "words": [
                                 "被",
                                 "影响",
@@ -232,7 +232,7 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
+                        "instruction": "Write a short paragraph of 4-5 sentences about the lesson topic:",
                         "topic": "我被他影响了"
                 }
         ],

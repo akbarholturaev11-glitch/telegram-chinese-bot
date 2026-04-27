@@ -12,8 +12,8 @@ LESSON = {
     "lesson_order": 12,
     "lesson_code": "HSK3-L12",
     "title": "把重要的东西放在我这儿吧",
-    "goal": "narsani bir joyda qoldirish va berishni ifodalash",
-    "intro_text": "Bu dars narsani bir joyda qoldirish va berishni ifodalashga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda “才”和“就” va “把”字句 2：A 把 B + V + 在/到/给…… kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "goal": "expressing leaving something in a place and handing things over",
+    "intro_text": "This lesson is dedicated to expressing leaving something in a place and handing things over. It uses 5 key vocabulary words and covers core grammar patterns such as "才"和"就" and "把"字句 2：A 把 B + V + 在/到/给……",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -21,35 +21,35 @@ LESSON = {
                         "zh": "行李箱",
                         "pinyin": "xínglixiāng",
                         "pos": "n.",
-                        "meaning": "chamadon"
+                        "meaning": "suitcase"
                 },
                 {
                         "no": 2,
                         "zh": "护照",
                         "pinyin": "hùzhào",
                         "pos": "n.",
-                        "meaning": "pasport"
+                        "meaning": "passport"
                 },
                 {
                         "no": 3,
                         "zh": "起飞",
                         "pinyin": "qǐfēi",
                         "pos": "v.",
-                        "meaning": "uchib ketmoq"
+                        "meaning": "to take off (plane)"
                 },
                 {
                         "no": 4,
                         "zh": "司机",
                         "pinyin": "sījī",
                         "pos": "n.",
-                        "meaning": "haydovchi"
+                        "meaning": "driver"
                 },
                 {
                         "no": 5,
                         "zh": "黑板",
                         "pinyin": "hēibǎn",
                         "pos": "n.",
-                        "meaning": "doska"
+                        "meaning": "blackboard"
                 }
         ],
         ensure_ascii=False,
@@ -65,13 +65,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "把重要的东西放在我这儿吧。",
                                         "pinyin": "",
-                                        "translation": "Muhim narsalarni mening yonimda qoldir."
+                                        "translation": "Leave the important things here with me."
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "好，护照和票我先给你。",
                                         "pinyin": "",
-                                        "translation": "Xo'p, pasport bilan biletni avval senga beraman."
+                                        "translation": "Sure, I'll give you the passport and tickets first."
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "司机什么时候到？",
                                         "pinyin": "",
-                                        "translation": "Haydovchi qachon keladi?"
+                                        "translation": "When will the driver arrive?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "他到了以后，我们就出发。",
                                         "pinyin": "",
-                                        "translation": "U kelganidan keyin yo'lga chiqamiz."
+                                        "translation": "We'll set off once he arrives."
                                 }
                         ]
                 }
@@ -101,35 +101,35 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "title_zh": "“才”和“就”",
-                        "explanation": "Bu grammatika mavzusi darsdagi asosiy gap qoliplarini amalda ishlatishga yordam beradi.",
+                        "title_zh": ""才"和"就"",
+                        "explanation": "This grammar topic helps to practise the core sentence patterns of the lesson in context.",
                         "examples": [
                                 {
                                         "zh": "把重要的东西放在我这儿吧。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有行李箱和护照。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 行李箱 va 护照 ishlatilgan."
+                                        "meaning": "This sentence uses 行李箱 and 护照."
                                 }
                         ]
                 },
                 {
                         "no": 2,
-                        "title_zh": "“把”字句 2：A 把 B + V + 在/到/给……",
-                        "explanation": "Bu tuzilma ta'sir qilinayotgan ob'ektni oldinga chiqarib, natijani yoki yo'nalishni ta'kidlaydi.",
+                        "title_zh": ""把"字句 2：A 把 B + V + 在/到/给……",
+                        "explanation": "This structure moves the affected object to the front to emphasise the result or direction.",
                         "examples": [
                                 {
                                         "zh": "把重要的东西放在我这儿吧。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi qolip namunasi."
+                                        "meaning": "A sample pattern from the lesson title."
                                 },
                                 {
                                         "zh": "请把行李箱放这儿。",
                                         "pinyin": "",
-                                        "meaning": "Iltimos, 行李箱ni bu yerga qo'ying."
+                                        "meaning": "Please put the 行李箱 here."
                                 }
                         ]
                 }
@@ -141,25 +141,25 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
-                                        "prompt": "chamadon",
+                                        "prompt": "suitcase",
                                         "answer": "行李箱",
                                         "pinyin": "xínglixiāng"
                                 },
                                 {
-                                        "prompt": "pasport",
+                                        "prompt": "passport",
                                         "answer": "护照",
                                         "pinyin": "hùzhào"
                                 },
                                 {
-                                        "prompt": "uchib ketmoq",
+                                        "prompt": "to take off (plane)",
                                         "answer": "起飞",
                                         "pinyin": "qǐfēi"
                                 },
                                 {
-                                        "prompt": "haydovchi",
+                                        "prompt": "driver",
                                         "answer": "司机",
                                         "pinyin": "sījī"
                                 }
@@ -168,26 +168,26 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "行李箱",
-                                        "answer": "chamadon",
+                                        "answer": "suitcase",
                                         "pinyin": "xínglixiāng"
                                 },
                                 {
                                         "prompt": "护照",
-                                        "answer": "pasport",
+                                        "answer": "passport",
                                         "pinyin": "hùzhào"
                                 },
                                 {
                                         "prompt": "起飞",
-                                        "answer": "uchib ketmoq",
+                                        "answer": "to take off (plane)",
                                         "pinyin": "qǐfēi"
                                 },
                                 {
                                         "prompt": "司机",
-                                        "answer": "haydovchi",
+                                        "answer": "driver",
                                         "pinyin": "sījī"
                                 }
                         ]
@@ -209,10 +209,10 @@ LESSON = {
                 {
                         "no": 2,
                         "answers": [
-                                "chamadon",
-                                "pasport",
-                                "uchib ketmoq",
-                                "haydovchi"
+                                "suitcase",
+                                "passport",
+                                "to take off (plane)",
+                                "driver"
                         ]
                 }
         ],
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Make 3 sentences using the following words:",
                         "words": [
                                 "行李箱",
                                 "护照",
@@ -232,7 +232,7 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
+                        "instruction": "Write a short paragraph of 4-5 sentences about the lesson topic:",
                         "topic": "把重要的东西放在我这儿吧"
                 }
         ],

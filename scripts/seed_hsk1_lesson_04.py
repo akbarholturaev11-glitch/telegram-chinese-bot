@@ -12,23 +12,23 @@ LESSON = {
     "lesson_order": 4,
     "lesson_code": "HSK1-L04",
     "title": "她是我的汉语老师",
-    "goal": "Uchinchi shaxs haqida gapirish, qarindoshlik va egalik bildirish",
+    "goal": "Talk about third persons, express possession with 的, and use 谁/哪 question words",
     "intro_text": (
-        "To'rtinchi darsda siz uchinchi shaxs (u/o'sha) haqida gapirish, "
-        "的 yuklamasi bilan egalik bildirish va 谁/哪 so'roq olmoshlarini o'rganasiz. "
-        "10 ta yangi so'z, 3 ta dialog."
+        "In the fourth lesson you will learn how to talk about third persons (he/she), "
+        "express possession using the particle 的, and use the question words 谁/哪. "
+        "10 new words, 3 dialogues."
     ),
     "vocabulary_json": json.dumps([
-        {"no": 1,  "zh": "她",   "pinyin": "tā",      "pos": "pron.", "meaning": "u (ayol)"},
-        {"no": 2,  "zh": "谁",   "pinyin": "shéi",    "pos": "pron.", "meaning": "kim, kim?"},
-        {"no": 3,  "zh": "的",   "pinyin": "de",      "pos": "part.", "meaning": "ning (egalik yuklamasi)"},
-        {"no": 4,  "zh": "汉语", "pinyin": "Hànyǔ",   "pos": "n.",    "meaning": "xitoy tili"},
-        {"no": 5,  "zh": "哪",   "pinyin": "nǎ",      "pos": "pron.", "meaning": "qaysi, qayerlik"},
-        {"no": 6,  "zh": "国",   "pinyin": "guó",     "pos": "n.",    "meaning": "mamlakat, davlat"},
-        {"no": 7,  "zh": "呢",   "pinyin": "ne",      "pos": "part.", "meaning": "nima, bo'lsa? (so'roq)"},
-        {"no": 8,  "zh": "他",   "pinyin": "tā",      "pos": "pron.", "meaning": "u (erkak)"},
-        {"no": 9,  "zh": "同学", "pinyin": "tóngxué", "pos": "n.",    "meaning": "sinfdosh, kursdosh"},
-        {"no": 10, "zh": "朋友", "pinyin": "péngyou", "pos": "n.",    "meaning": "do'st"},
+        {"no": 1,  "zh": "她",   "pinyin": "tā",      "pos": "pron.", "meaning": "she, her"},
+        {"no": 2,  "zh": "谁",   "pinyin": "shéi",    "pos": "pron.", "meaning": "who"},
+        {"no": 3,  "zh": "的",   "pinyin": "de",      "pos": "part.", "meaning": "'s (possessive particle)"},
+        {"no": 4,  "zh": "汉语", "pinyin": "Hànyǔ",   "pos": "n.",    "meaning": "Chinese language"},
+        {"no": 5,  "zh": "哪",   "pinyin": "nǎ",      "pos": "pron.", "meaning": "which, where from"},
+        {"no": 6,  "zh": "国",   "pinyin": "guó",     "pos": "n.",    "meaning": "country, nation"},
+        {"no": 7,  "zh": "呢",   "pinyin": "ne",      "pos": "part.", "meaning": "what about? (follow-up question)"},
+        {"no": 8,  "zh": "他",   "pinyin": "tā",      "pos": "pron.", "meaning": "he, him"},
+        {"no": 9,  "zh": "同学", "pinyin": "tóngxué", "pos": "n.",    "meaning": "classmate"},
+        {"no": 10, "zh": "朋友", "pinyin": "péngyou", "pos": "n.",    "meaning": "friend"},
     ], ensure_ascii=False),
 
     "dialogue_json": json.dumps([
@@ -37,8 +37,8 @@ LESSON = {
             "section_label": "课文 1",
             "scene_label_zh": "Sinfda — o'qituvchi haqida",
             "dialogue": [
-                {"speaker": "A", "zh": "她是谁？",              "pinyin": "Tā shì shéi?",                       "translation": "U kim?"},
-                {"speaker": "B", "zh": "她是我的汉语老师，她叫李月。", "pinyin": "Tā shì wǒ de Hànyǔ lǎoshī, tā jiào Lǐ Yuè.", "translation": "U mening xitoy tili o'qituvchim, uning ismi Li Yue."},
+                {"speaker": "A", "zh": "她是谁？",              "pinyin": "Tā shì shéi?",                       "translation": "Who is she?"},
+                {"speaker": "B", "zh": "她是我的汉语老师，她叫李月。", "pinyin": "Tā shì wǒ de Hànyǔ lǎoshī, tā jiào Lǐ Yuè.", "translation": "She is my Chinese teacher, her name is Li Yue."},
             ]
         },
         {
@@ -46,9 +46,9 @@ LESSON = {
             "section_label": "课文 2",
             "scene_label_zh": "Kutubxonada — millat so'rash",
             "dialogue": [
-                {"speaker": "A", "zh": "你是哪国人？",    "pinyin": "Nǐ shì nǎ guó rén?",       "translation": "Siz qaysi mamlakatdansiz?"},
-                {"speaker": "B", "zh": "我是美国人。你呢？","pinyin": "Wǒ shì Měiguó rén. Nǐ ne?", "translation": "Men amerikalikman. Siz-chi?"},
-                {"speaker": "A", "zh": "我是中国人。",    "pinyin": "Wǒ shì Zhōngguó rén.",     "translation": "Men xitoylikman."},
+                {"speaker": "A", "zh": "你是哪国人？",    "pinyin": "Nǐ shì nǎ guó rén?",       "translation": "What country are you from?"},
+                {"speaker": "B", "zh": "我是美国人。你呢？","pinyin": "Wǒ shì Měiguó rén. Nǐ ne?", "translation": "I am American. What about you?"},
+                {"speaker": "A", "zh": "我是中国人。",    "pinyin": "Wǒ shì Zhōngguó rén.",     "translation": "I am Chinese."},
             ]
         },
         {
@@ -56,10 +56,10 @@ LESSON = {
             "section_label": "课文 3",
             "scene_label_zh": "Fotoda — do'st va sinfdosh",
             "dialogue": [
-                {"speaker": "A", "zh": "他是谁？",                "pinyin": "Tā shì shéi?",                           "translation": "U kim?"},
-                {"speaker": "B", "zh": "他是我同学。",             "pinyin": "Tā shì wǒ tóngxué.",                    "translation": "U mening sinfdoshim."},
-                {"speaker": "A", "zh": "她呢？她是你同学吗？",     "pinyin": "Tā ne? Tā shì nǐ tóngxué ma?",          "translation": "U-chi? U ham sinfdoshingizmi?"},
-                {"speaker": "B", "zh": "她不是我同学，她是我朋友。","pinyin": "Tā bú shì wǒ tóngxué, tā shì wǒ péngyou.", "translation": "U sinfdoshim emas, u mening do'stim."},
+                {"speaker": "A", "zh": "他是谁？",                "pinyin": "Tā shì shéi?",                           "translation": "Who is he?"},
+                {"speaker": "B", "zh": "他是我同学。",             "pinyin": "Tā shì wǒ tóngxué.",                    "translation": "He is my classmate."},
+                {"speaker": "A", "zh": "她呢？她是你同学吗？",     "pinyin": "Tā ne? Tā shì nǐ tóngxué ma?",          "translation": "What about her? Is she also your classmate?"},
+                {"speaker": "B", "zh": "她不是我同学，她是我朋友。","pinyin": "Tā bú shì wǒ tóngxué, tā shì wǒ péngyou.", "translation": "She is not my classmate, she is my friend."},
             ]
         },
     ], ensure_ascii=False),
@@ -69,53 +69,53 @@ LESSON = {
             "no": 1,
             "title_zh": "结构助词 的 — Egalik yuklamasi",
             "explanation": (
-                "的(de) — egalik yoki tegishlilik bildiradi.\n"
-                "Tuzilishi: Ot/Olmosh + 的 + Ot\n\n"
-                "Misol:\n"
-                "我的老师 — mening o'qituvchim\n"
-                "她的朋友 — uning do'sti\n\n"
-                "Muhim: Qarindoshlik va shaxs nomlari oldidan 的 tushib qolishi mumkin:\n"
-                "我(的)老师 ✓ — mening o'qituvchim\n"
-                "我(的)朋友 ✓ — mening do'stim"
+                "的(de) — expresses possession or association.\n"
+                "Structure: Noun/Pronoun + 的 + Noun\n\n"
+                "Example:\n"
+                "我的老师 — my teacher\n"
+                "她的朋友 — her friend\n\n"
+                "Note: 的 can be omitted before kinship terms and personal nouns:\n"
+                "我(的)老师 ✓ — my teacher\n"
+                "我(的)朋友 ✓ — my friend"
             ),
             "examples": [
-                {"zh": "我的汉语老师",   "pinyin": "wǒ de Hànyǔ lǎoshī", "meaning": "mening xitoy tili o'qituvchim"},
-                {"zh": "他的同学",       "pinyin": "tā de tóngxué",       "meaning": "uning sinfdoshi"},
-                {"zh": "你的朋友",       "pinyin": "nǐ de péngyou",       "meaning": "sening do'sting"},
+                {"zh": "我的汉语老师",   "pinyin": "wǒ de Hànyǔ lǎoshī", "meaning": "my Chinese teacher"},
+                {"zh": "他的同学",       "pinyin": "tā de tóngxué",       "meaning": "his classmate"},
+                {"zh": "你的朋友",       "pinyin": "nǐ de péngyou",       "meaning": "your friend"},
             ]
         },
         {
             "no": 2,
             "title_zh": "谁 — Kim so'roq olmoshi",
             "explanation": (
-                "谁(shéi) — 'kim?' ma'nosida ishlatiladi.\n"
-                "Gapda ega yoki to'ldiruvchi o'rnida keladi.\n\n"
-                "Misol:\n"
-                "她是谁？— U kim?\n"
-                "谁是老师？— Kim o'qituvchi?\n"
-                "他是谁的朋友？— U kimning do'sti?"
+                "谁(shéi) — means 'who?'.\n"
+                "It can function as the subject or object in a sentence.\n\n"
+                "Example:\n"
+                "她是谁？— Who is she?\n"
+                "谁是老师？— Who is the teacher?\n"
+                "他是谁的朋友？— Whose friend is he?"
             ),
             "examples": [
-                {"zh": "她是谁？",       "pinyin": "Tā shì shéi?",        "meaning": "U kim?"},
-                {"zh": "谁是你的老师？", "pinyin": "Shéi shì nǐ de lǎoshī?", "meaning": "Kimingiz o'qituvchi?"},
-                {"zh": "他是谁的同学？", "pinyin": "Tā shì shéi de tóngxué?", "meaning": "U kimning sinfdoshi?"},
+                {"zh": "她是谁？",       "pinyin": "Tā shì shéi?",        "meaning": "Who is she?"},
+                {"zh": "谁是你的老师？", "pinyin": "Shéi shì nǐ de lǎoshī?", "meaning": "Who is your teacher?"},
+                {"zh": "他是谁的同学？", "pinyin": "Tā shì shéi de tóngxué?", "meaning": "Whose classmate is he?"},
             ]
         },
         {
             "no": 3,
             "title_zh": "呢 — Qaytarma so'roq yuklamasi",
             "explanation": (
-                "呢(ne) — oldingi gapda aytilgan narsani so'rash uchun.\n"
-                "Tuzilishi: A gap... B呢？ (B nima bo'lsa?)\n\n"
-                "Misol:\n"
+                "呢(ne) — used to ask about the same topic mentioned in the previous sentence.\n"
+                "Structure: Statement A... B呢？ (What about B?)\n\n"
+                "Example:\n"
                 "我是美国人。你呢？\n"
-                "Men amerikalikman. Siz-chi?\n\n"
+                "I am American. What about you?\n\n"
                 "她叫李月。他呢？\n"
-                "Uning ismi Li Yue. U-chi?"
+                "Her name is Li Yue. What about him?"
             ),
             "examples": [
-                {"zh": "我是学生。你呢？",  "pinyin": "Wǒ shì xuésheng. Nǐ ne?", "meaning": "Men o'quvchiman. Siz-chi?"},
-                {"zh": "她是中国人。他呢？","pinyin": "Tā shì Zhōngguó rén. Tā ne?","meaning": "U xitoylik. U-chi (erkak)?"},
+                {"zh": "我是学生。你呢？",  "pinyin": "Wǒ shì xuésheng. Nǐ ne?", "meaning": "I am a student. What about you?"},
+                {"zh": "她是中国人。他呢？","pinyin": "Tā shì Zhōngguó rén. Tā ne?","meaning": "She is Chinese. What about him?"},
             ]
         },
     ], ensure_ascii=False),
@@ -124,19 +124,19 @@ LESSON = {
         {
             "no": 1,
             "type": "translate_to_chinese",
-            "instruction": "Xitoycha yozing:",
+            "instruction": "Write in Chinese:",
             "items": [
-                {"prompt": "U (ayol) kim?",                        "answer": "她是谁？",                  "pinyin": "Tā shì shéi?"},
-                {"prompt": "U mening xitoy tili o'qituvchim.",     "answer": "她是我的汉语老师。",         "pinyin": "Tā shì wǒ de Hànyǔ lǎoshī."},
-                {"prompt": "Siz qaysi mamlakatdansiz?",            "answer": "你是哪国人？",               "pinyin": "Nǐ shì nǎ guó rén?"},
-                {"prompt": "Men amerikalikman. Siz-chi?",          "answer": "我是美国人。你呢？",         "pinyin": "Wǒ shì Měiguó rén. Nǐ ne?"},
-                {"prompt": "U sinfdoshim emas, u mening do'stim.", "answer": "他不是我同学，他是我朋友。", "pinyin": "Tā bú shì wǒ tóngxué, tā shì wǒ péngyou."},
+                {"prompt": "Who is she?",                              "answer": "她是谁？",                  "pinyin": "Tā shì shéi?"},
+                {"prompt": "She is my Chinese teacher.",               "answer": "她是我的汉语老师。",         "pinyin": "Tā shì wǒ de Hànyǔ lǎoshī."},
+                {"prompt": "What country are you from?",              "answer": "你是哪国人？",               "pinyin": "Nǐ shì nǎ guó rén?"},
+                {"prompt": "I am American. What about you?",          "answer": "我是美国人。你呢？",         "pinyin": "Wǒ shì Měiguó rén. Nǐ ne?"},
+                {"prompt": "He is not my classmate, he is my friend.","answer": "他不是我同学，他是我朋友。", "pinyin": "Tā bú shì wǒ tóngxué, tā shì wǒ péngyou."},
             ]
         },
         {
             "no": 2,
             "type": "fill_blank",
-            "instruction": "Bo'sh joyni to'ldiring:",
+            "instruction": "Fill in the blank:",
             "items": [
                 {"prompt": "她是我___汉语老师。",            "answer": "的",   "pinyin": "de"},
                 {"prompt": "A: 他是___？  B: 他是我同学。", "answer": "谁",   "pinyin": "shéi"},
@@ -147,7 +147,7 @@ LESSON = {
         {
             "no": 3,
             "type": "make_sentence",
-            "instruction": "Berilgan so'zlardan gap tuzing:",
+            "instruction": "Make a sentence from the given words:",
             "items": [
                 {"words": ["她", "是", "我", "的", "朋友"], "answer": "她是我的朋友。",       "pinyin": "Tā shì wǒ de péngyou."},
                 {"words": ["他", "哪", "是", "国", "人"],   "answer": "他是哪国人？",         "pinyin": "Tā shì nǎ guó rén?"},
@@ -165,17 +165,17 @@ LESSON = {
     "homework_json": json.dumps([
         {
             "no": 1,
-            "instruction": "Do'stingiz haqida 4 ta gap yozing:",
+            "instruction": "Write 4 sentences about a friend:",
             "template": "他/她叫___。他/她是___人。他/她是我的___。他/她是不是___？",
             "words": ["的", "同学", "朋友", "老师", "汉语老师"],
         },
         {
             "no": 2,
-            "instruction": "Savollarga javob bering:",
+            "instruction": "Answer the following questions:",
             "items": [
-                {"prompt": "你的汉语老师是哪国人？",    "hint": "Xitoy tili o'qituvchingiz qaysi mamlakatdan?"},
-                {"prompt": "你的朋友叫什么名字？",       "hint": "Do'stingizning ismi nima?"},
-                {"prompt": "他/她是你的同学吗？",        "hint": "U sizning sinfdoshingizmi?"},
+                {"prompt": "你的汉语老师是哪国人？",    "hint": "What country is your Chinese teacher from?"},
+                {"prompt": "你的朋友叫什么名字？",       "hint": "What is your friend's name?"},
+                {"prompt": "他/她是你的同学吗？",        "hint": "Is he/she your classmate?"},
             ]
         }
     ], ensure_ascii=False),

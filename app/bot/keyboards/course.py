@@ -1,36 +1,80 @@
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from app.bot.utils.i18n import t
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton
 
 
-def course_menu_keyboard(lang: str) -> InlineKeyboardMarkup:
+# ─── STEP KEYBOARDS (inline) ────────────────────────────────────────────────
+
+def course_intro_keyboard(lang: str) -> InlineKeyboardMarkup:
     labels = {
-        "tj": "📚 Дарсро оғоз кунед",
-        "uz": "📚 Darsni boshlash",
-        "ru": "📚 Начать урок",
+        "uz": "📖 So'zlarni o'rganamiz",
+        "tj": "📖 Калимаҳоро меомӯзем",
+        "ru": "📖 Изучаем слова",
     }
-    return InlineKeyboardMarkup(
-        inline_keyboard=[[
-            InlineKeyboardButton(
-                text=labels.get(lang, labels["ru"]),
-                callback_data="course:continue",
-            )
-        ]]
-    )
+    return InlineKeyboardMarkup(inline_keyboard=[[
+        InlineKeyboardButton(text=labels.get(lang, labels["ru"]), callback_data="course:go_vocab")
+    ]])
 
 
-def review_choice_keyboard(lang: str) -> InlineKeyboardMarkup:
+def course_vocab_keyboard(lang: str) -> InlineKeyboardMarkup:
+    audio_label = "🔉"
+    next_labels = {
+        "uz": "💬 Dialogni o'rganamiz",
+        "tj": "💬 Муколамаро меомӯзем",
+        "ru": "💬 Изучаем диалог",
+    }
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [
+            InlineKeyboardButton(text=audio_label, callback_data="course:audio_vocab"),
+            InlineKeyboardButton(text=next_labels.get(lang, next_labels["ru"]), callback_data="course:go_dialogue"),
+        ]
+    ])
+
+
+def course_dialogue_keyboard(lang: str) -> InlineKeyboardMarkup:
+    audio_label = "🔉"
+    next_labels = {
+        "uz": "📐 Grammatikaga o'tamiz",
+        "tj": "📐 Ба грамматика мегузарем",
+        "ru": "📐 Переходим к грамматике",
+    }
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [
+            InlineKeyboardButton(text=audio_label, callback_data="course:audio_dialogue"),
+            InlineKeyboardButton(text=next_labels.get(lang, next_labels["ru"]), callback_data="course:go_grammar"),
+        ]
+    ])
+
+
+def course_grammar_keyboard(lang: str) -> InlineKeyboardMarkup:
     labels = {
-        "tj": {"yes": "🔁 Такрор", "no": "▶️ Давом"},
-        "uz": {"yes": "🔁 Takror", "no": "▶️ Davom"},
-        "ru": {"yes": "🔁 Повторить", "no": "▶️ Продолжить"},
+        "uz": "✏️ Mashqlarga o'tamiz",
+        "tj": "✏️ Ба машқҳо мегузарем",
+        "ru": "✏️ Переходим к упражнениям",
     }
-    l = labels.get(lang, labels["ru"])
-    return InlineKeyboardMarkup(
-        inline_keyboard=[[
-            InlineKeyboardButton(text=l["yes"], callback_data="course:review_last"),
-            InlineKeyboardButton(text=l["no"], callback_data="course:continue"),
-        ]]
-    )
+    return InlineKeyboardMarkup(inline_keyboard=[[
+        InlineKeyboardButton(text=labels.get(lang, labels["ru"]), callback_data="course:go_exercise")
+    ]])
+
+
+def course_exercise_keyboard(lang: str) -> InlineKeyboardMarkup:
+    labels = {
+        "uz": "🏁 Darsni yakunlaymiz",
+        "tj": "🏁 Дарсро хулосабандӣ мекунем",
+        "ru": "🏁 Завершаем урок",
+    }
+    return InlineKeyboardMarkup(inline_keyboard=[[
+        InlineKeyboardButton(text=labels.get(lang, labels["ru"]), callback_data="course:go_homework")
+    ]])
+
+
+def course_homework_keyboard(lang: str) -> InlineKeyboardMarkup:
+    labels = {
+        "uz": "✅ Dars tugadi — Keyingi darsga",
+        "tj": "✅ Дарс тамом шуд — Ба дарси навбатӣ",
+        "ru": "✅ Урок завершён — К следующему уроку",
+    }
+    return InlineKeyboardMarkup(inline_keyboard=[[
+        InlineKeyboardButton(text=labels.get(lang, labels["ru"]), callback_data="course:next_lesson")
+    ]])
 
 
 def lesson_selection_keyboard(
@@ -50,133 +94,34 @@ def lesson_selection_keyboard(
     total = len(lessons)
 
     buttons = []
-    for i in range(0, len(page_lessons), 2):
-        row = [InlineKeyboardButton(
-            text=str(page_lessons[i].lesson_order),
-            callback_data=f"course:pick_lesson:{page_lessons[i].id}",
-        )]
-        if i + 1 < len(page_lessons):
-            row.append(InlineKeyboardButton(
-                text=str(page_lessons[i + 1].lesson_order),
-                callback_data=f"course:pick_lesson:{page_lessons[i + 1].id}",
-            ))
-        buttons.append(row)
+    for lesson in page_lessons:
+        buttons.append([
+            InlineKeyboardButton(
+                text=f"{lesson.lesson_order}. {lesson.title}",
+                callback_data=f"course:pick_lesson:{lesson.id}",
+            )
+        ])
 
     nav = []
     if level == "hsk4":
         if page > 0:
-            nav.append(InlineKeyboardButton(
-                text="⬆️ 上",
-                callback_data=f"course:lessons_page:{page - 1}",
-            ))
+            nav.append(InlineKeyboardButton(text="⬆️ 上", callback_data=f"course:lessons_page:{page-1}"))
         if end < total:
-            nav.append(InlineKeyboardButton(
-                text="⬇️ 下",
-                callback_data=f"course:lessons_page:{page + 1}",
-            ))
+            nav.append(InlineKeyboardButton(text="⬇️ 下", callback_data=f"course:lessons_page:{page+1}"))
     else:
-        prev_labels = {"tj": "👈🏽 қабл", "uz": "👈🏽 oldingi", "ru": "👈🏽 назад"}
-        next_labels = {"tj": "давом👉🏽", "uz": "davom👉🏽", "ru": "далее👉🏽"}
+        prev_labels = {"tj": "⬅️ Қабл", "uz": "⬅️ Oldingi", "ru": "⬅️ Назад"}
+        next_labels = {"tj": "Баъд ➡️", "uz": "Keyingi ➡️", "ru": "Далее ➡️"}
         if page > 0:
             nav.append(InlineKeyboardButton(
-                text=prev_labels.get(lang, "👈🏽"),
-                callback_data=f"course:lessons_page:{page - 1}",
+                text=prev_labels.get(lang, "⬅️"),
+                callback_data=f"course:lessons_page:{page-1}",
             ))
         if end < total:
             nav.append(InlineKeyboardButton(
-                text=next_labels.get(lang, "👉🏽"),
-                callback_data=f"course:lessons_page:{page + 1}",
+                text=next_labels.get(lang, "➡️"),
+                callback_data=f"course:lessons_page:{page+1}",
             ))
-
     if nav:
         buttons.append(nav)
 
     return InlineKeyboardMarkup(inline_keyboard=buttons)
-
-
-def course_intro_keyboard(lang: str) -> InlineKeyboardMarkup:
-    labels = {
-        "tj": "📖 Луғатро омӯзем ➡️",
-        "uz": "📖 So'zlarni o'rganamiz ➡️",
-        "ru": "📖 Изучаем слова ➡️",
-    }
-    return InlineKeyboardMarkup(inline_keyboard=[[
-        InlineKeyboardButton(text=labels.get(lang, labels["ru"]), callback_data="course:go_vocab")
-    ]])
-
-
-def course_vocab_keyboard(lang: str) -> InlineKeyboardMarkup:
-    labels = {
-        "tj": {
-            "next": "📝 Диалогро омӯзем ➡️",
-            "repeat": "🔁 Такрор",
-        },
-        "uz": {
-            "next": "📝 Dialogni o'rganamiz ➡️",
-            "repeat": "🔁 Takror",
-        },
-        "ru": {
-            "next": "📝 Изучаем диалог ➡️",
-            "repeat": "🔁 Повторить",
-        },
-    }
-    l = labels.get(lang, labels["ru"])
-    return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text=l["next"], callback_data="course:go_dialogue")],
-        [InlineKeyboardButton(text=l["repeat"], callback_data="course:repeat_step")],
-    ])
-
-
-def course_dialogue_keyboard(lang: str) -> InlineKeyboardMarkup:
-    labels = {
-        "tj": {
-            "next": "📐 Грамматикаро омӯзем ➡️",
-            "repeat": "🔁 Такрор",
-        },
-        "uz": {
-            "next": "📐 Grammatikani o'rganamiz ➡️",
-            "repeat": "🔁 Takror",
-        },
-        "ru": {
-            "next": "📐 Изучаем грамматику ➡️",
-            "repeat": "🔁 Повторить",
-        },
-    }
-    l = labels.get(lang, labels["ru"])
-    return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text=l["next"], callback_data="course:go_grammar")],
-        [InlineKeyboardButton(text=l["repeat"], callback_data="course:repeat_step")],
-    ])
-
-
-def course_grammar_keyboard(lang: str) -> InlineKeyboardMarkup:
-    labels = {
-        "tj": {
-            "next": "✏️ Машқҳо ➡️",
-            "repeat": "🔁 Такрор",
-        },
-        "uz": {
-            "next": "✏️ Mashqlar ➡️",
-            "repeat": "🔁 Takror",
-        },
-        "ru": {
-            "next": "✏️ Упражнения ➡️",
-            "repeat": "🔁 Повторить",
-        },
-    }
-    l = labels.get(lang, labels["ru"])
-    return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text=l["next"], callback_data="course:go_exercise")],
-        [InlineKeyboardButton(text=l["repeat"], callback_data="course:repeat_step")],
-    ])
-
-
-def course_exercise_keyboard(lang: str) -> InlineKeyboardMarkup:
-    labels = {
-        "tj": "🧪 Тестро оғоз кунем ➡️",
-        "uz": "🧪 Testni boshlaymiz ➡️",
-        "ru": "🧪 Начинаем тест ➡️",
-    }
-    return InlineKeyboardMarkup(inline_keyboard=[[
-        InlineKeyboardButton(text=labels.get(lang, labels["ru"]), callback_data="course:go_quiz")
-    ]])

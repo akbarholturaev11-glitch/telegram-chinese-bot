@@ -12,8 +12,8 @@ LESSON = {
     "lesson_order": 1,
     "lesson_code": "HSK3-L01",
     "title": "周末你有什么打算",
-    "goal": "dam olish kuni rejalari haqida gapirish",
-    "intro_text": "Bu dars dam olish kuni rejalari haqida gapirishga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda 结果补语“好” va “一……也/都 + 不/没……”表示否定 kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "goal": "talking about weekend plans",
+    "intro_text": "This lesson is dedicated to talking about weekend plans. It uses 5 key vocabulary words and covers core grammar patterns such as the resultative complement 好 and 一......也/都 + 不/没...... expressing negation.",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -21,35 +21,35 @@ LESSON = {
                         "zh": "周末",
                         "pinyin": "zhōumò",
                         "pos": "n.",
-                        "meaning": "dam olish kuni"
+                        "meaning": "weekend"
                 },
                 {
                         "no": 2,
                         "zh": "打算",
                         "pinyin": "dǎsuàn",
                         "pos": "v./n.",
-                        "meaning": "reja qilmoq, reja"
+                        "meaning": "to plan, plan"
                 },
                 {
                         "no": 3,
                         "zh": "作业",
                         "pinyin": "zuòyè",
                         "pos": "n.",
-                        "meaning": "uy vazifasi"
+                        "meaning": "homework"
                 },
                 {
                         "no": 4,
                         "zh": "着急",
                         "pinyin": "zháojí",
                         "pos": "adj.",
-                        "meaning": "xavotirli, shoshayotgan"
+                        "meaning": "worried, anxious"
                 },
                 {
                         "no": 5,
                         "zh": "地图",
                         "pinyin": "dìtú",
                         "pos": "n.",
-                        "meaning": "xarita"
+                        "meaning": "map"
                 }
         ],
         ensure_ascii=False,
@@ -65,13 +65,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "周末你有什么打算？",
                                         "pinyin": "",
-                                        "translation": "Dam olish kuni uchun qanday rejang bor?"
+                                        "translation": "What are your plans for the weekend?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "我想先写作业，然后跟朋友出去。",
                                         "pinyin": "",
-                                        "translation": "Avval uy vazifamni qilaman, keyin do'stim bilan chiqaman."
+                                        "translation": "I want to do my homework first, then go out with a friend."
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "去公园要不要带地图？",
                                         "pinyin": "",
-                                        "translation": "Parkka borganda xarita olib ketamizmi?"
+                                        "translation": "Do we need to bring a map to the park?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "不用着急，我都准备好了。",
                                         "pinyin": "",
-                                        "translation": "Xavotir olma, hammasini tayyorlab bo'ldim."
+                                        "translation": "Don't worry, I've got everything ready."
                                 }
                         ]
                 }
@@ -102,34 +102,34 @@ LESSON = {
                 {
                         "no": 1,
                         "title_zh": "结果补语“好”",
-                        "explanation": "Bu qolip harakatning muvaffaqiyatli yoki qoniqarli tugaganini bildiradi.",
+                        "explanation": "This pattern indicates that an action has been completed successfully or satisfactorily.",
                         "examples": [
                                 {
                                         "zh": "我准备好了。",
                                         "pinyin": "",
-                                        "meaning": "Men tayyor bo'ldim."
+                                        "meaning": "I'm ready."
                                 },
                                 {
                                         "zh": "电影票买好了。",
                                         "pinyin": "",
-                                        "meaning": "Kinoga bilet sotib olinib bo'ldi."
+                                        "meaning": "The movie tickets have been bought."
                                 }
                         ]
                 },
                 {
                         "no": 2,
-                        "title_zh": "“一……也/都 + 不/没……”表示否定",
-                        "explanation": "Bu grammatika mavzusi darsdagi asosiy gap qoliplarini amalda ishlatishga yordam beradi.",
+                        "title_zh": "一......也/都 + 不/没......表示否定",
+                        "explanation": "This grammar topic helps to practice the core sentence patterns of the lesson in context.",
                         "examples": [
                                 {
                                         "zh": "周末你有什么打算。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有周末和打算。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 周末 va 打算 ishlatilgan."
+                                        "meaning": "This sentence uses 周末 and 打算."
                                 }
                         ]
                 }
@@ -141,25 +141,25 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
-                                        "prompt": "dam olish kuni",
+                                        "prompt": "weekend",
                                         "answer": "周末",
                                         "pinyin": "zhōumò"
                                 },
                                 {
-                                        "prompt": "reja qilmoq, reja",
+                                        "prompt": "to plan, plan",
                                         "answer": "打算",
                                         "pinyin": "dǎsuàn"
                                 },
                                 {
-                                        "prompt": "uy vazifasi",
+                                        "prompt": "homework",
                                         "answer": "作业",
                                         "pinyin": "zuòyè"
                                 },
                                 {
-                                        "prompt": "xavotirli, shoshayotgan",
+                                        "prompt": "worried, anxious",
                                         "answer": "着急",
                                         "pinyin": "zháojí"
                                 }
@@ -168,26 +168,26 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "周末",
-                                        "answer": "dam olish kuni",
+                                        "answer": "weekend",
                                         "pinyin": "zhōumò"
                                 },
                                 {
                                         "prompt": "打算",
-                                        "answer": "reja qilmoq, reja",
+                                        "answer": "to plan, plan",
                                         "pinyin": "dǎsuàn"
                                 },
                                 {
                                         "prompt": "作业",
-                                        "answer": "uy vazifasi",
+                                        "answer": "homework",
                                         "pinyin": "zuòyè"
                                 },
                                 {
                                         "prompt": "着急",
-                                        "answer": "xavotirli, shoshayotgan",
+                                        "answer": "worried, anxious",
                                         "pinyin": "zháojí"
                                 }
                         ]
@@ -209,10 +209,10 @@ LESSON = {
                 {
                         "no": 2,
                         "answers": [
-                                "dam olish kuni",
-                                "reja qilmoq, reja",
-                                "uy vazifasi",
-                                "xavotirli, shoshayotgan"
+                                "weekend",
+                                "to plan, plan",
+                                "homework",
+                                "worried, anxious"
                         ]
                 }
         ],
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Make 3 sentences using the following words:",
                         "words": [
                                 "周末",
                                 "打算",
@@ -232,7 +232,7 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
+                        "instruction": "Write a short paragraph of 4-5 sentences about the lesson topic:",
                         "topic": "周末你有什么打算"
                 }
         ],

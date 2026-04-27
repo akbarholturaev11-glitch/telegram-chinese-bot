@@ -12,8 +12,8 @@ LESSON = {
     "lesson_order": 16,
     "lesson_code": "HSK3-L16",
     "title": "我现在累得下了班就想睡觉",
-    "goal": "natijaviy holat va shartni ifodalash",
-    "intro_text": "Bu dars natijaviy holat va shartni ifodalashga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda 如果……（的话），（S）就…… va 复杂的状态补语 kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "goal": "expressing resultative states and conditions",
+    "intro_text": "This lesson focuses on expressing resultative states and conditions. It uses 5 key vocabulary words and covers the main grammar patterns 如果……（的话），（S）就…… and 复杂的状态补语.",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -21,35 +21,35 @@ LESSON = {
                         "zh": "累",
                         "pinyin": "lèi",
                         "pos": "adj.",
-                        "meaning": "charchagan"
+                        "meaning": "tired"
                 },
                 {
                         "no": 2,
                         "zh": "睡觉",
                         "pinyin": "shuìjiào",
                         "pos": "v.",
-                        "meaning": "uxlamoq"
+                        "meaning": "to sleep"
                 },
                 {
                         "no": 3,
                         "zh": "如果",
                         "pinyin": "rúguǒ",
                         "pos": "conj.",
-                        "meaning": "agar"
+                        "meaning": "if"
                 },
                 {
                         "no": 4,
                         "zh": "城市",
                         "pinyin": "chéngshì",
                         "pos": "n.",
-                        "meaning": "shahar"
+                        "meaning": "city"
                 },
                 {
                         "no": 5,
                         "zh": "检查",
                         "pinyin": "jiǎnchá",
                         "pos": "v.",
-                        "meaning": "tekshirmoq"
+                        "meaning": "to check, to inspect"
                 }
         ],
         ensure_ascii=False,
@@ -65,13 +65,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "你今天怎么这么累？",
                                         "pinyin": "",
-                                        "translation": "Bugun nega bunchalik charchading?"
+                                        "translation": "Why are you so tired today?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "我现在累得下了班就想睡觉。",
                                         "pinyin": "",
-                                        "translation": "Men hozir shunchalik charchadimki, ishdan keyin faqat uxlagim keladi."
+                                        "translation": "I'm so tired right now that after work I just want to sleep."
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "如果你这么累，就早点休息吧。",
                                         "pinyin": "",
-                                        "translation": "Agar shunchalik charchagan bo'lsang, erta dam ol."
+                                        "translation": "If you're that tired, you should rest early."
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "好，明天我再去检查。",
                                         "pinyin": "",
-                                        "translation": "Xo'p, ertaga yana tekshiruvga boraman."
+                                        "translation": "Okay, I'll go for the check-up again tomorrow."
                                 }
                         ]
                 }
@@ -102,34 +102,34 @@ LESSON = {
                 {
                         "no": 1,
                         "title_zh": "如果……（的话），（S）就……",
-                        "explanation": "Bu qolip shart va natijani bitta gapda bog'lash uchun ishlatiladi.",
+                        "explanation": "This pattern is used to link a condition and its result in one sentence.",
                         "examples": [
                                 {
                                         "zh": "如果你累了，就早点睡觉。",
                                         "pinyin": "",
-                                        "meaning": "Agar charchagan bo'lsang, erta uxlaysan."
+                                        "meaning": "If you are tired, go to sleep early."
                                 },
                                 {
                                         "zh": "如果下雨的话，我们就不出去。",
                                         "pinyin": "",
-                                        "meaning": "Agar yomg'ir yog'sa, tashqariga chiqmaymiz."
+                                        "meaning": "If it rains, we won't go out."
                                 }
                         ]
                 },
                 {
                         "no": 2,
                         "title_zh": "复杂的状态补语",
-                        "explanation": "Bu qolip harakat yoki holatning darajasini batafsilroq tasvirlaydi.",
+                        "explanation": "This pattern describes the degree of an action or state in greater detail.",
                         "examples": [
                                 {
                                         "zh": "我现在累得下了班就想睡觉。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有累和睡觉。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 累 va 睡觉 ishlatilgan."
+                                        "meaning": "This sentence uses 累 and 睡觉."
                                 }
                         ]
                 }
@@ -141,25 +141,25 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
-                                        "prompt": "charchagan",
+                                        "prompt": "tired",
                                         "answer": "累",
                                         "pinyin": "lèi"
                                 },
                                 {
-                                        "prompt": "uxlamoq",
+                                        "prompt": "to sleep",
                                         "answer": "睡觉",
                                         "pinyin": "shuìjiào"
                                 },
                                 {
-                                        "prompt": "agar",
+                                        "prompt": "if",
                                         "answer": "如果",
                                         "pinyin": "rúguǒ"
                                 },
                                 {
-                                        "prompt": "shahar",
+                                        "prompt": "city",
                                         "answer": "城市",
                                         "pinyin": "chéngshì"
                                 }
@@ -168,26 +168,26 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "累",
-                                        "answer": "charchagan",
+                                        "answer": "tired",
                                         "pinyin": "lèi"
                                 },
                                 {
                                         "prompt": "睡觉",
-                                        "answer": "uxlamoq",
+                                        "answer": "to sleep",
                                         "pinyin": "shuìjiào"
                                 },
                                 {
                                         "prompt": "如果",
-                                        "answer": "agar",
+                                        "answer": "if",
                                         "pinyin": "rúguǒ"
                                 },
                                 {
                                         "prompt": "城市",
-                                        "answer": "shahar",
+                                        "answer": "city",
                                         "pinyin": "chéngshì"
                                 }
                         ]
@@ -209,10 +209,10 @@ LESSON = {
                 {
                         "no": 2,
                         "answers": [
-                                "charchagan",
-                                "uxlamoq",
-                                "agar",
-                                "shahar"
+                                "tired",
+                                "to sleep",
+                                "if",
+                                "city"
                         ]
                 }
         ],
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Make 3 sentences using the following words:",
                         "words": [
                                 "累",
                                 "睡觉",
@@ -232,7 +232,7 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
+                        "instruction": "Write a short text of 4-5 sentences about the lesson topic:",
                         "topic": "我现在累得下了班就想睡觉"
                 }
         ],

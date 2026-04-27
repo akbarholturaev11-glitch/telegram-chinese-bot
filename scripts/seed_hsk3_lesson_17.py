@@ -11,9 +11,9 @@ LESSON = {
     "level": "hsk3",
     "lesson_order": 17,
     "lesson_code": "HSK3-L17",
-    "title": "谁都有办法看好你的“病”",
-    "goal": "taklif, usul va umumiy ma'nodagi olmoshlarni ishlatish",
-    "intro_text": "Bu dars taklif, usul va umumiy ma'nodagi olmoshlarni ishlatishga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda 双音节动词重叠 va 疑问代词活用 3 kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "title": "谁都有办法看好你的"病"",
+    "goal": "using suggestions, methods, and indefinite pronouns",
+    "intro_text": "This lesson focuses on using suggestions, methods, and indefinite pronouns. It uses 5 key vocabulary words and covers the main grammar patterns 双音节动词重叠 and 疑问代词活用 3.",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -21,35 +21,35 @@ LESSON = {
                         "zh": "请假",
                         "pinyin": "qǐngjià",
                         "pos": "v.",
-                        "meaning": "ta'til so'ramoq"
+                        "meaning": "to ask for time off"
                 },
                 {
                         "no": 2,
                         "zh": "邻居",
                         "pinyin": "línjū",
                         "pos": "n.",
-                        "meaning": "qo'shni"
+                        "meaning": "neighbor"
                 },
                 {
                         "no": 3,
                         "zh": "办法",
                         "pinyin": "bànfǎ",
                         "pos": "n.",
-                        "meaning": "usul"
+                        "meaning": "method, way"
                 },
                 {
                         "no": 4,
                         "zh": "决定",
                         "pinyin": "juédìng",
                         "pos": "v.",
-                        "meaning": "qaror qilmoq"
+                        "meaning": "to decide"
                 },
                 {
                         "no": 5,
                         "zh": "根据",
                         "pinyin": "gēnjù",
                         "pos": "prep./n.",
-                        "meaning": "asosida"
+                        "meaning": "based on, according to"
                 }
         ],
         ensure_ascii=False,
@@ -63,15 +63,15 @@ LESSON = {
                         "dialogue": [
                                 {
                                         "speaker": "A",
-                                        "zh": "谁都有办法看好你的“病”。",
+                                        "zh": "谁都有办法看好你的"病"。",
                                         "pinyin": "",
-                                        "translation": "Har kim sening “kasaling”ni tuzatishning yo'lini topa oladi."
+                                        "translation": "Anyone can find a way to cure your \"illness\"."
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "真的吗？那我该怎么办？",
                                         "pinyin": "",
-                                        "translation": "Rostdanmi? Unda men nima qilay?"
+                                        "translation": "Really? So what should I do?"
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "你可以根据医生的话决定。",
                                         "pinyin": "",
-                                        "translation": "Doktorning gapiga qarab qaror qilishing mumkin."
+                                        "translation": "You can decide based on what the doctor says."
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "好，我先请假休息两天。",
                                         "pinyin": "",
-                                        "translation": "Xo'p, avval ikki kun dam olish uchun ruxsat so'rayman."
+                                        "translation": "Okay, I'll ask for two days off to rest first."
                                 }
                         ]
                 }
@@ -102,34 +102,34 @@ LESSON = {
                 {
                         "no": 1,
                         "title_zh": "双音节动词重叠",
-                        "explanation": "Bu mavzu takroriy shakl orqali ohangni yumshatish yoki ma'noni tabiiyroq qilishni ko'rsatadi.",
+                        "explanation": "This topic shows how repeating a verb can soften the tone or make the meaning more natural.",
                         "examples": [
                                 {
-                                        "zh": "谁都有办法看好你的“病”。",
+                                        "zh": "谁都有办法看好你的"病"。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有请假和邻居。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 请假 va 邻居 ishlatilgan."
+                                        "meaning": "This sentence uses 请假 and 邻居."
                                 }
                         ]
                 },
                 {
                         "no": 2,
                         "title_zh": "疑问代词活用 3",
-                        "explanation": "Bu mavzu so'roq olmoshlarining umumiy yoki erkin ma'noda ishlatilishini ko'rsatadi.",
+                        "explanation": "This topic shows how question pronouns can be used with a general or indefinite meaning.",
                         "examples": [
                                 {
                                         "zh": "你去哪儿我就去哪儿。",
                                         "pinyin": "",
-                                        "meaning": "Sen qayerga borsang, men ham o'sha yerga boraman."
+                                        "meaning": "Wherever you go, I'll go there too."
                                 },
                                 {
                                         "zh": "谁都可以参加。",
                                         "pinyin": "",
-                                        "meaning": "Hamma qatnasha oladi."
+                                        "meaning": "Anyone can participate."
                                 }
                         ]
                 }
@@ -141,25 +141,25 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
-                                        "prompt": "ta'til so'ramoq",
+                                        "prompt": "to ask for time off",
                                         "answer": "请假",
                                         "pinyin": "qǐngjià"
                                 },
                                 {
-                                        "prompt": "qo'shni",
+                                        "prompt": "neighbor",
                                         "answer": "邻居",
                                         "pinyin": "línjū"
                                 },
                                 {
-                                        "prompt": "usul",
+                                        "prompt": "method, way",
                                         "answer": "办法",
                                         "pinyin": "bànfǎ"
                                 },
                                 {
-                                        "prompt": "qaror qilmoq",
+                                        "prompt": "to decide",
                                         "answer": "决定",
                                         "pinyin": "juédìng"
                                 }
@@ -168,26 +168,26 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "请假",
-                                        "answer": "ta'til so'ramoq",
+                                        "answer": "to ask for time off",
                                         "pinyin": "qǐngjià"
                                 },
                                 {
                                         "prompt": "邻居",
-                                        "answer": "qo'shni",
+                                        "answer": "neighbor",
                                         "pinyin": "línjū"
                                 },
                                 {
                                         "prompt": "办法",
-                                        "answer": "usul",
+                                        "answer": "method, way",
                                         "pinyin": "bànfǎ"
                                 },
                                 {
                                         "prompt": "决定",
-                                        "answer": "qaror qilmoq",
+                                        "answer": "to decide",
                                         "pinyin": "juédìng"
                                 }
                         ]
@@ -209,10 +209,10 @@ LESSON = {
                 {
                         "no": 2,
                         "answers": [
-                                "ta'til so'ramoq",
-                                "qo'shni",
-                                "usul",
-                                "qaror qilmoq"
+                                "to ask for time off",
+                                "neighbor",
+                                "method, way",
+                                "to decide"
                         ]
                 }
         ],
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Make 3 sentences using the following words:",
                         "words": [
                                 "请假",
                                 "邻居",
@@ -232,8 +232,8 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
-                        "topic": "谁都有办法看好你的“病”"
+                        "instruction": "Write a short text of 4-5 sentences about the lesson topic:",
+                        "topic": "谁都有办法看好你的"病""
                 }
         ],
         ensure_ascii=False,

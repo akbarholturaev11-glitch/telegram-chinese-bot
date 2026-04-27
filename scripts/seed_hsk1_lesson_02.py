@@ -12,16 +12,16 @@ LESSON = {
     "lesson_order": 2,
     "lesson_code": "HSK1-L02",
     "title": "谢谢你",
-    "goal": "Minnatdorchilik bildirish va xayrlashishni o'rganish",
+    "goal": "Learn how to express gratitude and say goodbye in Chinese",
     "intro_text": (
-        "Ikkinchi darsda siz xitoycha minnatdorchilik va xayrlashishni o'rganasiz. "
-        "4 ta yangi so'z, 3 ta dialog va neytral ton qoidalari."
+        "In the second lesson you will learn how to express gratitude and say goodbye in Chinese. "
+        "4 new words, 3 dialogues, and the rules for the neutral tone."
     ),
     "vocabulary_json": json.dumps([
-        {"no": 1, "zh": "谢谢",   "pinyin": "xièxie",  "pos": "v.",   "meaning": "rahmat aytmoq"},
-        {"no": 2, "zh": "不",     "pinyin": "bù",       "pos": "adv.", "meaning": "yo'q, emas"},
-        {"no": 3, "zh": "不客气", "pinyin": "bú kèqi",  "pos": "expr.", "meaning": "arzimaydi, marhamat"},
-        {"no": 4, "zh": "再见",   "pinyin": "zàijiàn",  "pos": "v.",   "meaning": "xayr, ko'rishguncha"},
+        {"no": 1, "zh": "谢谢",   "pinyin": "xièxie",  "pos": "v.",   "meaning": "to thank, thank you"},
+        {"no": 2, "zh": "不",     "pinyin": "bù",       "pos": "adv.", "meaning": "no, not"},
+        {"no": 3, "zh": "不客气", "pinyin": "bú kèqi",  "pos": "expr.", "meaning": "you're welcome, no problem"},
+        {"no": 4, "zh": "再见",   "pinyin": "zàijiàn",  "pos": "v.",   "meaning": "goodbye, see you"},
     ], ensure_ascii=False),
 
     "dialogue_json": json.dumps([
@@ -30,8 +30,8 @@ LESSON = {
             "section_label": "课文 1",
             "scene_label_zh": "Yordam uchun rahmat",
             "dialogue": [
-                {"speaker": "A", "zh": "谢谢！", "pinyin": "Xièxie!", "translation": "Rahmat!"},
-                {"speaker": "B", "zh": "不谢！", "pinyin": "Bú xiè!", "translation": "Arzimaydi!"},
+                {"speaker": "A", "zh": "谢谢！", "pinyin": "Xièxie!", "translation": "Thank you!"},
+                {"speaker": "B", "zh": "不谢！", "pinyin": "Bú xiè!", "translation": "You're welcome!"},
             ]
         },
         {
@@ -39,8 +39,8 @@ LESSON = {
             "section_label": "课文 2",
             "scene_label_zh": "Rasmiy rahmat",
             "dialogue": [
-                {"speaker": "A", "zh": "谢谢你！", "pinyin": "Xièxie nǐ!", "translation": "Sizga rahmat!"},
-                {"speaker": "B", "zh": "不客气！", "pinyin": "Bú kèqi!",   "translation": "Arzimaydi (marhamat)!"},
+                {"speaker": "A", "zh": "谢谢你！", "pinyin": "Xièxie nǐ!", "translation": "Thank you!"},
+                {"speaker": "B", "zh": "不客气！", "pinyin": "Bú kèqi!",   "translation": "You're welcome!"},
             ]
         },
         {
@@ -48,8 +48,8 @@ LESSON = {
             "section_label": "课文 3",
             "scene_label_zh": "Xayrlashuv",
             "dialogue": [
-                {"speaker": "A", "zh": "再见！", "pinyin": "Zàijiàn!", "translation": "Xayr!"},
-                {"speaker": "B", "zh": "再见！", "pinyin": "Zàijiàn!", "translation": "Xayr!"},
+                {"speaker": "A", "zh": "再见！", "pinyin": "Zàijiàn!", "translation": "Goodbye!"},
+                {"speaker": "B", "zh": "再见！", "pinyin": "Zàijiàn!", "translation": "Goodbye!"},
             ]
         },
     ], ensure_ascii=False),
@@ -59,32 +59,32 @@ LESSON = {
             "no": 1,
             "title_zh": "不 — Inkor yuklamasi",
             "explanation": (
-                "不(bù) — inkor ma'nosini beradi (yo'q, emas).\n"
-                "Lekin: 不 4-tonda, lekin 4-ton oldida 2-tonga o'zgaradi.\n"
-                "bù + 4-ton → bú + 4-ton\n"
-                "Masalan: 不客气 → bú kèqi\n"
+                "不(bù) — negation particle (no, not).\n"
+                "Note: 不 is tone 4, but changes to tone 2 before another tone-4 syllable.\n"
+                "bù + tone 4 → bú + tone 4\n"
+                "Example: 不客气 → bú kèqi\n"
                 "不谢 → bú xiè"
             ),
             "examples": [
-                {"zh": "不谢",   "pinyin": "bú xiè",  "meaning": "arzimaydi"},
-                {"zh": "不客气", "pinyin": "bú kèqi", "meaning": "marhamat"},
-                {"zh": "不好",   "pinyin": "bù hǎo",  "meaning": "yaxshi emas"},
+                {"zh": "不谢",   "pinyin": "bú xiè",  "meaning": "you're welcome"},
+                {"zh": "不客气", "pinyin": "bú kèqi", "meaning": "you're welcome"},
+                {"zh": "不好",   "pinyin": "bù hǎo",  "meaning": "not good"},
             ]
         },
         {
             "no": 2,
             "title_zh": "轻声 — Neytral ton",
             "explanation": (
-                "Xitoy tilida 5-ton ham bor — neytral ton (轻声).\n"
-                "U qisqa va engil o'qiladi, ton belgisi yo'q.\n"
-                "Ko'pincha oila a'zolari nomlarida uchraydi.\n"
-                "Masalan: 妈妈(māma), 爸爸(bàba), 爷爷(yéye), 奶奶(nǎinai)"
+                "Chinese also has a 5th tone — the neutral tone (轻声).\n"
+                "It is short and light, with no tone mark.\n"
+                "It often appears in kinship terms.\n"
+                "Example: 妈妈(māma), 爸爸(bàba), 爷爷(yéye), 奶奶(nǎinai)"
             ),
             "examples": [
-                {"zh": "妈妈", "pinyin": "māma",   "meaning": "ona"},
-                {"zh": "爸爸", "pinyin": "bàba",   "meaning": "ota"},
-                {"zh": "爷爷", "pinyin": "yéye",   "meaning": "buva"},
-                {"zh": "奶奶", "pinyin": "nǎinai", "meaning": "buvi"},
+                {"zh": "妈妈", "pinyin": "māma",   "meaning": "mother"},
+                {"zh": "爸爸", "pinyin": "bàba",   "meaning": "father"},
+                {"zh": "爷爷", "pinyin": "yéye",   "meaning": "paternal grandfather"},
+                {"zh": "奶奶", "pinyin": "nǎinai", "meaning": "paternal grandmother"},
             ]
         },
     ], ensure_ascii=False),
@@ -93,18 +93,18 @@ LESSON = {
         {
             "no": 1,
             "type": "translate_to_chinese",
-            "instruction": "Xitoycha yozing:",
+            "instruction": "Write in Chinese:",
             "items": [
-                {"prompt": "Rahmat!",               "answer": "谢谢！",   "pinyin": "Xièxie!"},
-                {"prompt": "Sizga rahmat!",          "answer": "谢谢你！", "pinyin": "Xièxie nǐ!"},
-                {"prompt": "Arzimaydi (marhamat)!",  "answer": "不客气！", "pinyin": "Bú kèqi!"},
-                {"prompt": "Xayr!",                  "answer": "再见！",   "pinyin": "Zàijiàn!"},
+                {"prompt": "Thank you!",               "answer": "谢谢！",   "pinyin": "Xièxie!"},
+                {"prompt": "Thank you (to you)!",      "answer": "谢谢你！", "pinyin": "Xièxie nǐ!"},
+                {"prompt": "You're welcome!",           "answer": "不客气！", "pinyin": "Bú kèqi!"},
+                {"prompt": "Goodbye!",                  "answer": "再见！",   "pinyin": "Zàijiàn!"},
             ]
         },
         {
             "no": 2,
             "type": "fill_blank",
-            "instruction": "Bo'sh joyni to'ldiring:",
+            "instruction": "Fill in the blank:",
             "items": [
                 {"prompt": "A: 谢谢你！  B: ___！", "answer": "不客气", "pinyin": "bú kèqi"},
                 {"prompt": "A: ___！     B: 再见！", "answer": "再见",   "pinyin": "zàijiàn"},
@@ -121,13 +121,13 @@ LESSON = {
     "homework_json": json.dumps([
         {
             "no": 1,
-            "instruction": "Quyidagi so'zlardan foydalanib 2 ta to'liq dialog tuzing:",
+            "instruction": "Write 2 complete dialogues using the following words:",
             "words": ["谢谢", "不客气", "再见", "你好"],
             "example": "A: 你好！... A: 谢谢！B: 不客气！再见！B: 再见！",
         },
         {
             "no": 2,
-            "instruction": "不 ning to'g'ri talaffuzini yozing (bù yoki bú):",
+            "instruction": "Write the correct pronunciation of 不 (bù or bú):",
             "items": [
                 {"prompt": "不好",   "answer": "bù hǎo"},
                 {"prompt": "不谢",   "answer": "bú xiè"},

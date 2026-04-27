@@ -12,8 +12,8 @@ LESSON = {
     "lesson_order": 5,
     "lesson_code": "HSK3-L05",
     "title": "我最近越来越胖了",
-    "goal": "sog'liq va o'zgarishni ifodalash",
-    "intro_text": "Bu dars sog'liq va o'zgarishni ifodalashga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda “了”表示变化 va 越来越 + Adj/Mental V kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "goal": "expressing health changes and progressive states",
+    "intro_text": "This lesson is dedicated to expressing health changes and progressive states. It uses 5 key vocabulary words and covers core grammar patterns such as "了" expressing change and 越来越 + Adj/Mental V.",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -21,35 +21,35 @@ LESSON = {
                         "zh": "最近",
                         "pinyin": "zuìjìn",
                         "pos": "adv.",
-                        "meaning": "so'nggi paytda"
+                        "meaning": "recently, lately"
                 },
                 {
                         "no": 2,
                         "zh": "发烧",
                         "pinyin": "fāshāo",
                         "pos": "v.",
-                        "meaning": "isitmalamoq"
+                        "meaning": "to have a fever"
                 },
                 {
                         "no": 3,
                         "zh": "感冒",
                         "pinyin": "gǎnmào",
                         "pos": "v./n.",
-                        "meaning": "shamollamoq, shamollash"
+                        "meaning": "to catch a cold, cold"
                 },
                 {
                         "no": 4,
                         "zh": "季节",
                         "pinyin": "jìjié",
                         "pos": "n.",
-                        "meaning": "fasl"
+                        "meaning": "season"
                 },
                 {
                         "no": 5,
                         "zh": "夏天",
                         "pinyin": "xiàtiān",
                         "pos": "n.",
-                        "meaning": "yoz"
+                        "meaning": "summer"
                 }
         ],
         ensure_ascii=False,
@@ -65,13 +65,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "你最近怎么了？",
                                         "pinyin": "",
-                                        "translation": "So'nggi paytda senga nima bo'ldi?"
+                                        "translation": "What's been going on with you lately?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "我最近越来越胖了，而且还感冒了。",
                                         "pinyin": "",
-                                        "translation": "Men so'nggi paytda tobora semiryapman, ustiga-ustak shamolladim."
+                                        "translation": "I've been getting more and more chubby lately, and on top of that I caught a cold."
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "夏天你容易发烧吗？",
                                         "pinyin": "",
-                                        "translation": "Yozda tez-tez isitmalaysanmi?"
+                                        "translation": "Do you often get a fever in summer?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "有时候，因为这个季节太热了。",
                                         "pinyin": "",
-                                        "translation": "Ba'zida, chunki bu fasl juda issiq."
+                                        "translation": "Sometimes, because this season is very hot."
                                 }
                         ]
                 }
@@ -101,35 +101,35 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "title_zh": "“了”表示变化",
-                        "explanation": "Bu grammatika mavzusi darsdagi asosiy gap qoliplarini amalda ishlatishga yordam beradi.",
+                        "title_zh": ""了"表示变化",
+                        "explanation": "This grammar topic helps to practise the core sentence patterns of the lesson in context.",
                         "examples": [
                                 {
                                         "zh": "我最近越来越胖了。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有最近和发烧。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 最近 va 发烧 ishlatilgan."
+                                        "meaning": "This sentence uses 最近 and 发烧."
                                 }
                         ]
                 },
                 {
                         "no": 2,
                         "title_zh": "越来越 + Adj/Mental V",
-                        "explanation": "Bu qolip holatning bosqichma-bosqich kuchayib borishini bildiradi.",
+                        "explanation": "This pattern indicates a gradual increase or intensification of a state.",
                         "examples": [
                                 {
                                         "zh": "我最近越来越胖了。",
                                         "pinyin": "",
-                                        "meaning": "Men so'nggi paytda tobora semiryapman."
+                                        "meaning": "I've been getting more and more chubby lately."
                                 },
                                 {
                                         "zh": "他的汉语越来越好了。",
                                         "pinyin": "",
-                                        "meaning": "Uning xitoy tili tobora yaxshilanmoqda."
+                                        "meaning": "His Chinese keeps getting better and better."
                                 }
                         ]
                 }
@@ -141,25 +141,25 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
-                                        "prompt": "so'nggi paytda",
+                                        "prompt": "recently, lately",
                                         "answer": "最近",
                                         "pinyin": "zuìjìn"
                                 },
                                 {
-                                        "prompt": "isitmalamoq",
+                                        "prompt": "to have a fever",
                                         "answer": "发烧",
                                         "pinyin": "fāshāo"
                                 },
                                 {
-                                        "prompt": "shamollamoq, shamollash",
+                                        "prompt": "to catch a cold, cold",
                                         "answer": "感冒",
                                         "pinyin": "gǎnmào"
                                 },
                                 {
-                                        "prompt": "fasl",
+                                        "prompt": "season",
                                         "answer": "季节",
                                         "pinyin": "jìjié"
                                 }
@@ -168,26 +168,26 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "最近",
-                                        "answer": "so'nggi paytda",
+                                        "answer": "recently, lately",
                                         "pinyin": "zuìjìn"
                                 },
                                 {
                                         "prompt": "发烧",
-                                        "answer": "isitmalamoq",
+                                        "answer": "to have a fever",
                                         "pinyin": "fāshāo"
                                 },
                                 {
                                         "prompt": "感冒",
-                                        "answer": "shamollamoq, shamollash",
+                                        "answer": "to catch a cold, cold",
                                         "pinyin": "gǎnmào"
                                 },
                                 {
                                         "prompt": "季节",
-                                        "answer": "fasl",
+                                        "answer": "season",
                                         "pinyin": "jìjié"
                                 }
                         ]
@@ -209,10 +209,10 @@ LESSON = {
                 {
                         "no": 2,
                         "answers": [
-                                "so'nggi paytda",
-                                "isitmalamoq",
-                                "shamollamoq, shamollash",
-                                "fasl"
+                                "recently, lately",
+                                "to have a fever",
+                                "to catch a cold, cold",
+                                "season"
                         ]
                 }
         ],
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Make 3 sentences using the following words:",
                         "words": [
                                 "最近",
                                 "发烧",
@@ -232,7 +232,7 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
+                        "instruction": "Write a short paragraph of 4-5 sentences about the lesson topic:",
                         "topic": "我最近越来越胖了"
                 }
         ],

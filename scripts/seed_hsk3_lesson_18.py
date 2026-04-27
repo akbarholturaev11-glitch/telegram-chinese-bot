@@ -12,8 +12,8 @@ LESSON = {
     "lesson_order": 18,
     "lesson_code": "HSK3-L18",
     "title": "我相信他们会同意的",
-    "goal": "ishonch, shart va mavzu haqida gapirish",
-    "intro_text": "Bu dars ishonch, shart va mavzu haqida gapirishga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda 只要……就…… va 介词“关于” kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "goal": "talking about belief, conditions, and topics",
+    "intro_text": "This lesson is dedicated to talking about belief, conditions, and topics. It uses 5 key vocabulary words and covers core grammar patterns such as 只要……就…… and the preposition "关于".",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -21,35 +21,35 @@ LESSON = {
                         "zh": "相信",
                         "pinyin": "xiāngxìn",
                         "pos": "v.",
-                        "meaning": "ishonmoq"
+                        "meaning": "to believe, to trust"
                 },
                 {
                         "no": 2,
                         "zh": "同意",
                         "pinyin": "tóngyì",
                         "pos": "v.",
-                        "meaning": "rozi bo'lmoq"
+                        "meaning": "to agree"
                 },
                 {
                         "no": 3,
                         "zh": "关于",
                         "pinyin": "guānyú",
                         "pos": "prep.",
-                        "meaning": "haqida"
+                        "meaning": "about, regarding"
                 },
                 {
                         "no": 4,
                         "zh": "机会",
                         "pinyin": "jīhuì",
                         "pos": "n.",
-                        "meaning": "imkoniyat"
+                        "meaning": "opportunity, chance"
                 },
                 {
                         "no": 5,
                         "zh": "国家",
                         "pinyin": "guójiā",
                         "pos": "n.",
-                        "meaning": "davlat"
+                        "meaning": "country, nation"
                 }
         ],
         ensure_ascii=False,
@@ -65,13 +65,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "我相信他们会同意的。",
                                         "pinyin": "",
-                                        "translation": "Men ularning rozi bo'lishiga ishonaman."
+                                        "translation": "I believe they will agree."
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "只要你说明理由，他们就会考虑。",
                                         "pinyin": "",
-                                        "translation": "Sababini tushuntirsang, albatta ko'rib chiqishadi."
+                                        "translation": "As long as you explain your reasons, they will consider it."
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "你想写关于哪个国家的文章？",
                                         "pinyin": "",
-                                        "translation": "Qaysi davlat haqida maqola yozmoqchisan?"
+                                        "translation": "Which country do you want to write an article about?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "我想写一个我很感兴趣的国家。",
                                         "pinyin": "",
-                                        "translation": "Men o'zimni qiziqtiradigan bir davlat haqida yozmoqchiman."
+                                        "translation": "I want to write about a country that interests me."
                                 }
                         ]
                 }
@@ -102,34 +102,34 @@ LESSON = {
                 {
                         "no": 1,
                         "title_zh": "只要……就……",
-                        "explanation": "Bu qolip yetarli shart va kutilgan natijani ko'rsatadi.",
+                        "explanation": "This pattern expresses a sufficient condition and an expected result.",
                         "examples": [
                                 {
                                         "zh": "只要你努力，就会进步。",
                                         "pinyin": "",
-                                        "meaning": "Faqat harakat qilsang, albatta rivojlanasan."
+                                        "meaning": "As long as you make an effort, you will improve."
                                 },
                                 {
                                         "zh": "只要有时间，我就来。",
                                         "pinyin": "",
-                                        "meaning": "Vaqtim bo'lsa, albatta kelaman."
+                                        "meaning": "As long as I have time, I'll come."
                                 }
                         ]
                 },
                 {
                         "no": 2,
-                        "title_zh": "介词“关于”",
-                        "explanation": "Bu mavzu gap qismlarini tabiiy bog'lash va ma'no aniqligini oshirishga xizmat qiladi.",
+                        "title_zh": "介词"关于"",
+                        "explanation": "This topic helps to naturally connect parts of a sentence and enhance clarity of meaning.",
                         "examples": [
                                 {
                                         "zh": "我相信他们会同意的。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有相信和同意。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 相信 va 同意 ishlatilgan."
+                                        "meaning": "This sentence uses 相信 and 同意."
                                 }
                         ]
                 }
@@ -141,25 +141,25 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
-                                        "prompt": "ishonmoq",
+                                        "prompt": "to believe, to trust",
                                         "answer": "相信",
                                         "pinyin": "xiāngxìn"
                                 },
                                 {
-                                        "prompt": "rozi bo'lmoq",
+                                        "prompt": "to agree",
                                         "answer": "同意",
                                         "pinyin": "tóngyì"
                                 },
                                 {
-                                        "prompt": "haqida",
+                                        "prompt": "about, regarding",
                                         "answer": "关于",
                                         "pinyin": "guānyú"
                                 },
                                 {
-                                        "prompt": "imkoniyat",
+                                        "prompt": "opportunity, chance",
                                         "answer": "机会",
                                         "pinyin": "jīhuì"
                                 }
@@ -168,26 +168,26 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "相信",
-                                        "answer": "ishonmoq",
+                                        "answer": "to believe, to trust",
                                         "pinyin": "xiāngxìn"
                                 },
                                 {
                                         "prompt": "同意",
-                                        "answer": "rozi bo'lmoq",
+                                        "answer": "to agree",
                                         "pinyin": "tóngyì"
                                 },
                                 {
                                         "prompt": "关于",
-                                        "answer": "haqida",
+                                        "answer": "about, regarding",
                                         "pinyin": "guānyú"
                                 },
                                 {
                                         "prompt": "机会",
-                                        "answer": "imkoniyat",
+                                        "answer": "opportunity, chance",
                                         "pinyin": "jīhuì"
                                 }
                         ]
@@ -209,10 +209,10 @@ LESSON = {
                 {
                         "no": 2,
                         "answers": [
-                                "ishonmoq",
-                                "rozi bo'lmoq",
-                                "haqida",
-                                "imkoniyat"
+                                "to believe, to trust",
+                                "to agree",
+                                "about, regarding",
+                                "opportunity, chance"
                         ]
                 }
         ],
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Make 3 sentences using the following words:",
                         "words": [
                                 "相信",
                                 "同意",
@@ -232,7 +232,7 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
+                        "instruction": "Write a short paragraph of 4-5 sentences about the lesson topic:",
                         "topic": "我相信他们会同意的"
                 }
         ],
