@@ -1,7 +1,7 @@
 from aiogram import Router, F
 from aiogram.dispatcher.event.bases import SkipHandler
 from aiogram.types import Message
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from app.repositories.user_repo import UserRepository
 from app.repositories.payment_repo import PaymentRepository
 from app.services.payment_service import PaymentService
@@ -12,9 +12,11 @@ from app.bot.utils.i18n import t
 router = Router()
 
 
+_TJT = timezone(timedelta(hours=5))  # Tajikistan Time = UTC+5, server-independent
+
 def _is_night() -> bool:
-    local_hour = (datetime.now(timezone.utc).hour + 5) % 24
-    return local_hour >= 23 or local_hour < 8
+    tj_hour = datetime.now(_TJT).hour
+    return tj_hour >= 23 or tj_hour < 8
 
 
 def _waiting_message(lang: str, is_night: bool) -> str:
