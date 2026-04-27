@@ -12,24 +12,24 @@ LESSON = {
     "lesson_order": 11,
     "lesson_code": "HSK1-L11",
     "title": "现在几点",
-    "goal": "Vaqtni aytish va so'rash, vaqt ravishi va 前 so'zi",
+    "goal": "Telling and asking the time, time adverbials, and the word 前",
     "intro_text": (
-        "O'n birinchi darsda siz soatni aytishni, "
-        "vaqt ravishlarini ishlatishni va 前 so'zi bilan vaqtni ifodalashni o'rganasiz. "
-        "11 ta yangi so'z, 3 ta dialog."
+        "In lesson eleven you will learn how to tell the time, "
+        "use time adverbials, and express time with the word 前. "
+        "11 new words, 3 dialogues."
     ),
     "vocabulary_json": json.dumps([
-        {"no": 1,  "zh": "现在", "pinyin": "xiànzài",  "pos": "n.",   "meaning": "hozir, hozirgi vaqtda"},
-        {"no": 2,  "zh": "点",   "pinyin": "diǎn",     "pos": "m.",   "meaning": "soat (o'lchov so'z)"},
-        {"no": 3,  "zh": "分",   "pinyin": "fēn",      "pos": "m.",   "meaning": "daqiqa"},
-        {"no": 4,  "zh": "中午", "pinyin": "zhōngwǔ",  "pos": "n.",   "meaning": "tush vaqti, peshin"},
-        {"no": 5,  "zh": "吃饭", "pinyin": "chī fàn",  "pos": "v.",   "meaning": "ovqat yemoq"},
-        {"no": 6,  "zh": "时候", "pinyin": "shíhou",   "pos": "n.",   "meaning": "vaqt, payt"},
-        {"no": 7,  "zh": "回",   "pinyin": "huí",      "pos": "v.",   "meaning": "qaytmoq, qaytib kelmoq"},
-        {"no": 8,  "zh": "我们", "pinyin": "wǒmen",    "pos": "pron.","meaning": "biz"},
-        {"no": 9,  "zh": "电影", "pinyin": "diànyǐng", "pos": "n.",   "meaning": "kino, film"},
-        {"no": 10, "zh": "住",   "pinyin": "zhù",      "pos": "v.",   "meaning": "yashaymoq, turmoq"},
-        {"no": 11, "zh": "前",   "pinyin": "qián",     "pos": "n.",   "meaning": "oldin, -dan avval"},
+        {"no": 1,  "zh": "现在", "pinyin": "xiànzài",  "pos": "n.",   "meaning": "now, at the moment"},
+        {"no": 2,  "zh": "点",   "pinyin": "diǎn",     "pos": "m.",   "meaning": "o'clock (measure word for hours)"},
+        {"no": 3,  "zh": "分",   "pinyin": "fēn",      "pos": "m.",   "meaning": "minute"},
+        {"no": 4,  "zh": "中午", "pinyin": "zhōngwǔ",  "pos": "n.",   "meaning": "noon, midday"},
+        {"no": 5,  "zh": "吃饭", "pinyin": "chī fàn",  "pos": "v.",   "meaning": "to eat, to have a meal"},
+        {"no": 6,  "zh": "时候", "pinyin": "shíhou",   "pos": "n.",   "meaning": "time, moment"},
+        {"no": 7,  "zh": "回",   "pinyin": "huí",      "pos": "v.",   "meaning": "to return, to come back"},
+        {"no": 8,  "zh": "我们", "pinyin": "wǒmen",    "pos": "pron.","meaning": "we, us"},
+        {"no": 9,  "zh": "电影", "pinyin": "diànyǐng", "pos": "n.",   "meaning": "movie, film"},
+        {"no": 10, "zh": "住",   "pinyin": "zhù",      "pos": "v.",   "meaning": "to live, to stay"},
+        {"no": 11, "zh": "前",   "pinyin": "qián",     "pos": "n.",   "meaning": "before, prior to"},
     ], ensure_ascii=False),
 
     "dialogue_json": json.dumps([
@@ -38,10 +38,10 @@ LESSON = {
             "section_label": "课文 1",
             "scene_label_zh": "Kutubxonada — soat so'rash",
             "dialogue": [
-                {"speaker": "A", "zh": "现在几点？",    "pinyin": "Xiànzài jǐ diǎn?",     "translation": "Hozir soat necha?"},
-                {"speaker": "B", "zh": "现在十点十分。", "pinyin": "Xiànzài shí diǎn shí fēn.", "translation": "Hozir soat o'n o'n daqiqa."},
-                {"speaker": "A", "zh": "中午几点吃饭？", "pinyin": "Zhōngwǔ jǐ diǎn chī fàn?",  "translation": "Tushda soat nechada ovqatlanasiz?"},
-                {"speaker": "B", "zh": "十二点吃饭。",  "pinyin": "Shí'èr diǎn chī fàn.",  "translation": "Soat o'n ikkida ovqatlanamiz."},
+                {"speaker": "A", "zh": "现在几点？",    "pinyin": "Xiànzài jǐ diǎn?",     "translation": "What time is it now?"},
+                {"speaker": "B", "zh": "现在十点十分。", "pinyin": "Xiànzài shí diǎn shí fēn.", "translation": "It is ten past ten."},
+                {"speaker": "A", "zh": "中午几点吃饭？", "pinyin": "Zhōngwǔ jǐ diǎn chī fàn?",  "translation": "What time do you eat lunch?"},
+                {"speaker": "B", "zh": "十二点吃饭。",  "pinyin": "Shí'èr diǎn chī fàn.",  "translation": "We eat at twelve o'clock."},
             ]
         },
         {
@@ -49,10 +49,10 @@ LESSON = {
             "section_label": "课文 2",
             "scene_label_zh": "Uyda — otani kutish",
             "dialogue": [
-                {"speaker": "A", "zh": "爸爸什么时候回家？",   "pinyin": "Bàba shénme shíhou huí jiā?",        "translation": "Ota qachon uyga qaytadi?"},
-                {"speaker": "B", "zh": "下午五点。",           "pinyin": "Xiàwǔ wǔ diǎn.",                    "translation": "Tushdan keyin soat beshda."},
-                {"speaker": "A", "zh": "我们什么时候去看电影？","pinyin": "Wǒmen shénme shíhou qù kàn diànyǐng?","translation": "Biz qachon kino ko'rgani boramiz?"},
-                {"speaker": "B", "zh": "六点三十分。",         "pinyin": "Liù diǎn sānshí fēn.",              "translation": "Soat olti o'ttizda."},
+                {"speaker": "A", "zh": "爸爸什么时候回家？",   "pinyin": "Bàba shénme shíhou huí jiā?",        "translation": "When is Dad coming home?"},
+                {"speaker": "B", "zh": "下午五点。",           "pinyin": "Xiàwǔ wǔ diǎn.",                    "translation": "At five in the afternoon."},
+                {"speaker": "A", "zh": "我们什么时候去看电影？","pinyin": "Wǒmen shénme shíhou qù kàn diànyǐng?","translation": "When are we going to watch a movie?"},
+                {"speaker": "B", "zh": "六点三十分。",         "pinyin": "Liù diǎn sānshí fēn.",              "translation": "At six thirty."},
             ]
         },
         {
@@ -60,11 +60,11 @@ LESSON = {
             "section_label": "课文 3",
             "scene_label_zh": "Uyda — Pekin safari rejasi",
             "dialogue": [
-                {"speaker": "A", "zh": "我星期一去北京。",          "pinyin": "Wǒ xīngqī yī qù Běijīng.",              "translation": "Men dushanbada Pekinga boraman."},
-                {"speaker": "B", "zh": "你想在北京住几天？",        "pinyin": "Nǐ xiǎng zài Běijīng zhù jǐ tiān?",     "translation": "Pekinda necha kun yashay deb o'ylayapsiz?"},
-                {"speaker": "A", "zh": "住三天。",                  "pinyin": "Zhù sān tiān.",                         "translation": "Uch kun."},
-                {"speaker": "B", "zh": "星期五前能回家吗？",        "pinyin": "Xīngqī wǔ qián néng huí jiā ma?",       "translation": "Jumadan oldin uyga qayta olasizmi?"},
-                {"speaker": "A", "zh": "能。",                      "pinyin": "Néng.",                                 "translation": "Ha, olaman."},
+                {"speaker": "A", "zh": "我星期一去北京。",          "pinyin": "Wǒ xīngqī yī qù Běijīng.",              "translation": "I'm going to Beijing on Monday."},
+                {"speaker": "B", "zh": "你想在北京住几天？",        "pinyin": "Nǐ xiǎng zài Běijīng zhù jǐ tiān?",     "translation": "How many days are you planning to stay in Beijing?"},
+                {"speaker": "A", "zh": "住三天。",                  "pinyin": "Zhù sān tiān.",                         "translation": "Three days."},
+                {"speaker": "B", "zh": "星期五前能回家吗？",        "pinyin": "Xīngqī wǔ qián néng huí jiā ma?",       "translation": "Can you be back home before Friday?"},
+                {"speaker": "A", "zh": "能。",                      "pinyin": "Néng.",                                 "translation": "Yes, I can."},
             ]
         },
     ], ensure_ascii=False),
@@ -74,60 +74,60 @@ LESSON = {
             "no": 1,
             "title_zh": "时间的表达 — Vaqtni ifodalash",
             "explanation": (
-                "Soat: 点(diǎn)\n"
-                "Daqiqa: 分(fēn)\n"
-                "Tuzilishi: N点 yoki N点M分\n\n"
+                "Hour: 点(diǎn)\n"
+                "Minute: 分(fēn)\n"
+                "Structure: N点 or N点M分\n\n"
                 "9:00 → 九点\n"
                 "10:10 → 十点十分\n"
                 "5:30 → 五点三十分\n"
                 "2:05 → 两点零五分\n\n"
-                "Kun qismlari:\n"
-                "上午 shàngwǔ — ertalab (AM)\n"
-                "中午 zhōngwǔ — tush\n"
-                "下午 xiàwǔ — tushdan keyin (PM)\n\n"
-                "2:00 → 两点 (liǎng diǎn), 二点 emas!"
+                "Parts of the day:\n"
+                "上午 shàngwǔ — morning (AM)\n"
+                "中午 zhōngwǔ — noon\n"
+                "下午 xiàwǔ — afternoon (PM)\n\n"
+                "2:00 → 两点 (liǎng diǎn), not 二点!"
             ),
             "examples": [
-                {"zh": "现在九点。",       "pinyin": "Xiànzài jiǔ diǎn.",          "meaning": "Hozir soat to'qqiz."},
-                {"zh": "下午三点十分。",   "pinyin": "Xiàwǔ sān diǎn shí fēn.",   "meaning": "Tushdan keyin soat uch o'n daqiqa."},
-                {"zh": "上午两点半。",     "pinyin": "Shàngwǔ liǎng diǎn bàn.",   "meaning": "Ertalab soat ikki yarim."},
+                {"zh": "现在九点。",       "pinyin": "Xiànzài jiǔ diǎn.",          "meaning": "It is nine o'clock now."},
+                {"zh": "下午三点十分。",   "pinyin": "Xiàwǔ sān diǎn shí fēn.",   "meaning": "Ten past three in the afternoon."},
+                {"zh": "上午两点半。",     "pinyin": "Shàngwǔ liǎng diǎn bàn.",   "meaning": "Two thirty in the morning."},
             ]
         },
         {
             "no": 2,
             "title_zh": "时间词做状语 — Vaqt ravishi",
             "explanation": (
-                "Vaqt so'zi gap ichida ravish bo'la oladi.\n"
-                "Odatda ega dan keyin yoki ega dan oldin keladi.\n\n"
-                "Tuzilishi 1: Ega + Vaqt + Fe'l\n"
-                "妈妈六点做饭。— Ona soat oltida ovqat tayyorlaydi.\n\n"
-                "Tuzilishi 2: Vaqt + Ega + Fe'l\n"
-                "中午十二点我们吃饭。— Tush soat o'n ikkida ovqatlanamiz.\n\n"
-                "So'roq: 什么时候 — qachon?"
+                "A time word can serve as an adverbial in a sentence.\n"
+                "It usually comes after the subject or before the subject.\n\n"
+                "Structure 1: Subject + Time + Verb\n"
+                "妈妈六点做饭。— Mum cooks at six o'clock.\n\n"
+                "Structure 2: Time + Subject + Verb\n"
+                "中午十二点我们吃饭。— We eat lunch at noon at twelve.\n\n"
+                "Question: 什么时候 — when?"
             ),
             "examples": [
-                {"zh": "他们六点吃饭。",       "pinyin": "Tāmen liù diǎn chī fàn.",     "meaning": "Ular soat oltida ovqatlanadi."},
-                {"zh": "我星期一去北京。",     "pinyin": "Wǒ xīngqī yī qù Běijīng.",   "meaning": "Men dushanbada Pekinga boraman."},
-                {"zh": "你什么时候回家？",     "pinyin": "Nǐ shénme shíhou huí jiā?",  "meaning": "Qachon uyga qaytasiz?"},
+                {"zh": "他们六点吃饭。",       "pinyin": "Tāmen liù diǎn chī fàn.",     "meaning": "They eat at six o'clock."},
+                {"zh": "我星期一去北京。",     "pinyin": "Wǒ xīngqī yī qù Běijīng.",   "meaning": "I'm going to Beijing on Monday."},
+                {"zh": "你什么时候回家？",     "pinyin": "Nǐ shénme shíhou huí jiā?",  "meaning": "When are you going home?"},
             ]
         },
         {
             "no": 3,
             "title_zh": "名词 前 — 前 vaqt belgisi",
             "explanation": (
-                "前(qián) — biror vaqtdan oldingi paytni bildiradi.\n\n"
-                "三天前 — uch kun oldin\n"
-                "一个星期前 — bir hafta oldin\n"
-                "四点前 — soat to'rtdan oldin\n"
-                "星期五前 — jumadan oldin\n\n"
-                "Misol:\n"
-                "星期五前能回家吗？— Jumadan oldin uyga qayta olasizmi?\n"
-                "八点前去学校。— Soat sakkizdan oldin maktabga bor."
+                "前(qián) — indicates a point in time before a certain event.\n\n"
+                "三天前 — three days ago\n"
+                "一个星期前 — one week ago\n"
+                "四点前 — before four o'clock\n"
+                "星期五前 — before Friday\n\n"
+                "Example:\n"
+                "星期五前能回家吗？— Can you be back home before Friday?\n"
+                "八点前去学校。— Go to school before eight o'clock."
             ),
             "examples": [
-                {"zh": "星期五前能回家吗？", "pinyin": "Xīngqī wǔ qián néng huí jiā ma?", "meaning": "Jumadan oldin uyga qayta olasizmi?"},
-                {"zh": "三天前我在北京。",   "pinyin": "Sān tiān qián wǒ zài Běijīng.",   "meaning": "Uch kun oldin men Pekinda edim."},
-                {"zh": "八点前来。",         "pinyin": "Bā diǎn qián lái.",               "meaning": "Soat sakkizdan oldin kel."},
+                {"zh": "星期五前能回家吗？", "pinyin": "Xīngqī wǔ qián néng huí jiā ma?", "meaning": "Can you be back home before Friday?"},
+                {"zh": "三天前我在北京。",   "pinyin": "Sān tiān qián wǒ zài Běijīng.",   "meaning": "Three days ago I was in Beijing."},
+                {"zh": "八点前来。",         "pinyin": "Bā diǎn qián lái.",               "meaning": "Come before eight o'clock."},
             ]
         },
     ], ensure_ascii=False),
@@ -136,7 +136,7 @@ LESSON = {
         {
             "no": 1,
             "type": "time_writing",
-            "instruction": "Vaqtni xitoycha yozing:",
+            "instruction": "Write the time in Chinese:",
             "items": [
                 {"prompt": "9:00",          "answer": "九点",         "pinyin": "jiǔ diǎn"},
                 {"prompt": "2:00",          "answer": "两点",         "pinyin": "liǎng diǎn"},
@@ -148,18 +148,18 @@ LESSON = {
         {
             "no": 2,
             "type": "translate_to_chinese",
-            "instruction": "Xitoycha yozing:",
+            "instruction": "Write in Chinese:",
             "items": [
-                {"prompt": "Hozir soat necha?",              "answer": "现在几点？",           "pinyin": "Xiànzài jǐ diǎn?"},
-                {"prompt": "Biz qachon kino ko'rgani boramiz?","answer": "我们什么时候去看电影？","pinyin": "Wǒmen shénme shíhou qù kàn diànyǐng?"},
-                {"prompt": "Jumadan oldin uyga qayta olasizmi?","answer": "星期五前能回家吗？", "pinyin": "Xīngqī wǔ qián néng huí jiā ma?"},
-                {"prompt": "Men Pekinda uch kun yashayman.",  "answer": "我在北京住三天。",     "pinyin": "Wǒ zài Běijīng zhù sān tiān."},
+                {"prompt": "What time is it now?",              "answer": "现在几点？",           "pinyin": "Xiànzài jǐ diǎn?"},
+                {"prompt": "When are we going to watch a movie?","answer": "我们什么时候去看电影？","pinyin": "Wǒmen shénme shíhou qù kàn diànyǐng?"},
+                {"prompt": "Can you be back home before Friday?","answer": "星期五前能回家吗？", "pinyin": "Xīngqī wǔ qián néng huí jiā ma?"},
+                {"prompt": "I will stay in Beijing for three days.",  "answer": "我在北京住三天。",     "pinyin": "Wǒ zài Běijīng zhù sān tiān."},
             ]
         },
         {
             "no": 3,
             "type": "fill_blank",
-            "instruction": "Bo'sh joyni to'ldiring:",
+            "instruction": "Fill in the blank:",
             "items": [
                 {"prompt": "现在___点___分？",           "answer": "几/几",    "pinyin": "jǐ/jǐ"},
                 {"prompt": "爸爸什么___回家？",          "answer": "时候",     "pinyin": "shíhou"},
@@ -178,17 +178,17 @@ LESSON = {
     "homework_json": json.dumps([
         {
             "no": 1,
-            "instruction": "Bugungi kun jadvalingizni yozing (vaqt + harakat):",
+            "instruction": "Write your daily schedule (time + activity):",
             "template": "上午___点我___。中午___点我___。下午___点我___。",
             "words": ["点", "分", "吃饭", "去", "回家", "看书", "工作"],
         },
         {
             "no": 2,
-            "instruction": "Savollarga javob bering:",
+            "instruction": "Answer the questions:",
             "items": [
-                {"prompt": "现在几点？",           "hint": "Hozirgi vaqtni ayting"},
-                {"prompt": "你几点吃饭？",         "hint": "Qaysi soatda ovqatlanasiz?"},
-                {"prompt": "你什么时候回家？",     "hint": "Qachon uyga qaytasiz?"},
+                {"prompt": "现在几点？",           "hint": "Say the current time"},
+                {"prompt": "你几点吃饭？",         "hint": "What time do you eat?"},
+                {"prompt": "你什么时候回家？",     "hint": "When are you going home?"},
             ]
         }
     ], ensure_ascii=False),

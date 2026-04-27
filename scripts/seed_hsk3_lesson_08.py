@@ -12,8 +12,8 @@ LESSON = {
     "lesson_order": 8,
     "lesson_code": "HSK3-L08",
     "title": "你去哪儿我就去哪儿",
-    "goal": "savol olmoshlari va yo'nalishni erkin ishlatish",
-    "intro_text": "Bu dars savol olmoshlari va yo'nalishni erkin ishlatishga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda “又”和“再” va 疑问代词活用 1 kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "goal": "freely using interrogative pronouns and expressing direction",
+    "intro_text": "This lesson is dedicated to freely using interrogative pronouns and expressing direction. It introduces 5 key vocabulary words and covers core grammar patterns such as "又"和"再" and 疑问代词活用 1.",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -28,28 +28,28 @@ LESSON = {
                         "zh": "电梯",
                         "pinyin": "diàntī",
                         "pos": "n.",
-                        "meaning": "lift"
+                        "meaning": "elevator / lift"
                 },
                 {
                         "no": 3,
                         "zh": "洗手间",
                         "pinyin": "xǐshǒujiān",
                         "pos": "n.",
-                        "meaning": "hojatxona"
+                        "meaning": "restroom / bathroom"
                 },
                 {
                         "no": 4,
                         "zh": "马上",
                         "pinyin": "mǎshàng",
                         "pos": "adv.",
-                        "meaning": "darhol"
+                        "meaning": "immediately / right away"
                 },
                 {
                         "no": 5,
                         "zh": "健康",
                         "pinyin": "jiànkāng",
                         "pos": "adj./n.",
-                        "meaning": "sog'lom, salomatlik"
+                        "meaning": "healthy; health"
                 }
         ],
         ensure_ascii=False,
@@ -65,13 +65,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "你去哪儿我就去哪儿。",
                                         "pinyin": "",
-                                        "translation": "Sen qayerga borsang, men ham o'sha yerga boraman."
+                                        "translation": "Wherever you go, I'll go too."
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "那我们先去看熊猫吧。",
                                         "pinyin": "",
-                                        "translation": "Unda avval pandalarni ko'rgani boraylik."
+                                        "translation": "Then let's go see the pandas first."
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "你害怕坐电梯吗？",
                                         "pinyin": "",
-                                        "translation": "Liftga chiqishdan qo'rqasanmi?"
+                                        "translation": "Are you afraid of taking the elevator?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "不害怕，我马上就上去。",
                                         "pinyin": "",
-                                        "translation": "Yo'q, men hozir chiqaman."
+                                        "translation": "No, I'll go up right away."
                                 }
                         ]
                 }
@@ -101,35 +101,35 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "title_zh": "“又”和“再”",
-                        "explanation": "Bu grammatika mavzusi darsdagi asosiy gap qoliplarini amalda ishlatishga yordam beradi.",
+                        "title_zh": ""又"和"再"",
+                        "explanation": "This grammar topic helps practice the core sentence patterns used in the lesson.",
                         "examples": [
                                 {
                                         "zh": "你去哪儿我就去哪儿。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The key pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有熊猫和电梯。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 熊猫 va 电梯 ishlatilgan."
+                                        "meaning": "This sentence uses 熊猫 and 电梯."
                                 }
                         ]
                 },
                 {
                         "no": 2,
                         "title_zh": "疑问代词活用 1",
-                        "explanation": "Bu mavzu so'roq olmoshlarining umumiy yoki erkin ma'noda ishlatilishini ko'rsatadi.",
+                        "explanation": "This topic shows how interrogative pronouns can be used in a general or open-ended sense.",
                         "examples": [
                                 {
                                         "zh": "你去哪儿我就去哪儿。",
                                         "pinyin": "",
-                                        "meaning": "Sen qayerga borsang, men ham o'sha yerga boraman."
+                                        "meaning": "Wherever you go, I'll go too."
                                 },
                                 {
                                         "zh": "谁都可以参加。",
                                         "pinyin": "",
-                                        "meaning": "Hamma qatnasha oladi."
+                                        "meaning": "Anyone can participate."
                                 }
                         ]
                 }
@@ -141,7 +141,7 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
                                         "prompt": "panda",
@@ -149,17 +149,17 @@ LESSON = {
                                         "pinyin": "xióngmāo"
                                 },
                                 {
-                                        "prompt": "lift",
+                                        "prompt": "elevator / lift",
                                         "answer": "电梯",
                                         "pinyin": "diàntī"
                                 },
                                 {
-                                        "prompt": "hojatxona",
+                                        "prompt": "restroom / bathroom",
                                         "answer": "洗手间",
                                         "pinyin": "xǐshǒujiān"
                                 },
                                 {
-                                        "prompt": "darhol",
+                                        "prompt": "immediately / right away",
                                         "answer": "马上",
                                         "pinyin": "mǎshàng"
                                 }
@@ -168,7 +168,7 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "熊猫",
@@ -177,17 +177,17 @@ LESSON = {
                                 },
                                 {
                                         "prompt": "电梯",
-                                        "answer": "lift",
+                                        "answer": "elevator / lift",
                                         "pinyin": "diàntī"
                                 },
                                 {
                                         "prompt": "洗手间",
-                                        "answer": "hojatxona",
+                                        "answer": "restroom / bathroom",
                                         "pinyin": "xǐshǒujiān"
                                 },
                                 {
                                         "prompt": "马上",
-                                        "answer": "darhol",
+                                        "answer": "immediately / right away",
                                         "pinyin": "mǎshàng"
                                 }
                         ]
@@ -210,9 +210,9 @@ LESSON = {
                         "no": 2,
                         "answers": [
                                 "panda",
-                                "lift",
-                                "hojatxona",
-                                "darhol"
+                                "elevator / lift",
+                                "restroom / bathroom",
+                                "immediately / right away"
                         ]
                 }
         ],
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Write 3 sentences using the following words:",
                         "words": [
                                 "熊猫",
                                 "电梯",
@@ -232,7 +232,7 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
+                        "instruction": "Write a short passage of 4–5 sentences about the lesson topic:",
                         "topic": "你去哪儿我就去哪儿"
                 }
         ],

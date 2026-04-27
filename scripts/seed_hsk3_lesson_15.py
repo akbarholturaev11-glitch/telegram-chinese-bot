@@ -12,8 +12,8 @@ LESSON = {
     "lesson_order": 15,
     "lesson_code": "HSK3-L15",
     "title": "其他都没什么问题",
-    "goal": "istisno, qolgan narsalar va darajani ifodalash",
-    "intro_text": "Bu dars istisno, qolgan narsalar va darajani ifodalashga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda 除了……以外，都/还/也…… va 程度的表达：极了 kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "goal": "expressing exceptions, remaining things, and degree",
+    "intro_text": "This lesson focuses on expressing exceptions, remaining things, and degree. It uses 5 key vocabulary words and covers the main grammar patterns 除了……以外，都/还/也…… and 程度的表达：极了.",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -21,35 +21,35 @@ LESSON = {
                         "zh": "留学",
                         "pinyin": "liúxué",
                         "pos": "v.",
-                        "meaning": "chet elda o'qimoq"
+                        "meaning": "to study abroad"
                 },
                 {
                         "no": 2,
                         "zh": "水平",
                         "pinyin": "shuǐpíng",
                         "pos": "n.",
-                        "meaning": "daraja"
+                        "meaning": "level, standard"
                 },
                 {
                         "no": 3,
                         "zh": "提高",
                         "pinyin": "tígāo",
                         "pos": "v.",
-                        "meaning": "oshirmoq"
+                        "meaning": "to improve, to raise"
                 },
                 {
                         "no": 4,
                         "zh": "新闻",
                         "pinyin": "xīnwén",
                         "pos": "n.",
-                        "meaning": "yangilik"
+                        "meaning": "news"
                 },
                 {
                         "no": 5,
                         "zh": "文化",
                         "pinyin": "wénhuà",
                         "pos": "n.",
-                        "meaning": "madaniyat"
+                        "meaning": "culture"
                 }
         ],
         ensure_ascii=False,
@@ -65,13 +65,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "其他都没什么问题。",
                                         "pinyin": "",
-                                        "translation": "Qolgani deyarli muammosiz."
+                                        "translation": "Everything else is pretty much fine."
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "那我们就按计划进行吧。",
                                         "pinyin": "",
-                                        "translation": "Unda rejaga ko'ra davom etamiz."
+                                        "translation": "Then let's proceed according to plan."
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "除了语言以外，你还担心什么？",
                                         "pinyin": "",
-                                        "translation": "Tildan tashqari yana nimadan xavotirdasan?"
+                                        "translation": "Besides language, what else are you worried about?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "我最想提高自己的文化水平。",
                                         "pinyin": "",
-                                        "translation": "Men eng ko'p o'z madaniy saviyamni oshirmoqchiman."
+                                        "translation": "What I want most is to improve my cultural knowledge."
                                 }
                         ]
                 }
@@ -102,34 +102,34 @@ LESSON = {
                 {
                         "no": 1,
                         "title_zh": "除了……以外，都/还/也……",
-                        "explanation": "Bu grammatika mavzusi darsdagi asosiy gap qoliplarini amalda ishlatishga yordam beradi.",
+                        "explanation": "This grammar topic helps practice the main sentence patterns used in the lesson.",
                         "examples": [
                                 {
                                         "zh": "其他都没什么问题。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有留学和水平。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 留学 va 水平 ishlatilgan."
+                                        "meaning": "This sentence uses 留学 and 水平."
                                 }
                         ]
                 },
                 {
                         "no": 2,
                         "title_zh": "程度的表达：极了",
-                        "explanation": "Bu grammatika mavzusi darsdagi asosiy gap qoliplarini amalda ishlatishga yordam beradi.",
+                        "explanation": "This grammar topic helps practice the main sentence patterns used in the lesson.",
                         "examples": [
                                 {
                                         "zh": "其他都没什么问题。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有留学和水平。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 留学 va 水平 ishlatilgan."
+                                        "meaning": "This sentence uses 留学 and 水平."
                                 }
                         ]
                 }
@@ -141,25 +141,25 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
-                                        "prompt": "chet elda o'qimoq",
+                                        "prompt": "to study abroad",
                                         "answer": "留学",
                                         "pinyin": "liúxué"
                                 },
                                 {
-                                        "prompt": "daraja",
+                                        "prompt": "level, standard",
                                         "answer": "水平",
                                         "pinyin": "shuǐpíng"
                                 },
                                 {
-                                        "prompt": "oshirmoq",
+                                        "prompt": "to improve, to raise",
                                         "answer": "提高",
                                         "pinyin": "tígāo"
                                 },
                                 {
-                                        "prompt": "yangilik",
+                                        "prompt": "news",
                                         "answer": "新闻",
                                         "pinyin": "xīnwén"
                                 }
@@ -168,26 +168,26 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "留学",
-                                        "answer": "chet elda o'qimoq",
+                                        "answer": "to study abroad",
                                         "pinyin": "liúxué"
                                 },
                                 {
                                         "prompt": "水平",
-                                        "answer": "daraja",
+                                        "answer": "level, standard",
                                         "pinyin": "shuǐpíng"
                                 },
                                 {
                                         "prompt": "提高",
-                                        "answer": "oshirmoq",
+                                        "answer": "to improve, to raise",
                                         "pinyin": "tígāo"
                                 },
                                 {
                                         "prompt": "新闻",
-                                        "answer": "yangilik",
+                                        "answer": "news",
                                         "pinyin": "xīnwén"
                                 }
                         ]
@@ -209,10 +209,10 @@ LESSON = {
                 {
                         "no": 2,
                         "answers": [
-                                "chet elda o'qimoq",
-                                "daraja",
-                                "oshirmoq",
-                                "yangilik"
+                                "to study abroad",
+                                "level, standard",
+                                "to improve, to raise",
+                                "news"
                         ]
                 }
         ],
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Make 3 sentences using the following words:",
                         "words": [
                                 "留学",
                                 "水平",
@@ -232,7 +232,7 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
+                        "instruction": "Write a short text of 4-5 sentences about the lesson topic:",
                         "topic": "其他都没什么问题"
                 }
         ],

@@ -12,23 +12,23 @@ LESSON = {
     "lesson_order": 13,
     "lesson_code": "HSK1-L13",
     "title": "他在学做中国菜呢",
-    "goal": "Hozir bajariladigan harakatni ifodalash (在...呢), telefon raqamlari",
+    "goal": "Expressing ongoing actions (在...呢), phone numbers, and the particle 吧",
     "intro_text": (
-        "O'n uchinchi darsda siz hozirgi vaqtda bajariladigan harakatni, "
-        "在...呢 konstruktsiyasini va 吧 yuklamasini o'rganasiz. "
-        "10 ta yangi so'z, 3 ta dialog."
+        "In lesson thirteen you will learn how to express actions happening right now, "
+        "use the 在...呢 construction, and the particle 吧. "
+        "10 new words, 3 dialogues."
     ),
     "vocabulary_json": json.dumps([
-        {"no": 1,  "zh": "喂",   "pinyin": "wèi",      "pos": "int.", "meaning": "allo (telefonda)"},
-        {"no": 2,  "zh": "也",   "pinyin": "yě",       "pos": "adv.", "meaning": "ham, shuningdek"},
-        {"no": 3,  "zh": "学习", "pinyin": "xuéxí",    "pos": "v.",   "meaning": "o'rganmoq, o'qimoq"},
-        {"no": 4,  "zh": "上午", "pinyin": "shàngwǔ",  "pos": "n.",   "meaning": "ertalab (tushdan oldin)"},
-        {"no": 5,  "zh": "睡觉", "pinyin": "shuì jiào","pos": "v.",   "meaning": "uxlamoq"},
-        {"no": 6,  "zh": "电视", "pinyin": "diànshì",  "pos": "n.",   "meaning": "televizor"},
-        {"no": 7,  "zh": "喜欢", "pinyin": "xǐhuan",   "pos": "v.",   "meaning": "yoqtirmoq, yaxshi ko'rmoq"},
-        {"no": 8,  "zh": "给",   "pinyin": "gěi",      "pos": "prep.","meaning": "-ga, uchun (kimgadir)"},
-        {"no": 9,  "zh": "打电话","pinyin": "dǎ diànhuà","pos": "v.",  "meaning": "telefon qilmoq"},
-        {"no": 10, "zh": "吧",   "pinyin": "ba",       "pos": "part.","meaning": "taklif/buyruq yumshatuvchi yukla"},
+        {"no": 1,  "zh": "喂",   "pinyin": "wèi",      "pos": "int.", "meaning": "hello (on the phone)"},
+        {"no": 2,  "zh": "也",   "pinyin": "yě",       "pos": "adv.", "meaning": "also, too"},
+        {"no": 3,  "zh": "学习", "pinyin": "xuéxí",    "pos": "v.",   "meaning": "to study, to learn"},
+        {"no": 4,  "zh": "上午", "pinyin": "shàngwǔ",  "pos": "n.",   "meaning": "morning (before noon)"},
+        {"no": 5,  "zh": "睡觉", "pinyin": "shuì jiào","pos": "v.",   "meaning": "to sleep"},
+        {"no": 6,  "zh": "电视", "pinyin": "diànshì",  "pos": "n.",   "meaning": "television"},
+        {"no": 7,  "zh": "喜欢", "pinyin": "xǐhuan",   "pos": "v.",   "meaning": "to like, to enjoy"},
+        {"no": 8,  "zh": "给",   "pinyin": "gěi",      "pos": "prep.","meaning": "to, for (someone)"},
+        {"no": 9,  "zh": "打电话","pinyin": "dǎ diànhuà","pos": "v.",  "meaning": "to make a phone call"},
+        {"no": 10, "zh": "吧",   "pinyin": "ba",       "pos": "part.","meaning": "softening particle for suggestions or mild commands"},
     ], ensure_ascii=False),
 
     "dialogue_json": json.dumps([
@@ -37,10 +37,10 @@ LESSON = {
             "section_label": "课文 1",
             "scene_label_zh": "Telefonda — hozir nima qilyapsan",
             "dialogue": [
-                {"speaker": "A", "zh": "喂，你在做什么呢？",              "pinyin": "Wèi, nǐ zài zuò shénme ne?",                    "translation": "Allo, hozir nima qilyapsan?"},
-                {"speaker": "B", "zh": "我在看书呢。",                    "pinyin": "Wǒ zài kàn shū ne.",                            "translation": "Hozir kitob o'qiyapman."},
-                {"speaker": "A", "zh": "大卫也在看书吗？",                "pinyin": "Dàwèi yě zài kàn shū ma?",                     "translation": "David ham kitob o'qiyaptimi?"},
-                {"speaker": "B", "zh": "他没看书，他在学做中国菜呢。",    "pinyin": "Tā méi kàn shū, tā zài xué zuò Zhōngguó cài ne.", "translation": "U kitob o'qiyapti emas, u xitoy taomi tayyorlashni o'rganayapti."},
+                {"speaker": "A", "zh": "喂，你在做什么呢？",              "pinyin": "Wèi, nǐ zài zuò shénme ne?",                    "translation": "Hello, what are you doing right now?"},
+                {"speaker": "B", "zh": "我在看书呢。",                    "pinyin": "Wǒ zài kàn shū ne.",                            "translation": "I'm reading a book right now."},
+                {"speaker": "A", "zh": "大卫也在看书吗？",                "pinyin": "Dàwèi yě zài kàn shū ma?",                     "translation": "Is David reading too?"},
+                {"speaker": "B", "zh": "他没看书，他在学做中国菜呢。",    "pinyin": "Tā méi kàn shū, tā zài xué zuò Zhōngguó cài ne.", "translation": "He is not reading; he is learning to cook Chinese food."},
             ]
         },
         {
@@ -48,10 +48,10 @@ LESSON = {
             "section_label": "课文 2",
             "scene_label_zh": "Qahvaxonada — kecha nima qilding",
             "dialogue": [
-                {"speaker": "A", "zh": "昨天上午你在做什么呢？",          "pinyin": "Zuótiān shàngwǔ nǐ zài zuò shénme ne?",         "translation": "Kecha ertalab nima qilyapding?"},
-                {"speaker": "B", "zh": "我在睡觉呢。你呢？",              "pinyin": "Wǒ zài shuì jiào ne. Nǐ ne?",                  "translation": "Uxlayapman edi. Siz-chi?"},
-                {"speaker": "A", "zh": "我在家看电视呢。你喜欢看电视吗？","pinyin": "Wǒ zài jiā kàn diànshì ne. Nǐ xǐhuan kàn diànshì ma?", "translation": "Men uyda televizor ko'rayapman edi. Siz televizor ko'rishni yoqtirasizmi?"},
-                {"speaker": "B", "zh": "我不喜欢看电视，我喜欢看电影。",  "pinyin": "Wǒ bù xǐhuan kàn diànshì, wǒ xǐhuan kàn diànyǐng.", "translation": "Men televizor ko'rishni yoqtirmayman, kino ko'rishni yoqtiraman."},
+                {"speaker": "A", "zh": "昨天上午你在做什么呢？",          "pinyin": "Zuótiān shàngwǔ nǐ zài zuò shénme ne?",         "translation": "What were you doing yesterday morning?"},
+                {"speaker": "B", "zh": "我在睡觉呢。你呢？",              "pinyin": "Wǒ zài shuì jiào ne. Nǐ ne?",                  "translation": "I was sleeping. What about you?"},
+                {"speaker": "A", "zh": "我在家看电视呢。你喜欢看电视吗？","pinyin": "Wǒ zài jiā kàn diànshì ne. Nǐ xǐhuan kàn diànshì ma?", "translation": "I was watching TV at home. Do you like watching TV?"},
+                {"speaker": "B", "zh": "我不喜欢看电视，我喜欢看电影。",  "pinyin": "Wǒ bù xǐhuan kàn diànshì, wǒ xǐhuan kàn diànyǐng.", "translation": "I don't like watching TV; I like watching movies."},
             ]
         },
         {
@@ -59,10 +59,10 @@ LESSON = {
             "section_label": "课文 3",
             "scene_label_zh": "Maktab ofisida — telefon raqami",
             "dialogue": [
-                {"speaker": "A", "zh": "82304155，这是李老师的电话吗？",     "pinyin": "Bā èr sān líng sì yāo wǔ wǔ, zhè shì Lǐ lǎoshī de diànhuà ma?", "translation": "82304155, bu Li o'qituvchining telefoni?"},
-                {"speaker": "B", "zh": "不是。她的电话是82304156。",         "pinyin": "Bú shì. Tā de diànhuà shì bā èr sān líng sì yāo wǔ liù.",      "translation": "Yo'q. Uning telefoni 82304156."},
-                {"speaker": "A", "zh": "好，我现在给她打电话。",             "pinyin": "Hǎo, wǒ xiànzài gěi tā dǎ diànhuà.",                           "translation": "Yaxshi, hozir unga telefon qilaman."},
-                {"speaker": "B", "zh": "她在工作呢，你下午打吧。",           "pinyin": "Tā zài gōngzuò ne, nǐ xiàwǔ dǎ ba.",                          "translation": "U ishlayapti, tushdan keyin qil."},
+                {"speaker": "A", "zh": "82304155，这是李老师的电话吗？",     "pinyin": "Bā èr sān líng sì yāo wǔ wǔ, zhè shì Lǐ lǎoshī de diànhuà ma?", "translation": "82304155, is this Teacher Li's phone number?"},
+                {"speaker": "B", "zh": "不是。她的电话是82304156。",         "pinyin": "Bú shì. Tā de diànhuà shì bā èr sān líng sì yāo wǔ liù.",      "translation": "No. Her number is 82304156."},
+                {"speaker": "A", "zh": "好，我现在给她打电话。",             "pinyin": "Hǎo, wǒ xiànzài gěi tā dǎ diànhuà.",                           "translation": "OK, I'll call her now."},
+                {"speaker": "B", "zh": "她在工作呢，你下午打吧。",           "pinyin": "Tā zài gōngzuò ne, nǐ xiàwǔ dǎ ba.",                          "translation": "She is working right now; call in the afternoon."},
             ]
         },
     ], ensure_ascii=False),
@@ -72,55 +72,55 @@ LESSON = {
             "no": 1,
             "title_zh": "在……呢 — Hozirgi davom harakat",
             "explanation": (
-                "Hozir bajarilayotgan harakat uchun:\n"
-                "Tuzilishi 1: 在 + Fe'l (+ Narsa)\n"
-                "Tuzilishi 2: Fe'l + Narsa + 呢\n"
-                "Tuzilishi 3: 在 + Fe'l + 呢 (kuchaytirish)\n\n"
-                "Misol:\n"
-                "我在看书呢。— Men hozir kitob o'qiyapman.\n"
-                "他在学做中国菜呢。— U xitoy taomi o'rganayapti.\n\n"
-                "Inkor: 没(在) + Fe'l, 呢 yo'q\n"
-                "他没看书。— U kitob o'qiyapti emas.\n"
-                "他们没在工作。— Ular ishlamayapti."
+                "For an action in progress right now:\n"
+                "Structure 1: 在 + Verb (+ Object)\n"
+                "Structure 2: Verb + Object + 呢\n"
+                "Structure 3: 在 + Verb + 呢 (emphatic)\n\n"
+                "Example:\n"
+                "我在看书呢。— I am reading a book right now.\n"
+                "他在学做中国菜呢。— He is learning to cook Chinese food.\n\n"
+                "Negation: 没(在) + Verb, no 呢\n"
+                "他没看书。— He is not reading.\n"
+                "他们没在工作。— They are not working."
             ),
             "examples": [
-                {"zh": "我在看书呢。",         "pinyin": "Wǒ zài kàn shū ne.",           "meaning": "Men hozir kitob o'qiyapman."},
-                {"zh": "他在学做中国菜呢。",   "pinyin": "Tā zài xué zuò Zhōngguó cài ne.", "meaning": "U xitoy taomi o'rganayapti."},
-                {"zh": "她没在工作。",         "pinyin": "Tā méi zài gōngzuò.",          "meaning": "U ishlamayapti."},
+                {"zh": "我在看书呢。",         "pinyin": "Wǒ zài kàn shū ne.",           "meaning": "I am reading a book right now."},
+                {"zh": "他在学做中国菜呢。",   "pinyin": "Tā zài xué zuò Zhōngguó cài ne.", "meaning": "He is learning to cook Chinese food."},
+                {"zh": "她没在工作。",         "pinyin": "Tā méi zài gōngzuò.",          "meaning": "She is not working."},
             ]
         },
         {
             "no": 2,
             "title_zh": "也 — Ham ravishi",
             "explanation": (
-                "也(yě) — 'ham, shuningdek' ma'nosida.\n"
-                "Doim fe'l yoki modal fe'ldan oldin keladi.\n\n"
-                "Misol:\n"
-                "大卫也在看书吗？— David ham kitob o'qiyaptimi?\n"
-                "我也喜欢看电影。— Men ham kino ko'rishni yoqtiraman.\n"
-                "她也是老师。— U ham o'qituvchi."
+                "也(yě) — means 'also, too'.\n"
+                "Always comes before the verb or modal verb.\n\n"
+                "Example:\n"
+                "大卫也在看书吗？— Is David reading too?\n"
+                "我也喜欢看电影。— I also like watching movies.\n"
+                "她也是老师。— She is also a teacher."
             ),
             "examples": [
-                {"zh": "大卫也在看书吗？",   "pinyin": "Dàwèi yě zài kàn shū ma?",   "meaning": "David ham kitob o'qiyaptimi?"},
-                {"zh": "我也喜欢中国菜。",   "pinyin": "Wǒ yě xǐhuan Zhōngguó cài.", "meaning": "Men ham xitoy taomini yoqtiraman."},
-                {"zh": "她也是学生。",       "pinyin": "Tā yě shì xuésheng.",         "meaning": "U ham o'quvchi."},
+                {"zh": "大卫也在看书吗？",   "pinyin": "Dàwèi yě zài kàn shū ma?",   "meaning": "Is David reading too?"},
+                {"zh": "我也喜欢中国菜。",   "pinyin": "Wǒ yě xǐhuan Zhōngguó cài.", "meaning": "I also like Chinese food."},
+                {"zh": "她也是学生。",       "pinyin": "Tā yě shì xuésheng.",         "meaning": "She is also a student."},
             ]
         },
         {
             "no": 3,
             "title_zh": "吧 — Yumshatuvchi yukla",
             "explanation": (
-                "吧(ba) — taklif, maslahat yoki yumshoq buyruq bildiradi.\n"
-                "Gap oxirida keladi.\n\n"
-                "Misol:\n"
-                "你下午打吧。— Tushdan keyin qil.\n"
-                "今天我们在家吃饭吧。— Bugun uyda ovqatlansak.\n"
-                "请坐吧。— O'tiring."
+                "吧(ba) — expresses a suggestion, advice, or softened command.\n"
+                "Comes at the end of the sentence.\n\n"
+                "Example:\n"
+                "你下午打吧。— Call in the afternoon.\n"
+                "今天我们在家吃饭吧。— Let's eat at home today.\n"
+                "请坐吧。— Please have a seat."
             ),
             "examples": [
-                {"zh": "你下午打吧。",           "pinyin": "Nǐ xiàwǔ dǎ ba.",           "meaning": "Tushdan keyin qil."},
-                {"zh": "我们一起去吧。",         "pinyin": "Wǒmen yīqǐ qù ba.",         "meaning": "Birga boraylik."},
-                {"zh": "请坐吧。",               "pinyin": "Qǐng zuò ba.",               "meaning": "Marhamat, o'tiring."},
+                {"zh": "你下午打吧。",           "pinyin": "Nǐ xiàwǔ dǎ ba.",           "meaning": "Call in the afternoon."},
+                {"zh": "我们一起去吧。",         "pinyin": "Wǒmen yīqǐ qù ba.",         "meaning": "Let's go together."},
+                {"zh": "请坐吧。",               "pinyin": "Qǐng zuò ba.",               "meaning": "Please have a seat."},
             ]
         },
     ], ensure_ascii=False),
@@ -129,19 +129,19 @@ LESSON = {
         {
             "no": 1,
             "type": "translate_to_chinese",
-            "instruction": "Xitoycha yozing:",
+            "instruction": "Write in Chinese:",
             "items": [
-                {"prompt": "Hozir nima qilyapsan?",               "answer": "你在做什么呢？",          "pinyin": "Nǐ zài zuò shénme ne?"},
-                {"prompt": "Men hozir kitob o'qiyapman.",          "answer": "我在看书呢。",             "pinyin": "Wǒ zài kàn shū ne."},
-                {"prompt": "U ishlayapti emas.",                   "answer": "他没在工作。",             "pinyin": "Tā méi zài gōngzuò."},
-                {"prompt": "Men ham kino ko'rishni yoqtiraman.",   "answer": "我也喜欢看电影。",         "pinyin": "Wǒ yě xǐhuan kàn diànyǐng."},
-                {"prompt": "Hozir unga telefon qilaman.",          "answer": "我现在给她打电话。",       "pinyin": "Wǒ xiànzài gěi tā dǎ diànhuà."},
+                {"prompt": "What are you doing right now?",               "answer": "你在做什么呢？",          "pinyin": "Nǐ zài zuò shénme ne?"},
+                {"prompt": "I am reading a book right now.",          "answer": "我在看书呢。",             "pinyin": "Wǒ zài kàn shū ne."},
+                {"prompt": "He is not working.",                   "answer": "他没在工作。",             "pinyin": "Tā méi zài gōngzuò."},
+                {"prompt": "I also like watching movies.",   "answer": "我也喜欢看电影。",         "pinyin": "Wǒ yě xǐhuan kàn diànyǐng."},
+                {"prompt": "I'll call her now.",          "answer": "我现在给她打电话。",       "pinyin": "Wǒ xiànzài gěi tā dǎ diànhuà."},
             ]
         },
         {
             "no": 2,
             "type": "fill_blank",
-            "instruction": "Bo'sh joyni to'ldiring:",
+            "instruction": "Fill in the blank:",
             "items": [
                 {"prompt": "我___看书呢。",               "answer": "在",   "pinyin": "zài"},
                 {"prompt": "大卫___在看书吗？",           "answer": "也",   "pinyin": "yě"},
@@ -152,7 +152,7 @@ LESSON = {
         {
             "no": 3,
             "type": "phone_numbers",
-            "instruction": "Telefon raqamlarini xitoycha o'qing:",
+            "instruction": "Read the phone numbers aloud in Chinese:",
             "items": [
                 {"prompt": "8069478",    "answer": "bā líng liù jiǔ sì qī bā"},
                 {"prompt": "13851897623","answer": "yāo sān bā wǔ yāo bā jiǔ liù èr sān"},
@@ -170,13 +170,13 @@ LESSON = {
     "homework_json": json.dumps([
         {
             "no": 1,
-            "instruction": "Kecha ertalab nima qilyapding? 3-4 gap yoz:",
+            "instruction": "What were you doing yesterday morning? Write 3–4 sentences:",
             "template": "昨天上午我在___呢。我___喜欢___。",
             "words": ["在", "呢", "也", "喜欢", "看书", "看电视", "睡觉", "学习"],
         },
         {
             "no": 2,
-            "instruction": "Do'stingga qo'ng'iroq qilish dialogini yoz (4 qator 喂 bilan boshla):",
+            "instruction": "Write a phone call dialogue with a friend (4 lines, start with 喂):",
             "example": "A: 喂，你在做什么呢？\nB: 我在___呢。\nA: ___也在___吗？\nB: 她___，她在___呢。",
         }
     ], ensure_ascii=False),

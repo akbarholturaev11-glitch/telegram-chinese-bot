@@ -12,8 +12,8 @@ LESSON = {
     "lesson_order": 13,
     "lesson_code": "HSK3-L13",
     "title": "我是走回来的",
-    "goal": "yo'nalish va bir vaqtdagi ikki harakatni ifodalash",
-    "intro_text": "Bu dars yo'nalish va bir vaqtdagi ikki harakatni ifodalashga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda 复合趋向补语 va 一边……一边…… kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "goal": "expressing direction of movement and simultaneous actions",
+    "intro_text": "This lesson is dedicated to expressing direction of movement and simultaneous actions. It uses 5 key vocabulary words and covers core grammar patterns such as 复合趋向补语 and 一边……一边……",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -21,35 +21,35 @@ LESSON = {
                         "zh": "礼物",
                         "pinyin": "lǐwù",
                         "pos": "n.",
-                        "meaning": "sovg'a"
+                        "meaning": "gift, present"
                 },
                 {
                         "no": 2,
                         "zh": "奶奶",
                         "pinyin": "nǎinai",
                         "pos": "n.",
-                        "meaning": "buvi"
+                        "meaning": "grandmother (paternal)"
                 },
                 {
                         "no": 3,
                         "zh": "遇到",
                         "pinyin": "yùdào",
                         "pos": "v.",
-                        "meaning": "uchratmoq"
+                        "meaning": "to run into, to meet"
                 },
                 {
                         "no": 4,
                         "zh": "一边",
                         "pinyin": "yìbiān",
                         "pos": "adv.",
-                        "meaning": "bir tomondan, bir paytning o'zida"
+                        "meaning": "at the same time, while"
                 },
                 {
                         "no": 5,
                         "zh": "愿意",
                         "pinyin": "yuànyì",
                         "pos": "v.",
-                        "meaning": "xohlamoq, rozi bo'lmoq"
+                        "meaning": "to be willing to, to agree"
                 }
         ],
         ensure_ascii=False,
@@ -65,13 +65,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "你怎么回来的？",
                                         "pinyin": "",
-                                        "translation": "Qanday qaytding?"
+                                        "translation": "How did you come back?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "我是走回来的。",
                                         "pinyin": "",
-                                        "translation": "Men piyoda qaytdim."
+                                        "translation": "I came back on foot."
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "路上你遇到谁了？",
                                         "pinyin": "",
-                                        "translation": "Yo'lda kimni uchratding?"
+                                        "translation": "Who did you run into on the way?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "我一边走一边给奶奶买礼物。",
                                         "pinyin": "",
-                                        "translation": "Men yurib ketib, bir vaqtning o'zida buvimga sovg'a oldim."
+                                        "translation": "I walked back while buying a gift for my grandmother at the same time."
                                 }
                         ]
                 }
@@ -102,34 +102,34 @@ LESSON = {
                 {
                         "no": 1,
                         "title_zh": "复合趋向补语",
-                        "explanation": "Bu mavzu harakatning qaysi tomonga yo'nalganini yoki natijada qayerga kelganini ko'rsatadi.",
+                        "explanation": "This topic shows the direction of movement of an action, or where the subject ends up as a result.",
                         "examples": [
                                 {
                                         "zh": "我是走回来的。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有礼物和奶奶。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 礼物 va 奶奶 ishlatilgan."
+                                        "meaning": "This sentence uses 礼物 and 奶奶."
                                 }
                         ]
                 },
                 {
                         "no": 2,
                         "title_zh": "一边……一边……",
-                        "explanation": "Bu qolip bir vaqtning o'zida ikki harakat ketayotganini bildiradi.",
+                        "explanation": "This pattern indicates that two actions are happening simultaneously.",
                         "examples": [
                                 {
                                         "zh": "我一边走一边听音乐。",
                                         "pinyin": "",
-                                        "meaning": "Men yurib ketib bir vaqtning o'zida musiqa tinglayman."
+                                        "meaning": "I listen to music while walking."
                                 },
                                 {
                                         "zh": "她一边做饭一边说话。",
                                         "pinyin": "",
-                                        "meaning": "U ovqat pishirib turib gaplashadi."
+                                        "meaning": "She talks while cooking."
                                 }
                         ]
                 }
@@ -141,25 +141,25 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
-                                        "prompt": "sovg'a",
+                                        "prompt": "gift, present",
                                         "answer": "礼物",
                                         "pinyin": "lǐwù"
                                 },
                                 {
-                                        "prompt": "buvi",
+                                        "prompt": "grandmother (paternal)",
                                         "answer": "奶奶",
                                         "pinyin": "nǎinai"
                                 },
                                 {
-                                        "prompt": "uchratmoq",
+                                        "prompt": "to run into, to meet",
                                         "answer": "遇到",
                                         "pinyin": "yùdào"
                                 },
                                 {
-                                        "prompt": "bir tomondan, bir paytning o'zida",
+                                        "prompt": "at the same time, while",
                                         "answer": "一边",
                                         "pinyin": "yìbiān"
                                 }
@@ -168,26 +168,26 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "礼物",
-                                        "answer": "sovg'a",
+                                        "answer": "gift, present",
                                         "pinyin": "lǐwù"
                                 },
                                 {
                                         "prompt": "奶奶",
-                                        "answer": "buvi",
+                                        "answer": "grandmother (paternal)",
                                         "pinyin": "nǎinai"
                                 },
                                 {
                                         "prompt": "遇到",
-                                        "answer": "uchratmoq",
+                                        "answer": "to run into, to meet",
                                         "pinyin": "yùdào"
                                 },
                                 {
                                         "prompt": "一边",
-                                        "answer": "bir tomondan, bir paytning o'zida",
+                                        "answer": "at the same time, while",
                                         "pinyin": "yìbiān"
                                 }
                         ]
@@ -209,10 +209,10 @@ LESSON = {
                 {
                         "no": 2,
                         "answers": [
-                                "sovg'a",
-                                "buvi",
-                                "uchratmoq",
-                                "bir tomondan, bir paytning o'zida"
+                                "gift, present",
+                                "grandmother (paternal)",
+                                "to run into, to meet",
+                                "at the same time, while"
                         ]
                 }
         ],
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Make 3 sentences using the following words:",
                         "words": [
                                 "礼物",
                                 "奶奶",
@@ -232,7 +232,7 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
+                        "instruction": "Write a short paragraph of 4-5 sentences about the lesson topic:",
                         "topic": "我是走回来的"
                 }
         ],

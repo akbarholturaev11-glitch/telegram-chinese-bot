@@ -12,8 +12,8 @@ LESSON = {
     "lesson_order": 9,
     "lesson_code": "HSK3-L09",
     "title": "她的汉语说得跟中国人一样好",
-    "goal": "bir xil darajadagi qiyoslashni ifodalash",
-    "intro_text": "Bu dars bir xil darajadagi qiyoslashni ifodalashga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda 越 A 越 B va 比较句 1：A 跟 B 一样 (+Adj) kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "goal": "expressing equality in degree through comparison",
+    "intro_text": "This lesson is dedicated to expressing equality in degree through comparison. It introduces 5 key vocabulary words and covers core grammar patterns such as 越 A 越 B and 比较句 1：A 跟 B 一样 (+Adj).",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -21,35 +21,35 @@ LESSON = {
                         "zh": "中文",
                         "pinyin": "zhōngwén",
                         "pos": "n.",
-                        "meaning": "xitoy tili"
+                        "meaning": "Chinese language"
                 },
                 {
                         "no": 2,
                         "zh": "一样",
                         "pinyin": "yíyàng",
                         "pos": "adj.",
-                        "meaning": "bir xil"
+                        "meaning": "the same; alike"
                 },
                 {
                         "no": 3,
                         "zh": "参加",
                         "pinyin": "cānjiā",
                         "pos": "v.",
-                        "meaning": "qatnashmoq"
+                        "meaning": "to participate; to join"
                 },
                 {
                         "no": 4,
                         "zh": "放心",
                         "pinyin": "fàngxīn",
                         "pos": "v.",
-                        "meaning": "ko'ngli joyiga tushmoq"
+                        "meaning": "to feel at ease; to rest assured"
                 },
                 {
                         "no": 5,
                         "zh": "影响",
                         "pinyin": "yǐngxiǎng",
                         "pos": "v./n.",
-                        "meaning": "ta'sir qilmoq, ta'sir"
+                        "meaning": "to influence; influence / effect"
                 }
         ],
         ensure_ascii=False,
@@ -65,13 +65,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "她的汉语说得跟中国人一样好。",
                                         "pinyin": "",
-                                        "translation": "U xitoy tilini xuddi xitoylikdek yaxshi gapiradi."
+                                        "translation": "She speaks Chinese just as well as a native Chinese person."
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "是啊，所以大家都很放心。",
                                         "pinyin": "",
-                                        "translation": "Ha, shuning uchun hamma xotirjam."
+                                        "translation": "Yes, that's why everyone feels at ease."
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "她会参加这次活动吗？",
                                         "pinyin": "",
-                                        "translation": "U bu tadbirga qatnashadimi?"
+                                        "translation": "Will she participate in this event?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "会，她的表现越说越自然。",
                                         "pinyin": "",
-                                        "translation": "Ha, bo'ladi, uning nutqi tobora tabiiylashyapti."
+                                        "translation": "Yes, her speech is becoming more and more natural."
                                 }
                         ]
                 }
@@ -102,34 +102,34 @@ LESSON = {
                 {
                         "no": 1,
                         "title_zh": "越 A 越 B",
-                        "explanation": "Bu grammatika mavzusi darsdagi asosiy gap qoliplarini amalda ishlatishga yordam beradi.",
+                        "explanation": "This grammar topic helps practice the core sentence patterns used in the lesson.",
                         "examples": [
                                 {
                                         "zh": "她的汉语说得跟中国人一样好。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The key pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有中文和一样。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 中文 va 一样 ishlatilgan."
+                                        "meaning": "This sentence uses 中文 and 一样."
                                 }
                         ]
                 },
                 {
                         "no": 2,
                         "title_zh": "比较句 1：A 跟 B 一样 (+Adj)",
-                        "explanation": "Bu qolip ikki narsa yoki odamni daraja jihatidan qiyoslash uchun ishlatiladi.",
+                        "explanation": "This pattern is used to compare two things or people in terms of degree.",
                         "examples": [
                                 {
                                         "zh": "她的汉语说得跟中国人一样好。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi qiyoslash namunasi."
+                                        "meaning": "A comparison example from the lesson title."
                                 },
                                 {
                                         "zh": "中文比一样更重要。",
                                         "pinyin": "",
-                                        "meaning": "中文 一样dan ham muhimroq."
+                                        "meaning": "中文 is even more important than 一样."
                                 }
                         ]
                 }
@@ -141,25 +141,25 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
-                                        "prompt": "xitoy tili",
+                                        "prompt": "Chinese language",
                                         "answer": "中文",
                                         "pinyin": "zhōngwén"
                                 },
                                 {
-                                        "prompt": "bir xil",
+                                        "prompt": "the same; alike",
                                         "answer": "一样",
                                         "pinyin": "yíyàng"
                                 },
                                 {
-                                        "prompt": "qatnashmoq",
+                                        "prompt": "to participate; to join",
                                         "answer": "参加",
                                         "pinyin": "cānjiā"
                                 },
                                 {
-                                        "prompt": "ko'ngli joyiga tushmoq",
+                                        "prompt": "to feel at ease; to rest assured",
                                         "answer": "放心",
                                         "pinyin": "fàngxīn"
                                 }
@@ -168,26 +168,26 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "中文",
-                                        "answer": "xitoy tili",
+                                        "answer": "Chinese language",
                                         "pinyin": "zhōngwén"
                                 },
                                 {
                                         "prompt": "一样",
-                                        "answer": "bir xil",
+                                        "answer": "the same; alike",
                                         "pinyin": "yíyàng"
                                 },
                                 {
                                         "prompt": "参加",
-                                        "answer": "qatnashmoq",
+                                        "answer": "to participate; to join",
                                         "pinyin": "cānjiā"
                                 },
                                 {
                                         "prompt": "放心",
-                                        "answer": "ko'ngli joyiga tushmoq",
+                                        "answer": "to feel at ease; to rest assured",
                                         "pinyin": "fàngxīn"
                                 }
                         ]
@@ -209,10 +209,10 @@ LESSON = {
                 {
                         "no": 2,
                         "answers": [
-                                "xitoy tili",
-                                "bir xil",
-                                "qatnashmoq",
-                                "ko'ngli joyiga tushmoq"
+                                "Chinese language",
+                                "the same; alike",
+                                "to participate; to join",
+                                "to feel at ease; to rest assured"
                         ]
                 }
         ],
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Write 3 sentences using the following words:",
                         "words": [
                                 "中文",
                                 "一样",
@@ -232,7 +232,7 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
+                        "instruction": "Write a short passage of 4–5 sentences about the lesson topic:",
                         "topic": "她的汉语说得跟中国人一样好"
                 }
         ],

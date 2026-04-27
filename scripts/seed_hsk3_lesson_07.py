@@ -12,8 +12,8 @@ LESSON = {
     "lesson_order": 7,
     "lesson_code": "HSK3-L07",
     "title": "我跟她都认识五年了",
-    "goal": "muddat va tanishlikni ifodalash",
-    "intro_text": "Bu dars muddat va tanishlikni ifodalashga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda 时段的表达 va 用“半”“刻”“差”表示时间 kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "goal": "expressing duration and acquaintance",
+    "intro_text": "This lesson is dedicated to expressing duration and acquaintance. It uses 5 key vocabulary words and covers core grammar patterns such as 时段的表达 and using "半" "刻" "差" to express time.",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -21,7 +21,7 @@ LESSON = {
                         "zh": "同事",
                         "pinyin": "tóngshì",
                         "pos": "n.",
-                        "meaning": "hamkasb"
+                        "meaning": "colleague, coworker"
                 },
                 {
                         "no": 2,
@@ -35,21 +35,21 @@ LESSON = {
                         "zh": "结婚",
                         "pinyin": "jiéhūn",
                         "pos": "v.",
-                        "meaning": "uylanmoq, turmush qurmoq"
+                        "meaning": "to get married"
                 },
                 {
                         "no": 4,
                         "zh": "迟到",
                         "pinyin": "chídào",
                         "pos": "v.",
-                        "meaning": "kech qolmoq"
+                        "meaning": "to be late"
                 },
                 {
                         "no": 5,
                         "zh": "半",
                         "pinyin": "bàn",
                         "pos": "num.",
-                        "meaning": "yarim"
+                        "meaning": "half"
                 }
         ],
         ensure_ascii=False,
@@ -65,13 +65,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "你跟她认识多久了？",
                                         "pinyin": "",
-                                        "translation": "Sen u bilan qancha vaqtdan beri tanishsan?"
+                                        "translation": "How long have you known her?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "我跟她都认识五年了。",
                                         "pinyin": "",
-                                        "translation": "Men u bilan besh yildan beri tanishman."
+                                        "translation": "I've known her for five years now."
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "你们以前是同事吗？",
                                         "pinyin": "",
-                                        "translation": "Sizlar ilgari hamkasb bo'lganmisizlar?"
+                                        "translation": "Were you colleagues before?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "对，我们在银行一起工作过。",
                                         "pinyin": "",
-                                        "translation": "Ha, biz bankda birga ishlaganmiz."
+                                        "translation": "Yes, we worked together at a bank."
                                 }
                         ]
                 }
@@ -102,34 +102,34 @@ LESSON = {
                 {
                         "no": 1,
                         "title_zh": "时段的表达",
-                        "explanation": "Bu mavzu vaqt va davomiylikni tabiiy usulda aytishni o'rgatadi.",
+                        "explanation": "This topic teaches how to express time and duration naturally.",
                         "examples": [
                                 {
                                         "zh": "我跟她都认识五年了。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有同事和银行。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 同事 va 银行 ishlatilgan."
+                                        "meaning": "This sentence uses 同事 and 银行."
                                 }
                         ]
                 },
                 {
                         "no": 2,
-                        "title_zh": "用“半”“刻”“差”表示时间",
-                        "explanation": "Bu mavzu vaqt va davomiylikni tabiiy usulda aytishni o'rgatadi.",
+                        "title_zh": "用"半""刻""差"表示时间",
+                        "explanation": "This topic teaches how to express time and duration naturally.",
                         "examples": [
                                 {
                                         "zh": "我跟她都认识五年了。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有同事和银行。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 同事 va 银行 ishlatilgan."
+                                        "meaning": "This sentence uses 同事 and 银行."
                                 }
                         ]
                 }
@@ -141,10 +141,10 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
-                                        "prompt": "hamkasb",
+                                        "prompt": "colleague, coworker",
                                         "answer": "同事",
                                         "pinyin": "tóngshì"
                                 },
@@ -154,12 +154,12 @@ LESSON = {
                                         "pinyin": "yínháng"
                                 },
                                 {
-                                        "prompt": "uylanmoq, turmush qurmoq",
+                                        "prompt": "to get married",
                                         "answer": "结婚",
                                         "pinyin": "jiéhūn"
                                 },
                                 {
-                                        "prompt": "kech qolmoq",
+                                        "prompt": "to be late",
                                         "answer": "迟到",
                                         "pinyin": "chídào"
                                 }
@@ -168,11 +168,11 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "同事",
-                                        "answer": "hamkasb",
+                                        "answer": "colleague, coworker",
                                         "pinyin": "tóngshì"
                                 },
                                 {
@@ -182,12 +182,12 @@ LESSON = {
                                 },
                                 {
                                         "prompt": "结婚",
-                                        "answer": "uylanmoq, turmush qurmoq",
+                                        "answer": "to get married",
                                         "pinyin": "jiéhūn"
                                 },
                                 {
                                         "prompt": "迟到",
-                                        "answer": "kech qolmoq",
+                                        "answer": "to be late",
                                         "pinyin": "chídào"
                                 }
                         ]
@@ -209,10 +209,10 @@ LESSON = {
                 {
                         "no": 2,
                         "answers": [
-                                "hamkasb",
+                                "colleague, coworker",
                                 "bank",
-                                "uylanmoq, turmush qurmoq",
-                                "kech qolmoq"
+                                "to get married",
+                                "to be late"
                         ]
                 }
         ],
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Make 3 sentences using the following words:",
                         "words": [
                                 "同事",
                                 "银行",
@@ -232,7 +232,7 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
+                        "instruction": "Write a short paragraph of 4-5 sentences about the lesson topic:",
                         "topic": "我跟她都认识五年了"
                 }
         ],

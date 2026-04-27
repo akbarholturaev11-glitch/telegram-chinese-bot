@@ -12,8 +12,8 @@ LESSON = {
     "lesson_order": 3,
     "lesson_code": "HSK3-L03",
     "title": "桌子上放着很多饮料",
-    "goal": "joylashuv va mavjud narsalarni tasvirlash",
-    "intro_text": "Bu dars joylashuv va mavjud narsalarni tasvirlashga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda “还是”和“或者” va 存在的表达 kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "goal": "describing the location and existence of objects",
+    "intro_text": "This lesson is dedicated to describing the location and existence of objects. It uses 5 key vocabulary words and covers core grammar patterns such as 还是 and 或者, and existential expressions.",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -21,35 +21,35 @@ LESSON = {
                         "zh": "饮料",
                         "pinyin": "yǐnliào",
                         "pos": "n.",
-                        "meaning": "ichimlik"
+                        "meaning": "drink, beverage"
                 },
                 {
                         "no": 2,
                         "zh": "放",
                         "pinyin": "fàng",
                         "pos": "v.",
-                        "meaning": "qo'ymoq"
+                        "meaning": "to put, to place"
                 },
                 {
                         "no": 3,
                         "zh": "花",
                         "pinyin": "huā",
                         "pos": "n.",
-                        "meaning": "gul"
+                        "meaning": "flower"
                 },
                 {
                         "no": 4,
                         "zh": "新鲜",
                         "pinyin": "xīnxiān",
                         "pos": "adj.",
-                        "meaning": "yangi, toza"
+                        "meaning": "fresh"
                 },
                 {
                         "no": 5,
                         "zh": "或者",
                         "pinyin": "huòzhě",
                         "pos": "conj.",
-                        "meaning": "yoki"
+                        "meaning": "or"
                 }
         ],
         ensure_ascii=False,
@@ -65,13 +65,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "桌子上放着很多饮料。",
                                         "pinyin": "",
-                                        "translation": "Stol ustida juda ko'p ichimliklar turibdi."
+                                        "translation": "There are lots of drinks on the table."
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "那边也有花，看起来很新鲜。",
                                         "pinyin": "",
-                                        "translation": "U yerda gullar ham bor, juda yangi ko'rinyapti."
+                                        "translation": "There are flowers over there too, they look very fresh."
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "你想喝茶还是果汁？",
                                         "pinyin": "",
-                                        "translation": "Sen choy ichasanmi yoki sharbatmi?"
+                                        "translation": "Would you like tea or juice?"
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "果汁或者水都可以。",
                                         "pinyin": "",
-                                        "translation": "Sharbat yoki suv, ikkalasi ham bo'ladi."
+                                        "translation": "Either juice or water is fine."
                                 }
                         ]
                 }
@@ -101,35 +101,35 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "title_zh": "“还是”和“或者”",
-                        "explanation": "Bu grammatika mavzusi darsdagi asosiy gap qoliplarini amalda ishlatishga yordam beradi.",
+                        "title_zh": ""还是"和"或者"",
+                        "explanation": "This grammar topic helps to practice the core sentence patterns of the lesson in context.",
                         "examples": [
                                 {
                                         "zh": "桌子上放着很多饮料。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有饮料和放。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 饮料 va 放 ishlatilgan."
+                                        "meaning": "This sentence uses 饮料 and 放."
                                 }
                         ]
                 },
                 {
                         "no": 2,
                         "title_zh": "存在的表达",
-                        "explanation": "Bu qolip joyda narsa borligini yoki joylashib turganini tasvirlash uchun ishlatiladi.",
+                        "explanation": "This pattern is used to describe something existing at a location or being positioned somewhere.",
                         "examples": [
                                 {
                                         "zh": "桌子上放着很多饮料。",
                                         "pinyin": "",
-                                        "meaning": "Stol ustida juda ko'p ichimliklar turibdi."
+                                        "meaning": "There are lots of drinks on the table."
                                 },
                                 {
                                         "zh": "门口站着一个客人。",
                                         "pinyin": "",
-                                        "meaning": "Eshik oldida bitta mehmon turibdi."
+                                        "meaning": "There is a guest standing at the door."
                                 }
                         ]
                 }
@@ -141,25 +141,25 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
-                                        "prompt": "ichimlik",
+                                        "prompt": "drink, beverage",
                                         "answer": "饮料",
                                         "pinyin": "yǐnliào"
                                 },
                                 {
-                                        "prompt": "qo'ymoq",
+                                        "prompt": "to put, to place",
                                         "answer": "放",
                                         "pinyin": "fàng"
                                 },
                                 {
-                                        "prompt": "gul",
+                                        "prompt": "flower",
                                         "answer": "花",
                                         "pinyin": "huā"
                                 },
                                 {
-                                        "prompt": "yangi, toza",
+                                        "prompt": "fresh",
                                         "answer": "新鲜",
                                         "pinyin": "xīnxiān"
                                 }
@@ -168,26 +168,26 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "饮料",
-                                        "answer": "ichimlik",
+                                        "answer": "drink, beverage",
                                         "pinyin": "yǐnliào"
                                 },
                                 {
                                         "prompt": "放",
-                                        "answer": "qo'ymoq",
+                                        "answer": "to put, to place",
                                         "pinyin": "fàng"
                                 },
                                 {
                                         "prompt": "花",
-                                        "answer": "gul",
+                                        "answer": "flower",
                                         "pinyin": "huā"
                                 },
                                 {
                                         "prompt": "新鲜",
-                                        "answer": "yangi, toza",
+                                        "answer": "fresh",
                                         "pinyin": "xīnxiān"
                                 }
                         ]
@@ -209,10 +209,10 @@ LESSON = {
                 {
                         "no": 2,
                         "answers": [
-                                "ichimlik",
-                                "qo'ymoq",
-                                "gul",
-                                "yangi, toza"
+                                "drink, beverage",
+                                "to put, to place",
+                                "flower",
+                                "fresh"
                         ]
                 }
         ],
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Make 3 sentences using the following words:",
                         "words": [
                                 "饮料",
                                 "放",
@@ -232,7 +232,7 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
+                        "instruction": "Write a short paragraph of 4-5 sentences about the lesson topic:",
                         "topic": "桌子上放着很多饮料"
                 }
         ],

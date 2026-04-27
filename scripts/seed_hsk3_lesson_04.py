@@ -12,8 +12,8 @@ LESSON = {
     "lesson_order": 4,
     "lesson_code": "HSK3-L04",
     "title": "她总是笑着跟客人说话",
-    "goal": "odat va bir paytdagi harakatlarni ifodalash",
-    "intro_text": "Bu dars odat va bir paytdagi harakatlarni ifodalashga bag'ishlangan. Unda 5 ta tayanch so'z ishlatiladi hamda 又……又…… va 动作的伴随：V1着(O1)+V2(O2) kabi asosiy grammatik qoliplar ko'rib chiqiladi.",
+    "goal": "expressing habitual actions and accompanying actions",
+    "intro_text": "This lesson is dedicated to expressing habitual actions and accompanying actions. It uses 5 key vocabulary words and covers core grammar patterns such as 又……又…… and 动作的伴随：V1着(O1)+V2(O2).",
     "vocabulary_json": json.dumps(
         [
                 {
@@ -21,35 +21,35 @@ LESSON = {
                         "zh": "总是",
                         "pinyin": "zǒngshì",
                         "pos": "adv.",
-                        "meaning": "doimo"
+                        "meaning": "always"
                 },
                 {
                         "no": 2,
                         "zh": "客人",
                         "pinyin": "kèrén",
                         "pos": "n.",
-                        "meaning": "mehmon, mijoz"
+                        "meaning": "guest, customer"
                 },
                 {
                         "no": 3,
                         "zh": "照片",
                         "pinyin": "zhàopiàn",
                         "pos": "n.",
-                        "meaning": "surat"
+                        "meaning": "photo, picture"
                 },
                 {
                         "no": 4,
                         "zh": "认真",
                         "pinyin": "rènzhēn",
                         "pos": "adj.",
-                        "meaning": "jiddiy"
+                        "meaning": "serious, earnest"
                 },
                 {
                         "no": 5,
                         "zh": "蛋糕",
                         "pinyin": "dàngāo",
                         "pos": "n.",
-                        "meaning": "tort"
+                        "meaning": "cake"
                 }
         ],
         ensure_ascii=False,
@@ -65,13 +65,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "她总是笑着跟客人说话。",
                                         "pinyin": "",
-                                        "translation": "U mijozlar bilan doim kulib gaplashadi."
+                                        "translation": "She always smiles when talking to customers."
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "对，她服务很认真。",
                                         "pinyin": "",
-                                        "translation": "Ha, u juda jiddiy xizmat ko'rsatadi."
+                                        "translation": "Yes, she provides very attentive service."
                                 }
                         ]
                 },
@@ -84,13 +84,13 @@ LESSON = {
                                         "speaker": "A",
                                         "zh": "桌子上又有蛋糕又有水果。",
                                         "pinyin": "",
-                                        "translation": "Stolda ham tort, ham meva bor."
+                                        "translation": "There is both cake and fruit on the table."
                                 },
                                 {
                                         "speaker": "B",
                                         "zh": "我们先拍照片吧。",
                                         "pinyin": "",
-                                        "translation": "Avval suratga tushaylik."
+                                        "translation": "Let's take a photo first."
                                 }
                         ]
                 }
@@ -102,34 +102,34 @@ LESSON = {
                 {
                         "no": 1,
                         "title_zh": "又……又……",
-                        "explanation": "Bu qolip ikki sifat yoki ikki holatni birga ta'kidlash uchun ishlatiladi.",
+                        "explanation": "This pattern is used to emphasise two qualities or states simultaneously.",
                         "examples": [
                                 {
                                         "zh": "这个蛋糕又甜又新鲜。",
                                         "pinyin": "",
-                                        "meaning": "Bu tort ham shirin, ham yangi."
+                                        "meaning": "This cake is both sweet and fresh."
                                 },
                                 {
                                         "zh": "她又认真又热情。",
                                         "pinyin": "",
-                                        "meaning": "U ham jiddiy, ham iliq muomalali."
+                                        "meaning": "She is both serious and warm."
                                 }
                         ]
                 },
                 {
                         "no": 2,
                         "title_zh": "动作的伴随：V1着(O1)+V2(O2)",
-                        "explanation": "Bu grammatika mavzusi darsdagi asosiy gap qoliplarini amalda ishlatishga yordam beradi.",
+                        "explanation": "This grammar topic helps to practise the core sentence patterns of the lesson in context.",
                         "examples": [
                                 {
                                         "zh": "她总是笑着跟客人说话。",
                                         "pinyin": "",
-                                        "meaning": "Dars sarlavhasidagi asosiy qolip."
+                                        "meaning": "The main pattern from the lesson title."
                                 },
                                 {
                                         "zh": "这个句子里有总是和客人。",
                                         "pinyin": "",
-                                        "meaning": "Bu gapda 总是 va 客人 ishlatilgan."
+                                        "meaning": "This sentence uses 总是 and 客人."
                                 }
                         ]
                 }
@@ -141,25 +141,25 @@ LESSON = {
                 {
                         "no": 1,
                         "type": "translate_to_chinese",
-                        "instruction": "Quyidagi ma'nolarning xitoychasini yozing:",
+                        "instruction": "Write the Chinese for the following meanings:",
                         "items": [
                                 {
-                                        "prompt": "doimo",
+                                        "prompt": "always",
                                         "answer": "总是",
                                         "pinyin": "zǒngshì"
                                 },
                                 {
-                                        "prompt": "mehmon, mijoz",
+                                        "prompt": "guest, customer",
                                         "answer": "客人",
                                         "pinyin": "kèrén"
                                 },
                                 {
-                                        "prompt": "surat",
+                                        "prompt": "photo, picture",
                                         "answer": "照片",
                                         "pinyin": "zhàopiàn"
                                 },
                                 {
-                                        "prompt": "jiddiy",
+                                        "prompt": "serious, earnest",
                                         "answer": "认真",
                                         "pinyin": "rènzhēn"
                                 }
@@ -168,26 +168,26 @@ LESSON = {
                 {
                         "no": 2,
                         "type": "translate_to_uzbek",
-                        "instruction": "Quyidagi so'zlarning o'zbekchasini yozing:",
+                        "instruction": "Write the English for the following words:",
                         "items": [
                                 {
                                         "prompt": "总是",
-                                        "answer": "doimo",
+                                        "answer": "always",
                                         "pinyin": "zǒngshì"
                                 },
                                 {
                                         "prompt": "客人",
-                                        "answer": "mehmon, mijoz",
+                                        "answer": "guest, customer",
                                         "pinyin": "kèrén"
                                 },
                                 {
                                         "prompt": "照片",
-                                        "answer": "surat",
+                                        "answer": "photo, picture",
                                         "pinyin": "zhàopiàn"
                                 },
                                 {
                                         "prompt": "认真",
-                                        "answer": "jiddiy",
+                                        "answer": "serious, earnest",
                                         "pinyin": "rènzhēn"
                                 }
                         ]
@@ -209,10 +209,10 @@ LESSON = {
                 {
                         "no": 2,
                         "answers": [
-                                "doimo",
-                                "mehmon, mijoz",
-                                "surat",
-                                "jiddiy"
+                                "always",
+                                "guest, customer",
+                                "photo, picture",
+                                "serious, earnest"
                         ]
                 }
         ],
@@ -222,7 +222,7 @@ LESSON = {
         [
                 {
                         "no": 1,
-                        "instruction": "Quyidagi so'zlardan foydalanib 3 ta gap tuzing:",
+                        "instruction": "Make 3 sentences using the following words:",
                         "words": [
                                 "总是",
                                 "客人",
@@ -232,7 +232,7 @@ LESSON = {
                 },
                 {
                         "no": 2,
-                        "instruction": "Dars mavzusi haqida 4-5 gaplik kichik matn yozing:",
+                        "instruction": "Write a short paragraph of 4-5 sentences about the lesson topic:",
                         "topic": "她总是笑着跟客人说话"
                 }
         ],

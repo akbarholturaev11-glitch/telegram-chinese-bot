@@ -18,6 +18,10 @@ from app.bot.keyboards.course_context import (
 )
 
 from app.config import COURSE_MODE_ENABLED
+from app.bot.utils.course_formatter import (
+    format_intro, format_vocab, format_dialogue,
+    format_grammar, format_exercise,
+)
 
 
 
@@ -307,14 +311,24 @@ async def _run_course_entry_flow(
         course_grammar_keyboard, course_exercise_keyboard,
     )
 
-    text = await tutor.generate_step_response(
-        user_language=user.language,
-        user_level=user.level,
-        lesson=lesson,
-        step=progress.current_step,
-        user_message="",
-    )
-
+    step = progress.current_step
+    formatter_map = {
+        "intro":    lambda: format_intro(lesson, lang),
+        "vocab":    lambda: format_vocab(lesson, lang),
+        "dialogue": lambda: format_dialogue(lesson, lang),
+        "grammar":  lambda: format_grammar(lesson, lang),
+        "exercise": lambda: format_exercise(lesson, lang),
+    }
+    if step in formatter_map:
+        text = formatter_map[step]()
+    else:
+        text = await tutor.generate_step_response(
+            user_language=user.language,
+            user_level=user.level,
+            lesson=lesson,
+            step=step,
+            user_message="",
+        )
     step_keyboards = {
         "intro":    lambda: course_intro_keyboard(lang),
         "vocab":    lambda: course_vocab_keyboard(lang),
@@ -322,9 +336,8 @@ async def _run_course_entry_flow(
         "grammar":  lambda: course_grammar_keyboard(lang),
         "exercise": lambda: course_exercise_keyboard(lang),
     }
-
-    keyboard = step_keyboards.get(progress.current_step, lambda: None)()
-    await respond(text, reply_markup=keyboard)
+    keyboard = step_keyboards.get(step, lambda: None)()
+    await respond(text, reply_markup=keyboard, parse_mode="HTML")
 
 @router.message(F.text == "/course")
 async def course_command_handler(message: Message, session):
