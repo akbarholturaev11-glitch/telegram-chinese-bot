@@ -548,9 +548,9 @@ async def profile_menu_level(callback: CallbackQuery, session):
 
 @router.callback_query(F.data == "profile_menu:course")
 async def profile_menu_course(callback: CallbackQuery, session):
-    from app.bot.handlers.course import _run_course_entry_flow
+    from app.bot.handlers.course import run_course_entry_flow
     await callback.answer()
-    await _run_course_entry_flow(
+    await run_course_entry_flow(
         session=session,
         telegram_id=callback.from_user.id,
         respond=callback.message.answer,
