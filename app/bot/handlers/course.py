@@ -200,12 +200,13 @@ async def mode_qa_handler(callback: CallbackQuery, session):
         await callback.message.answer(t("user_not_found", lang))
         return
 
+    lang = user.language if user.language else "ru"
     user.learning_mode = "qa"
     await session.commit()
 
     await callback.answer()
-    await callback.message.answer(t("trial_started_info", user.language))
-    await callback.message.answer(t("send_first_message", user.language))
+    await callback.message.answer(t("trial_started_info", lang))
+    await callback.message.answer(t("send_first_message", lang), reply_markup=main_menu_keyboard(lang))
 
 @router.callback_query(F.data == "mode:course")
 async def course_mode_open_handler(callback: CallbackQuery, session):

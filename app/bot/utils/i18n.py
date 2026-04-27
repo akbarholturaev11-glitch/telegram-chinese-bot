@@ -324,6 +324,8 @@ COURSE_I18N = {
         "course_mode_subscription_benefit": "Бо обуна режими Курси HSK низ кушода мешавад.",
         "course_start_button": "📚 Оғози курс",
         "course_continue_button": "📖 Давом додани дарс",
+        "course_settings_button": "⚙️ Танзимот",
+        "course_settings_choose_lesson": "📋 Дарсе интихоб кунед:",
         "course_back_to_qa_button": "↩️ Бозгашт ба савол-ҷавоб",
 
         "course_menu_title": "📚 Режими Курси HSK",
@@ -421,6 +423,8 @@ COURSE_I18N = {
         "course_mode_subscription_benefit": "С подпиской также открывается режим Курса HSK.",
         "course_start_button": "📚 Начать курс",
         "course_continue_button": "📖 Продолжить урок",
+        "course_settings_button": "⚙️ Настройки",
+        "course_settings_choose_lesson": "📋 Выберите урок:",
         "course_back_to_qa_button": "↩️ Вернуться к вопрос-ответ",
 
         "course_menu_title": "📚 Режим курса HSK",
@@ -518,6 +522,8 @@ COURSE_I18N = {
         "course_mode_subscription_benefit": "Obuna bilan HSK Kurs rejimi ham ochiladi.",
         "course_start_button": "📚 Kursni boshlash",
         "course_continue_button": "📖 Darsni davom ettirish",
+        "course_settings_button": "⚙️ Sozlamalar",
+        "course_settings_choose_lesson": "📋 Darsni tanlang:",
         "course_back_to_qa_button": "↩️ Savol-javobga qaytish",
 
         "course_menu_title": "📚 HSK Kurs rejimi",

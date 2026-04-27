@@ -5,7 +5,8 @@ from aiogram import F, Router
 from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton
 
 from app.bot.utils.response_effect import ResponseEffect
-from app.bot.handlers.course import get_course_keyboard_for_step, run_course_entry_flow
+from app.bot.handlers.course import get_course_keyboard_for_step, run_course_entry_flow, _resolve_lessons_for_user_level
+from app.bot.keyboards.course import lesson_selection_keyboard
 from app.bot.keyboards.checkout import checkout_keyboard
 from app.bot.keyboards.main_menu import main_menu_keyboard
 from app.bot.keyboards.referral import photo_limit_subscription_keyboard
@@ -93,11 +94,16 @@ async def handle_text_message(message: Message, session):
 
         msg_text = (message.text or "").strip()
 
-        if msg_text == t("course_continue_button", user_lang):
-            await run_course_entry_flow(
-                session=session,
-                telegram_id=message.from_user.id,
-                respond=message.answer,
+        if msg_text == t("course_settings_button", user_lang):
+            settings_engine = CourseEngineService(session)
+            lessons, resolved_level = await _resolve_lessons_for_user_level(settings_engine, user.level)
+            if not lessons:
+                await message.answer(t("course_no_lessons_available", user_lang))
+                return
+            level_label = resolved_level.upper() if resolved_level else "HSK"
+            await message.answer(
+                f"{level_label}. {t('course_settings_choose_lesson', user_lang)}",
+                reply_markup=lesson_selection_keyboard(lessons, page=0, lang=user_lang),
             )
             return
 
