@@ -225,18 +225,19 @@ async def handle_text_message(message: Message, session):
             content_type="course",
         )
 
-        emojis = ["🪄", "💫", "🪄", "💫", "🪄", "💫"]
-        anim_msg = await message.answer(emojis[0])
+        import asyncio as _asyncio
+        _emojis = ["🪄", "💫", "🪄", "💫", "🪄", "💫"]
+        _anim_msg = await message.answer(_emojis[0])
 
-        async def animate():
-            for i in range(1, 20):
-                await asyncio.sleep(1)
+        async def _animate():
+            for _i in range(1, 30):
+                await _asyncio.sleep(1)
                 try:
-                    await anim_msg.edit_text(emojis[i % len(emojis)])
+                    await _anim_msg.edit_text(_emojis[_i % len(_emojis)])
                 except Exception:
                     break
 
-        anim_task = asyncio.create_task(animate())
+        _anim_task = _asyncio.create_task(_animate())
 
         tutor_text = await tutor.generate_step_response(
             user_language=current_user.language,
@@ -247,9 +248,9 @@ async def handle_text_message(message: Message, session):
             history=course_history,
         )
 
-        anim_task.cancel()
+        _anim_task.cancel()
         try:
-            await anim_msg.delete()
+            await _anim_msg.delete()
         except Exception:
             pass
 

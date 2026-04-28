@@ -7,13 +7,16 @@ from app.repositories.user_repo import UserRepository
 from app.services.course_engine_service import CourseEngineService
 from app.services.course_tutor_service import CourseTutorService
 from app.bot.utils.i18n import t
-from app.bot.keyboards.course import lesson_selection_keyboard, review_choice_keyboard
+from app.bot.keyboards.course import (
+    lesson_selection_keyboard, review_choice_keyboard,
+    course_intro_keyboard, course_vocab_keyboard, course_dialogue_keyboard,
+    course_grammar_keyboard, course_exercise_keyboard, course_homework_keyboard,
+)
 from app.bot.keyboards.subscription import payment_method_keyboard
 from app.bot.keyboards.course_context import (
     course_resume_keyboard,
     course_review_offer_keyboard,
     course_satisfaction_keyboard,
-    course_homework_keyboard,
     course_next_lesson_keyboard,
 )
 
@@ -292,11 +295,6 @@ async def run_course_entry_flow(
     if error_key:
         await respond(t(error_key, lang))
         return
-
-    from app.bot.keyboards.course import (
-        course_intro_keyboard, course_vocab_keyboard, course_dialogue_keyboard,
-        course_grammar_keyboard, course_exercise_keyboard,
-    )
 
     step = progress.current_step
     formatter_map = {
